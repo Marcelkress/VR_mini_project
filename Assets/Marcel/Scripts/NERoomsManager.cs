@@ -1,15 +1,7 @@
 using UnityEngine;
 
-public class NE_Rooms : MonoBehaviour
+public class NERoomsManager : MonoBehaviour
 {
-    /* Capabilities:
-     *  Keep track of possible room positions
-     *  Keep track of player position
-     *  Keep track of player orientation
-     *  Change room diagonally to player
-     *  6 rooms
-     */
-
     public GameObject[] rooms;
     public GameObject corridor;
     
@@ -28,7 +20,6 @@ public class NE_Rooms : MonoBehaviour
                 rooms[roomIndex + 1].SetActive(true);
             }
             
-            
             lastRoomIndex = roomIndex;
         }
         
@@ -45,7 +36,6 @@ public class NE_Rooms : MonoBehaviour
             }
             lastRoomIndex = roomIndex;
         }
-        
     }
     
 }
