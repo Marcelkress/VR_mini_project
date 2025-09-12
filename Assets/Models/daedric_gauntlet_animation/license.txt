@@ -1,0 +1,11 @@
+Model Information:
+* title:	Daedric Gauntlet Animation
+* source:	https://sketchfab.com/3d-models/daedric-gauntlet-animation-18cb3151ea27476d9f6cfad665651800
+* author:	Chenchanchong (https://sketchfab.com/Chenchanchong)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Daedric Gauntlet Animation" (https://sketchfab.com/3d-models/daedric-gauntlet-animation-18cb3151ea27476d9f6cfad665651800) by Chenchanchong (https://sketchfab.com/Chenchanchong) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
