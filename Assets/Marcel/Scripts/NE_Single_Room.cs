@@ -1,16 +1,16 @@
+using System;
 using UnityEngine;
 
 public class NE_Single_Room : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public NERoomsManager RoomsManager;
+    public int roomID;
+    
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.CompareTag("Player"))
+        {
+            RoomsManager.EnteredRoom(roomID);    
+        }
     }
 }
