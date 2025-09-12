@@ -30,7 +30,7 @@ public class NERoomsManager : MonoBehaviour
             {
                 corridor.SetActive(true);
             }
-
+            
             if (roomIndex == 0)
             {
                 rooms[rooms.Length - 1].SetActive(false);
@@ -45,8 +45,6 @@ public class NERoomsManager : MonoBehaviour
             if (roomIndex < rooms.Length - 1)
             {
                 Debug.Log("Room index: " + roomIndex);
-                
-                
                 rooms[roomIndex + 1].SetActive(true);
             }
 
@@ -77,8 +75,6 @@ public class NERoomsManager : MonoBehaviour
             
             lastRoomIndex = roomIndex;
         }
-        
-        
     }
     
 }
