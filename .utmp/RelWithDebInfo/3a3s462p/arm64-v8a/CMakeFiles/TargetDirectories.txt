@@ -1,0 +1,5 @@
+/Users/mathiaslerchejaque/Documents/Unity/Miniproject VR/.utmp/RelWithDebInfo/3a3s462p/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/mathiaslerchejaque/Documents/Unity/Miniproject VR/.utmp/RelWithDebInfo/3a3s462p/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/mathiaslerchejaque/Documents/Unity/Miniproject VR/.utmp/RelWithDebInfo/3a3s462p/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/mathiaslerchejaque/Documents/Unity/Miniproject VR/.utmp/RelWithDebInfo/3a3s462p/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/mathiaslerchejaque/Documents/Unity/Miniproject VR/.utmp/RelWithDebInfo/3a3s462p/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
