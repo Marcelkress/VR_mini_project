@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - CinemachineTarget
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -14,9 +15,9 @@ TagManager:
   - Water
   - UI
   - Weapon
+  - Portal
   - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 

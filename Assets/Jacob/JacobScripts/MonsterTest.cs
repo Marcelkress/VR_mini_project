@@ -171,18 +171,8 @@ public class MonsterTest : MonoBehaviour, IDamagable
         var damager = other.GetComponent<Damager>();
         if (damager == null) return;
 
-        int damage = damager.GetDamageAmount();
-        
-        // Only take damage if the weapon is moving fast enough
-        if (damage > 0)
-        {
-            TakeDamage(damage);
-            Debug.Log($"Monster hit by {other.name} for {damage} damage based on velocity.");
-        }
-        else
-        {
-            Debug.Log($"Weapon {other.name} hit but was moving too slowly to cause damage.");
-        }
+        TakeDamage(damager.damageAmount);
+        Debug.Log($"Monster hit by {other.name} for {damager.damageAmount} damage.");
     }
 
     public void OnTriggerExit(Collider other)
