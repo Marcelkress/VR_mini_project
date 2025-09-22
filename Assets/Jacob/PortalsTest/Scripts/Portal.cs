@@ -8,9 +8,6 @@ public class Portal : MonoBehaviour
     [field: SerializeField]
     public Portal OtherPortal { get; private set; }
 
-    [SerializeField]
-    private Renderer outlineRenderer;
-
     [field: SerializeField]
     public Color PortalColour { get; private set; }
 
@@ -21,6 +18,8 @@ public class Portal : MonoBehaviour
     private Transform testTransform;
 
     private List<PortalableObject> portalObjects = new List<PortalableObject>();
+    // Track previous Z in portal-local space for each tracked object so we can detect crossing the portal plane.
+    private Dictionary<PortalableObject, float> previousLocalZ = new Dictionary<PortalableObject, float>();
     public bool IsPlaced { get; private set; } = false;
     [SerializeField]
     [Tooltip("Collider of the wall/surface this portal is mounted on. Optional for manual placement; will be set automatically on successful PlacePortal().")]
@@ -39,24 +38,10 @@ public class Portal : MonoBehaviour
         {
             Renderer = GetComponent<Renderer>();
         }
-
-        // If manually placed in the scene and wallCollider isn't assigned, try to auto-detect by raycasting backwards.
-        if (wallCollider == null)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position + transform.forward * 0.05f, -transform.forward, out hit, 0.2f))
-            {
-                wallCollider = hit.collider;
-            }
-        }
     }
 
     private void Start()
     {
-        if (outlineRenderer != null && outlineRenderer.material != null)
-        {
-            outlineRenderer.material.SetColor("_OutlineColour", PortalColour);
-        }
         
         // Validation for manual placement
         if (OtherPortal == null)
@@ -80,14 +65,51 @@ public class Portal : MonoBehaviour
         // Enable portal renderer only when both portals are properly set up
         Renderer.enabled = OtherPortal != null && OtherPortal.IsPlaced && IsPlaced;
 
-        for (int i = 0; i < portalObjects.Count; ++i)
+        // Iterate over a copy since we may modify the collection during iteration (warp moves objects to the other portal).
+        for (int i = portalObjects.Count - 1; i >= 0; --i)
         {
-            Vector3 objPos = transform.InverseTransformPoint(portalObjects[i].transform.position);
+            var obj = portalObjects[i];
 
-            if (objPos.z > 0.0f)
+            if (obj == null)
             {
-                portalObjects[i].Warp();
+                portalObjects.RemoveAt(i);
+                previousLocalZ.Remove(obj);
+                continue;
             }
+
+            float currentZ = transform.InverseTransformPoint(obj.transform.position).z;
+            float prevZ = 0.0f;
+            previousLocalZ.TryGetValue(obj, out prevZ);
+
+            // Skip if recently warped to prevent double triggers.
+            if (Time.time - obj.GetLastWarpTime() < 0.1f)
+            {
+                // Update previous Z for next frame.
+                previousLocalZ[obj] = currentZ;
+                continue;
+            }
+
+            // Detect crossing the portal plane in either direction (sign change across Z=0).
+            if ((prevZ > 0.0f && currentZ <= 0.0f) || (prevZ <= 0.0f && currentZ > 0.0f))
+            {
+                // Warp the object through this portal to the other one.
+                obj.Warp();
+
+                // Remove from this portal's tracking state.
+                portalObjects.RemoveAt(i);
+                previousLocalZ.Remove(obj);
+
+                // Ensure the object is registered with the destination portal so it can travel back.
+                if (OtherPortal != null)
+                {
+                    OtherPortal.RegisterObjectFromWarp(obj);
+                }
+
+                continue;
+            }
+
+            // Update previous Z for next frame.
+            previousLocalZ[obj] = currentZ;
         }
     }
 
@@ -97,6 +119,8 @@ public class Portal : MonoBehaviour
         if (obj != null)
         {
             portalObjects.Add(obj);
+            // Initialize previous local Z for this object so we can detect crossings.
+            previousLocalZ[obj] = transform.InverseTransformPoint(obj.transform.position).z;
             obj.SetIsInPortal(this, OtherPortal, wallCollider);
         }
     }
@@ -108,8 +132,30 @@ public class Portal : MonoBehaviour
         if(portalObjects.Contains(obj))
         {
             portalObjects.Remove(obj);
+            previousLocalZ.Remove(obj);
             obj.ExitPortal(wallCollider);
         }
+    }
+
+    /// <summary>
+    /// Called when an object was just warped into this portal's space by its paired portal.
+    /// Registers tracking state and ensures the object's portal collision/clone state is set.
+    /// </summary>
+    /// <param name="obj">The object that was warped into this portal.</param>
+    public void RegisterObjectFromWarp(PortalableObject obj)
+    {
+        if (obj == null)
+            return;
+
+        if (!portalObjects.Contains(obj))
+        {
+            portalObjects.Add(obj);
+        }
+
+        previousLocalZ[obj] = transform.InverseTransformPoint(obj.transform.position).z;
+
+        // Ensure the object has its portal state configured for this portal pair.
+        obj.SetIsInPortal(this, OtherPortal, wallCollider);
     }
 
 }

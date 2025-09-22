@@ -192,6 +192,13 @@ public class PortalCamera : MonoBehaviour
         var newMatrix = mainCamera.CalculateObliqueMatrix(clipPlaneCameraSpace);
         portalCamera.projectionMatrix = newMatrix;
 
+        // Check if camera position/rotation is valid to prevent rendering errors.
+        if (float.IsNaN(portalCamera.transform.position.x) || float.IsNaN(portalCamera.transform.position.y) || float.IsNaN(portalCamera.transform.position.z))
+        {
+            Debug.LogWarning("PortalCamera: Invalid camera position, skipping render.");
+            return;
+        }
+
         // Render the camera to its render target using direct camera render.
         portalCamera.Render();
     }

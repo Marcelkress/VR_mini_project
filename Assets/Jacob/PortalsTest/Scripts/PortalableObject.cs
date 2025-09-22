@@ -19,6 +19,7 @@ public class PortalableObject : MonoBehaviour
     protected new Collider collider;
 
     private static readonly Quaternion halfTurn = Quaternion.Euler(0.0f, 180.0f, 0.0f);
+    private float lastWarpTime = -1f;
 
     protected virtual void Awake()
     {
@@ -79,6 +80,20 @@ public class PortalableObject : MonoBehaviour
         ++inPortalCount;
     }
 
+    // Allows external callers (like Portal.RegisterObjectFromWarp) to set the portal pair without incrementing counts
+    // or changing collision ignoring beyond what SetIsInPortal does. This is useful when an object is teleported
+    // into the portal area programmatically and needs to be tracked by the destination portal.
+    public void SetPortals(Portal inPortal, Portal outPortal, Collider wallCollider)
+    {
+        this.inPortal = inPortal;
+        this.outPortal = outPortal;
+
+        if (wallCollider != null && collider != null)
+        {
+            Physics.IgnoreCollision(collider, wallCollider);
+        }
+    }
+
     public void ExitPortal(Collider wallCollider)
     {
         if (wallCollider != null && collider != null)
@@ -109,13 +124,20 @@ public class PortalableObject : MonoBehaviour
         transform.rotation = outTransform.rotation * relativeRot;
 
         // Update velocity of rigidbody.
-        Vector3 relativeVel = inTransform.InverseTransformDirection(rigidbody.linearVelocity);
-        relativeVel = halfTurn * relativeVel;
-        rigidbody.linearVelocity = outTransform.TransformDirection(relativeVel);
+    Vector3 relativeVel = inTransform.InverseTransformDirection(rigidbody.linearVelocity);
+    relativeVel = halfTurn * relativeVel;
+    rigidbody.linearVelocity = outTransform.TransformDirection(relativeVel);
 
         // Swap portal references.
         var tmp = inPortal;
         inPortal = outPortal;
         outPortal = tmp;
+
+        lastWarpTime = Time.time;
+    }
+
+    public float GetLastWarpTime()
+    {
+        return lastWarpTime;
     }
 }
