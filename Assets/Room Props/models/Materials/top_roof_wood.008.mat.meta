@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 767e976b0e2c9b64db2711dc92d7400a
+timeCreated: 1541616199
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 131004
+  packageName: Full Medieval Room
+  packageVersion: 1.0
+  assetPath: Assets/Room/models/Materials/top_roof_wood.008.mat
+  uploadId: 278357

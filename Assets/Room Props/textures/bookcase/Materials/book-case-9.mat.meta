@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d14ab62025729a14b811c155c96e7d35
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 131004
+  packageName: Full Medieval Room
+  packageVersion: 1.0
+  assetPath: Assets/Room/textures/bookcase/Materials/book-case-9.mat
+  uploadId: 278357
