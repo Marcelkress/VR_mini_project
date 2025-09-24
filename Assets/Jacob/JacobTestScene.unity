@@ -504,7 +504,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac373d2409e0e50daaffc80608ef2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damager
-  damageAmount: 10
+  baseDamageAmount: 10
+  velocityMultiplier: 2
+  minimumVelocity: 1
+  maxVelocity: 10
+  showDebugInfo: 1
 --- !u!54 &1027977133
 Rigidbody:
   m_ObjectHideFlags: 0
