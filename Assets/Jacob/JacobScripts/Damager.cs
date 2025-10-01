@@ -33,7 +33,7 @@ public class Damager : MonoBehaviour
         
         if (showDebugInfo && currentVelocity > minimumVelocity)
         {
-            Debug.Log($"Weapon velocity: {currentVelocity:F2} m/s");
+          //  Debug.Log($"Weapon velocity: {currentVelocity:F2} m/s");
         }
     }
     

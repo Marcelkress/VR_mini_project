@@ -1,538 +1,744 @@
 fileFormatVersion: 2
 guid: 8ac9a17e368a9564d9913fbee50048a9
-timeCreated: 1522683393
-licenseType: Store
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: Base_bone
-    100002: Bottom_arm.L
-    100004: Bottom_arm.R
-    100006: Bottom_low_leg.L
-    100008: Bottom_low_leg.R
-    100010: Clavicle.L
-    100012: Clavicle.R
-    100014: Creature_armature1
-    100016: Elbow_IK.L
-    100018: Elbow_IK.L_end
-    100020: Elbow_IK.R
-    100022: Elbow_IK.R_end
-    100024: finger1_1.L
-    100026: finger1_1.R
-    100028: finger1_2.L
-    100030: finger1_2.R
-    100032: finger1_3.L
-    100034: finger1_3.L_end
-    100036: finger1_3.R
-    100038: finger1_3.R_end
-    100040: finger2_1.L
-    100042: finger2_1.R
-    100044: finger2_2.L
-    100046: finger2_2.R
-    100048: finger2_3.L
-    100050: finger2_3.L_end
-    100052: finger2_3.R
-    100054: finger2_3.R_end
-    100056: finger3_1.L
-    100058: finger3_1.R
-    100060: finger3_2.L
-    100062: finger3_2.R
-    100064: finger3_3.L
-    100066: finger3_3.L_end
-    100068: finger3_3.R
-    100070: finger3_3.R_end
-    100072: finger4_1.L
-    100074: finger4_1.R
-    100076: finger4_2.L
-    100078: finger4_2.R
-    100080: finger4_3.L
-    100082: finger4_3.L_end
-    100084: finger4_3.R
-    100086: finger4_3.R_end
-    100088: Foot.L
-    100090: Foot.R
-    100092: Foot_ctrl.L
-    100094: Foot_ctrl.R
-    100096: Foot_IK.L
-    100098: Foot_IK.L_end
-    100100: Foot_IK.R
-    100102: Foot_IK.R_end
-    100104: FootRoll_crtl.L
-    100106: FootRoll_crtl.L_end
-    100108: FootRoll_crtl.R
-    100110: FootRoll_crtl.R_end
-    100112: Hand.L
-    100114: Hand.R
-    100116: Hand_IK.L
-    100118: Hand_IK.R
-    100120: Head
-    100122: Heel_roll.L
-    100124: Heel_roll.R
-    100126: Hips_ctrl
-    100128: //RootNode
-    100130: Horror1_LP
-    100132: Jaw
-    100134: Jaw_end
-    100136: Knee_IK.L
-    100138: Knee_IK.L_end
-    100140: Knee_IK.R
-    100142: Knee_IK.R_end
-    100144: Neck
-    100146: spine_1
-    100148: spine_2
-    100150: spine_3
-    100152: spine_5
-    100154: Thumb_1.L
-    100156: Thumb_1.R
-    100158: Thumb_2.L
-    100160: Thumb_2.L_end
-    100162: Thumb_2.R
-    100164: Thumb_2.R_end
-    100166: Toe.L
-    100168: Toe.L_end
-    100170: Toe.R
-    100172: Toe.R_end
-    100174: Toe_roll.L
-    100176: Toe_roll.R
-    100178: Upper_arm.L
-    100180: Upper_arm.R
-    100182: Upper_leg.L
-    100184: Upper_leg.R
-    400000: Base_bone
-    400002: Bottom_arm.L
-    400004: Bottom_arm.R
-    400006: Bottom_low_leg.L
-    400008: Bottom_low_leg.R
-    400010: Clavicle.L
-    400012: Clavicle.R
-    400014: Creature_armature1
-    400016: Elbow_IK.L
-    400018: Elbow_IK.L_end
-    400020: Elbow_IK.R
-    400022: Elbow_IK.R_end
-    400024: finger1_1.L
-    400026: finger1_1.R
-    400028: finger1_2.L
-    400030: finger1_2.R
-    400032: finger1_3.L
-    400034: finger1_3.L_end
-    400036: finger1_3.R
-    400038: finger1_3.R_end
-    400040: finger2_1.L
-    400042: finger2_1.R
-    400044: finger2_2.L
-    400046: finger2_2.R
-    400048: finger2_3.L
-    400050: finger2_3.L_end
-    400052: finger2_3.R
-    400054: finger2_3.R_end
-    400056: finger3_1.L
-    400058: finger3_1.R
-    400060: finger3_2.L
-    400062: finger3_2.R
-    400064: finger3_3.L
-    400066: finger3_3.L_end
-    400068: finger3_3.R
-    400070: finger3_3.R_end
-    400072: finger4_1.L
-    400074: finger4_1.R
-    400076: finger4_2.L
-    400078: finger4_2.R
-    400080: finger4_3.L
-    400082: finger4_3.L_end
-    400084: finger4_3.R
-    400086: finger4_3.R_end
-    400088: Foot.L
-    400090: Foot.R
-    400092: Foot_ctrl.L
-    400094: Foot_ctrl.R
-    400096: Foot_IK.L
-    400098: Foot_IK.L_end
-    400100: Foot_IK.R
-    400102: Foot_IK.R_end
-    400104: FootRoll_crtl.L
-    400106: FootRoll_crtl.L_end
-    400108: FootRoll_crtl.R
-    400110: FootRoll_crtl.R_end
-    400112: Hand.L
-    400114: Hand.R
-    400116: Hand_IK.L
-    400118: Hand_IK.R
-    400120: Head
-    400122: Heel_roll.L
-    400124: Heel_roll.R
-    400126: Hips_ctrl
-    400128: //RootNode
-    400130: Horror1_LP
-    400132: Jaw
-    400134: Jaw_end
-    400136: Knee_IK.L
-    400138: Knee_IK.L_end
-    400140: Knee_IK.R
-    400142: Knee_IK.R_end
-    400144: Neck
-    400146: spine_1
-    400148: spine_2
-    400150: spine_3
-    400152: spine_5
-    400154: Thumb_1.L
-    400156: Thumb_1.R
-    400158: Thumb_2.L
-    400160: Thumb_2.L_end
-    400162: Thumb_2.R
-    400164: Thumb_2.R_end
-    400166: Toe.L
-    400168: Toe.L_end
-    400170: Toe.R
-    400172: Toe.R_end
-    400174: Toe_roll.L
-    400176: Toe_roll.R
-    400178: Upper_arm.L
-    400180: Upper_arm.R
-    400182: Upper_leg.L
-    400184: Upper_leg.R
-    4300000: Horror1_LP
-    7400000: Creature_armature1|attack_1
-    7400002: Creature_armature1|attack_2
-    7400004: Creature_armature1|attack_3
-    7400006: Creature_armature1|battle_idle
-    7400008: Creature_armature1|bite
-    7400010: Creature_armature1|crawl
-    7400012: Creature_armature1|crawl_bite
-    7400014: Creature_armature1|crawl_idol
-    7400016: Creature_armature1|crawl_root_motion
-    7400018: Creature_armature1|crawl_to_state
-    7400020: Creature_armature1|crawl_to_state.001
-    7400022: Creature_armature1|death_1
-    7400024: Creature_armature1|death_2
-    7400026: Creature_armature1|defence
-    7400028: Creature_armature1|eating
-    7400030: Creature_armature1|hit_1
-    7400032: Creature_armature1|hit_2
-    7400034: Creature_armature1|idle
-    7400036: Creature_armature1|jump
-    7400038: Creature_armature1|roar
-    7400040: Creature_armature1|Run
-    7400042: Creature_armature1|Run_root_motion
-    7400044: Creature_armature1|state_to_crawl
-    7400046: Creature_armature1|walk
-    7400048: Creature_armature1|walk_root_motion
-    7400050: Creature_armature1|defence_start
-    7400052: Creature_armature1|defence_end
-    9500000: //RootNode
-    13700000: Horror1_LP
+  serializedVersion: 24200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Base_bone
+  - first:
+      1: 100002
+    second: Bottom_arm.L
+  - first:
+      1: 100004
+    second: Bottom_arm.R
+  - first:
+      1: 100006
+    second: Bottom_low_leg.L
+  - first:
+      1: 100008
+    second: Bottom_low_leg.R
+  - first:
+      1: 100010
+    second: Clavicle.L
+  - first:
+      1: 100012
+    second: Clavicle.R
+  - first:
+      1: 100014
+    second: Creature_armature1
+  - first:
+      1: 100016
+    second: Elbow_IK.L
+  - first:
+      1: 100018
+    second: Elbow_IK.L_end
+  - first:
+      1: 100020
+    second: Elbow_IK.R
+  - first:
+      1: 100022
+    second: Elbow_IK.R_end
+  - first:
+      1: 100024
+    second: finger1_1.L
+  - first:
+      1: 100026
+    second: finger1_1.R
+  - first:
+      1: 100028
+    second: finger1_2.L
+  - first:
+      1: 100030
+    second: finger1_2.R
+  - first:
+      1: 100032
+    second: finger1_3.L
+  - first:
+      1: 100034
+    second: finger1_3.L_end
+  - first:
+      1: 100036
+    second: finger1_3.R
+  - first:
+      1: 100038
+    second: finger1_3.R_end
+  - first:
+      1: 100040
+    second: finger2_1.L
+  - first:
+      1: 100042
+    second: finger2_1.R
+  - first:
+      1: 100044
+    second: finger2_2.L
+  - first:
+      1: 100046
+    second: finger2_2.R
+  - first:
+      1: 100048
+    second: finger2_3.L
+  - first:
+      1: 100050
+    second: finger2_3.L_end
+  - first:
+      1: 100052
+    second: finger2_3.R
+  - first:
+      1: 100054
+    second: finger2_3.R_end
+  - first:
+      1: 100056
+    second: finger3_1.L
+  - first:
+      1: 100058
+    second: finger3_1.R
+  - first:
+      1: 100060
+    second: finger3_2.L
+  - first:
+      1: 100062
+    second: finger3_2.R
+  - first:
+      1: 100064
+    second: finger3_3.L
+  - first:
+      1: 100066
+    second: finger3_3.L_end
+  - first:
+      1: 100068
+    second: finger3_3.R
+  - first:
+      1: 100070
+    second: finger3_3.R_end
+  - first:
+      1: 100072
+    second: finger4_1.L
+  - first:
+      1: 100074
+    second: finger4_1.R
+  - first:
+      1: 100076
+    second: finger4_2.L
+  - first:
+      1: 100078
+    second: finger4_2.R
+  - first:
+      1: 100080
+    second: finger4_3.L
+  - first:
+      1: 100082
+    second: finger4_3.L_end
+  - first:
+      1: 100084
+    second: finger4_3.R
+  - first:
+      1: 100086
+    second: finger4_3.R_end
+  - first:
+      1: 100088
+    second: Foot.L
+  - first:
+      1: 100090
+    second: Foot.R
+  - first:
+      1: 100092
+    second: Foot_ctrl.L
+  - first:
+      1: 100094
+    second: Foot_ctrl.R
+  - first:
+      1: 100096
+    second: Foot_IK.L
+  - first:
+      1: 100098
+    second: Foot_IK.L_end
+  - first:
+      1: 100100
+    second: Foot_IK.R
+  - first:
+      1: 100102
+    second: Foot_IK.R_end
+  - first:
+      1: 100104
+    second: FootRoll_crtl.L
+  - first:
+      1: 100106
+    second: FootRoll_crtl.L_end
+  - first:
+      1: 100108
+    second: FootRoll_crtl.R
+  - first:
+      1: 100110
+    second: FootRoll_crtl.R_end
+  - first:
+      1: 100112
+    second: Hand.L
+  - first:
+      1: 100114
+    second: Hand.R
+  - first:
+      1: 100116
+    second: Hand_IK.L
+  - first:
+      1: 100118
+    second: Hand_IK.R
+  - first:
+      1: 100120
+    second: Head
+  - first:
+      1: 100122
+    second: Heel_roll.L
+  - first:
+      1: 100124
+    second: Heel_roll.R
+  - first:
+      1: 100126
+    second: Hips_ctrl
+  - first:
+      1: 100128
+    second: //RootNode
+  - first:
+      1: 100130
+    second: Horror1_LP
+  - first:
+      1: 100132
+    second: Jaw
+  - first:
+      1: 100134
+    second: Jaw_end
+  - first:
+      1: 100136
+    second: Knee_IK.L
+  - first:
+      1: 100138
+    second: Knee_IK.L_end
+  - first:
+      1: 100140
+    second: Knee_IK.R
+  - first:
+      1: 100142
+    second: Knee_IK.R_end
+  - first:
+      1: 100144
+    second: Neck
+  - first:
+      1: 100146
+    second: spine_1
+  - first:
+      1: 100148
+    second: spine_2
+  - first:
+      1: 100150
+    second: spine_3
+  - first:
+      1: 100152
+    second: spine_5
+  - first:
+      1: 100154
+    second: Thumb_1.L
+  - first:
+      1: 100156
+    second: Thumb_1.R
+  - first:
+      1: 100158
+    second: Thumb_2.L
+  - first:
+      1: 100160
+    second: Thumb_2.L_end
+  - first:
+      1: 100162
+    second: Thumb_2.R
+  - first:
+      1: 100164
+    second: Thumb_2.R_end
+  - first:
+      1: 100166
+    second: Toe.L
+  - first:
+      1: 100168
+    second: Toe.L_end
+  - first:
+      1: 100170
+    second: Toe.R
+  - first:
+      1: 100172
+    second: Toe.R_end
+  - first:
+      1: 100174
+    second: Toe_roll.L
+  - first:
+      1: 100176
+    second: Toe_roll.R
+  - first:
+      1: 100178
+    second: Upper_arm.L
+  - first:
+      1: 100180
+    second: Upper_arm.R
+  - first:
+      1: 100182
+    second: Upper_leg.L
+  - first:
+      1: 100184
+    second: Upper_leg.R
+  - first:
+      4: 400000
+    second: Base_bone
+  - first:
+      4: 400002
+    second: Bottom_arm.L
+  - first:
+      4: 400004
+    second: Bottom_arm.R
+  - first:
+      4: 400006
+    second: Bottom_low_leg.L
+  - first:
+      4: 400008
+    second: Bottom_low_leg.R
+  - first:
+      4: 400010
+    second: Clavicle.L
+  - first:
+      4: 400012
+    second: Clavicle.R
+  - first:
+      4: 400014
+    second: Creature_armature1
+  - first:
+      4: 400016
+    second: Elbow_IK.L
+  - first:
+      4: 400018
+    second: Elbow_IK.L_end
+  - first:
+      4: 400020
+    second: Elbow_IK.R
+  - first:
+      4: 400022
+    second: Elbow_IK.R_end
+  - first:
+      4: 400024
+    second: finger1_1.L
+  - first:
+      4: 400026
+    second: finger1_1.R
+  - first:
+      4: 400028
+    second: finger1_2.L
+  - first:
+      4: 400030
+    second: finger1_2.R
+  - first:
+      4: 400032
+    second: finger1_3.L
+  - first:
+      4: 400034
+    second: finger1_3.L_end
+  - first:
+      4: 400036
+    second: finger1_3.R
+  - first:
+      4: 400038
+    second: finger1_3.R_end
+  - first:
+      4: 400040
+    second: finger2_1.L
+  - first:
+      4: 400042
+    second: finger2_1.R
+  - first:
+      4: 400044
+    second: finger2_2.L
+  - first:
+      4: 400046
+    second: finger2_2.R
+  - first:
+      4: 400048
+    second: finger2_3.L
+  - first:
+      4: 400050
+    second: finger2_3.L_end
+  - first:
+      4: 400052
+    second: finger2_3.R
+  - first:
+      4: 400054
+    second: finger2_3.R_end
+  - first:
+      4: 400056
+    second: finger3_1.L
+  - first:
+      4: 400058
+    second: finger3_1.R
+  - first:
+      4: 400060
+    second: finger3_2.L
+  - first:
+      4: 400062
+    second: finger3_2.R
+  - first:
+      4: 400064
+    second: finger3_3.L
+  - first:
+      4: 400066
+    second: finger3_3.L_end
+  - first:
+      4: 400068
+    second: finger3_3.R
+  - first:
+      4: 400070
+    second: finger3_3.R_end
+  - first:
+      4: 400072
+    second: finger4_1.L
+  - first:
+      4: 400074
+    second: finger4_1.R
+  - first:
+      4: 400076
+    second: finger4_2.L
+  - first:
+      4: 400078
+    second: finger4_2.R
+  - first:
+      4: 400080
+    second: finger4_3.L
+  - first:
+      4: 400082
+    second: finger4_3.L_end
+  - first:
+      4: 400084
+    second: finger4_3.R
+  - first:
+      4: 400086
+    second: finger4_3.R_end
+  - first:
+      4: 400088
+    second: Foot.L
+  - first:
+      4: 400090
+    second: Foot.R
+  - first:
+      4: 400092
+    second: Foot_ctrl.L
+  - first:
+      4: 400094
+    second: Foot_ctrl.R
+  - first:
+      4: 400096
+    second: Foot_IK.L
+  - first:
+      4: 400098
+    second: Foot_IK.L_end
+  - first:
+      4: 400100
+    second: Foot_IK.R
+  - first:
+      4: 400102
+    second: Foot_IK.R_end
+  - first:
+      4: 400104
+    second: FootRoll_crtl.L
+  - first:
+      4: 400106
+    second: FootRoll_crtl.L_end
+  - first:
+      4: 400108
+    second: FootRoll_crtl.R
+  - first:
+      4: 400110
+    second: FootRoll_crtl.R_end
+  - first:
+      4: 400112
+    second: Hand.L
+  - first:
+      4: 400114
+    second: Hand.R
+  - first:
+      4: 400116
+    second: Hand_IK.L
+  - first:
+      4: 400118
+    second: Hand_IK.R
+  - first:
+      4: 400120
+    second: Head
+  - first:
+      4: 400122
+    second: Heel_roll.L
+  - first:
+      4: 400124
+    second: Heel_roll.R
+  - first:
+      4: 400126
+    second: Hips_ctrl
+  - first:
+      4: 400128
+    second: //RootNode
+  - first:
+      4: 400130
+    second: Horror1_LP
+  - first:
+      4: 400132
+    second: Jaw
+  - first:
+      4: 400134
+    second: Jaw_end
+  - first:
+      4: 400136
+    second: Knee_IK.L
+  - first:
+      4: 400138
+    second: Knee_IK.L_end
+  - first:
+      4: 400140
+    second: Knee_IK.R
+  - first:
+      4: 400142
+    second: Knee_IK.R_end
+  - first:
+      4: 400144
+    second: Neck
+  - first:
+      4: 400146
+    second: spine_1
+  - first:
+      4: 400148
+    second: spine_2
+  - first:
+      4: 400150
+    second: spine_3
+  - first:
+      4: 400152
+    second: spine_5
+  - first:
+      4: 400154
+    second: Thumb_1.L
+  - first:
+      4: 400156
+    second: Thumb_1.R
+  - first:
+      4: 400158
+    second: Thumb_2.L
+  - first:
+      4: 400160
+    second: Thumb_2.L_end
+  - first:
+      4: 400162
+    second: Thumb_2.R
+  - first:
+      4: 400164
+    second: Thumb_2.R_end
+  - first:
+      4: 400166
+    second: Toe.L
+  - first:
+      4: 400168
+    second: Toe.L_end
+  - first:
+      4: 400170
+    second: Toe.R
+  - first:
+      4: 400172
+    second: Toe.R_end
+  - first:
+      4: 400174
+    second: Toe_roll.L
+  - first:
+      4: 400176
+    second: Toe_roll.R
+  - first:
+      4: 400178
+    second: Upper_arm.L
+  - first:
+      4: 400180
+    second: Upper_arm.R
+  - first:
+      4: 400182
+    second: Upper_leg.L
+  - first:
+      4: 400184
+    second: Upper_leg.R
+  - first:
+      43: 4300000
+    second: Horror1_LP
+  - first:
+      74: 7400000
+    second: Creature_armature1|attack_1
+  - first:
+      74: 7400002
+    second: Creature_armature1|attack_2
+  - first:
+      74: 7400004
+    second: Creature_armature1|attack_3
+  - first:
+      74: 7400006
+    second: Creature_armature1|battle_idle
+  - first:
+      74: 7400008
+    second: Creature_armature1|bite
+  - first:
+      74: 7400010
+    second: Creature_armature1|crawl
+  - first:
+      74: 7400012
+    second: Creature_armature1|crawl_bite
+  - first:
+      74: 7400014
+    second: Creature_armature1|crawl_idol
+  - first:
+      74: 7400016
+    second: Creature_armature1|crawl_root_motion
+  - first:
+      74: 7400018
+    second: Creature_armature1|crawl_to_state
+  - first:
+      74: 7400020
+    second: Creature_armature1|crawl_to_state.001
+  - first:
+      74: 7400022
+    second: Creature_armature1|death_1
+  - first:
+      74: 7400024
+    second: Creature_armature1|death_2
+  - first:
+      74: 7400026
+    second: Creature_armature1|defence
+  - first:
+      74: 7400028
+    second: Creature_armature1|eating
+  - first:
+      74: 7400030
+    second: Creature_armature1|hit_1
+  - first:
+      74: 7400032
+    second: Creature_armature1|hit_2
+  - first:
+      74: 7400034
+    second: Creature_armature1|idle
+  - first:
+      74: 7400036
+    second: Creature_armature1|jump
+  - first:
+      74: 7400038
+    second: Creature_armature1|roar
+  - first:
+      74: 7400040
+    second: Creature_armature1|Run
+  - first:
+      74: 7400042
+    second: Creature_armature1|Run_root_motion
+  - first:
+      74: 7400044
+    second: Creature_armature1|state_to_crawl
+  - first:
+      74: 7400046
+    second: Creature_armature1|walk
+  - first:
+      74: 7400048
+    second: Creature_armature1|walk_root_motion
+  - first:
+      74: 7400050
+    second: Creature_armature1|defence_start
+  - first:
+      74: 7400052
+    second: Creature_armature1|defence_end
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Horror1_LP
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 'MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger1_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger2_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger3_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger4_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger1_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger2_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger3_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger4_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger1_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger2_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger3_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger4_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger1_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger2_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger3_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger4_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger1_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger2_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger3_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger4_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger1_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger2_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger3_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger4_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger1_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger2_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger3_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger4_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger1_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger2_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger3_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger4_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger1_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger2_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger3_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.L/Upper_arm.L/Bottom_arm.L/Hand.L/finger4_1.L''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger1_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger2_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger3_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5''conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5/Clavicle.R/Upper_arm.R/Bottom_arm.R/Hand.R/finger4_1.R''
-      has translation animation. It is not supported.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-      MuscleClip ''hor_mon_1.2_5'' conversion warning: ''Creature_armature1/Base_bone/Hips_ctrl/spine_1/spine_2/spine_3/spine_5''
-      is between humanoid transforms and has rotation animation. This might lower
-      retargeting quality.
-
-
-'
+    animationImportWarnings: "\nClip 'Creature_armature1|attack_3' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Upper_arm.L' has translation
+      animation that will be discarded.\n\t'Upper_arm.R' has translation animation
+      that will be discarded.\n\nClip 'Creature_armature1|bite' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Upper_arm.L' has translation
+      animation that will be discarded.\n\t'Upper_arm.R' has translation animation
+      that will be discarded.\n\nClip 'Creature_armature1|crawl' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
+      animation that will be discarded.\n\t'finger2_1.L' has translation animation
+      that will be discarded.\n\t'finger3_1.L' has translation animation that will
+      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
+      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
+      animation that will be discarded.\n\t'finger3_1.R' has translation animation
+      that will be discarded.\n\t'finger4_1.R' has translation animation that will
+      be discarded.\n\nClip 'Creature_armature1|crawl_root_motion' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
+      animation that will be discarded.\n\t'finger2_1.L' has translation animation
+      that will be discarded.\n\t'finger3_1.L' has translation animation that will
+      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
+      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
+      animation that will be discarded.\n\t'finger3_1.R' has translation animation
+      that will be discarded.\n\t'finger4_1.R' has translation animation that will
+      be discarded.\n\nClip 'Creature_armature1|crawl_to_state' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
+      animation that will be discarded.\n\t'finger2_1.L' has translation animation
+      that will be discarded.\n\t'finger3_1.L' has translation animation that will
+      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
+      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
+      animation that will be discarded.\n\t'finger3_1.R' has translation animation
+      that will be discarded.\n\t'finger4_1.R' has translation animation that will
+      be discarded.\n\nClip 'Creature_armature1|crawl_to_state.001' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
+      animation that will be discarded.\n\t'finger2_1.L' has translation animation
+      that will be discarded.\n\t'finger3_1.L' has translation animation that will
+      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
+      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
+      animation that will be discarded.\n\t'finger3_1.R' has translation animation
+      that will be discarded.\n\t'finger4_1.R' has translation animation that will
+      be discarded.\n\nClip 'Creature_armature1|jump' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Upper_arm.L' has translation animation
+      that will be discarded.\n\t'Upper_arm.R' has translation animation that will
+      be discarded.\n\nClip 'Creature_armature1|state_to_crawl' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
+      animation that will be discarded.\n\t'finger2_1.L' has translation animation
+      that will be discarded.\n\t'finger3_1.L' has translation animation that will
+      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
+      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
+      animation that will be discarded.\n\t'finger3_1.R' has translation animation
+      that will be discarded.\n\t'finger4_1.R' has translation animation that will
+      be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Creature_armature1|attack_1
       takeName: Creature_armature1|attack_1
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -540,6 +746,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -742,9 +949,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|attack_2
       takeName: Creature_armature1|attack_2
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -752,6 +961,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -954,9 +1164,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|attack_3
       takeName: Creature_armature1|attack_3
+      internalID: 0
       firstFrame: 0
       lastFrame: 25
       wrapMode: 0
@@ -964,6 +1176,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -1166,9 +1379,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|battle_idle
       takeName: Creature_armature1|battle_idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -1176,6 +1391,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 1
@@ -1378,9 +1594,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|bite
       takeName: Creature_armature1|bite
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -1388,6 +1606,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -1590,9 +1809,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|crawl
       takeName: Creature_armature1|crawl
+      internalID: 0
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -1600,6 +1821,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -1802,9 +2024,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|crawl_bite
       takeName: Creature_armature1|crawl_bite
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -1812,6 +2036,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -2014,9 +2239,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|crawl_idol
       takeName: Creature_armature1|crawl_idol
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -2024,6 +2251,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 1
@@ -2226,9 +2454,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|crawl_root_motion
       takeName: Creature_armature1|crawl_root_motion
+      internalID: 0
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -2236,6 +2466,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -2438,9 +2669,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|crawl_to_state
       takeName: Creature_armature1|crawl_to_state
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -2448,6 +2681,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -2650,9 +2884,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|death_1
       takeName: Creature_armature1|death_1
+      internalID: 0
       firstFrame: 0
       lastFrame: 32
       wrapMode: 0
@@ -2660,6 +2896,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2862,9 +3099,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|death_2
       takeName: Creature_armature1|death_2
+      internalID: 0
       firstFrame: 0
       lastFrame: 34
       wrapMode: 0
@@ -2872,6 +3111,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -3074,9 +3314,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|defence
       takeName: Creature_armature1|defence
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -3084,6 +3326,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -3286,9 +3529,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|eating
       takeName: Creature_armature1|eating
+      internalID: 0
       firstFrame: 0
       lastFrame: 100
       wrapMode: 0
@@ -3296,6 +3541,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -3498,9 +3744,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|hit_1
       takeName: Creature_armature1|hit_1
+      internalID: 0
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
@@ -3508,6 +3756,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -3710,9 +3959,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|hit_2
       takeName: Creature_armature1|hit_2
+      internalID: 0
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
@@ -3720,6 +3971,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -3922,9 +4174,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|idle
       takeName: Creature_armature1|idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 80
       wrapMode: 0
@@ -3932,6 +4186,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 1
@@ -4134,9 +4389,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|jump
       takeName: Creature_armature1|jump
+      internalID: 0
       firstFrame: 0
       lastFrame: 45
       wrapMode: 0
@@ -4144,6 +4401,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -4346,9 +4604,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|roar
       takeName: Creature_armature1|roar
+      internalID: 0
       firstFrame: 0
       lastFrame: 45
       wrapMode: 0
@@ -4356,6 +4616,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -4558,9 +4819,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|Run
       takeName: Creature_armature1|Run
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -4568,6 +4831,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -4770,9 +5034,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|Run_root_motion
       takeName: Creature_armature1|Run_root_motion
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -4780,6 +5046,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -4982,9 +5249,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|state_to_crawl
       takeName: Creature_armature1|state_to_crawl
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -4992,6 +5261,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -5194,9 +5464,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|walk
       takeName: Creature_armature1|walk
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -5204,6 +5476,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -5406,9 +5679,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|walk_root_motion
       takeName: Creature_armature1|walk_root_motion
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -5416,6 +5691,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -5618,9 +5894,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|defence_start
       takeName: Creature_armature1|defence
+      internalID: 0
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
@@ -5628,6 +5906,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -5830,9 +6109,11 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Creature_armature1|defence_end
       takeName: Creature_armature1|defence
+      internalID: 0
       firstFrame: 15
       lastFrame: 30
       wrapMode: 0
@@ -5840,6 +6121,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
@@ -6042,32 +6324,59 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human:
     - boneName: spine_1
       humanName: Hips
@@ -6469,482 +6778,500 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
+    - boneName: spine_5
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     skeleton:
     - name: hor_mon_1.2_5(Clone)
+      parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Creature_armature1
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
+      parentName: hor_mon_1.2_5(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Base_bone
-      position: {x: -4.84598806e-09, y: .428947628, z: .00559782935}
-      rotation: {x: 1, y: 1.68936651e-08, z: -1.94707198e-07, w: -8.94069672e-08}
-      scale: {x: 1, y: 1.00000024, z: 1.00000024}
-      transformModified: 1
+      parentName: Creature_armature1
+      position: {x: -0.000000004845988, y: 0.4289476, z: 0.0055978294}
+      rotation: {x: 1, y: 0.000000016893665, z: -0.0000001947072, w: -0.00000008940697}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: Foot_ctrl.L
-      position: {x: -.329971433, y: .572514355, z: -.161258668}
-      rotation: {x: .706368625, y: -.00105111487, z: 8.8127963e-05, w: .707843363}
-      scale: {x: 1.00000024, y: .999999702, z: .999999821}
-      transformModified: 1
+      parentName: Base_bone
+      position: {x: -0.32997143, y: 0.57251436, z: -0.16125867}
+      rotation: {x: 0.7063686, y: -0.0010511149, z: 0.000088127985, w: 0.70784336}
+      scale: {x: 1, y: 0.9999997, z: 0.9999997}
     - name: Knee_IK.L
-      position: {x: -.0443603061, y: -.523475707, z: -.897952914}
-      rotation: {x: .000151989079, y: .749052405, z: -.662509978, w: -.00104479713}
-      scale: {x: .999999881, y: .999999821, z: .99999994}
-      transformModified: 1
+      parentName: Foot_ctrl.L
+      position: {x: -0.044360306, y: -0.5234757, z: -0.89795285}
+      rotation: {x: 0.00015198908, y: 0.74905235, z: -0.66251004, w: -0.0010447971}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
     - name: Knee_IK.L_end
-      position: {x: -0, y: .307957262, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Knee_IK.L
+      position: {x: -0, y: 0.30795726, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Heel_roll.L
-      position: {x: .0289296377, y: .142081901, z: .0617939234}
-      rotation: {x: -.0317059979, y: .708727121, z: -.704015553, w: -.0325988717}
-      scale: {x: .99999994, y: .999999821, z: 1}
-      transformModified: 1
+      parentName: Foot_ctrl.L
+      position: {x: 0.028929636, y: 0.1420819, z: 0.06179392}
+      rotation: {x: -0.031706, y: 0.7087271, z: -0.70401555, w: -0.032598875}
+      scale: {x: 1.0000002, y: 1, z: 1}
     - name: Toe_roll.L
-      position: {x: .00262748171, y: .231427714, z: -.00165385206}
-      rotation: {x: .000722760335, y: -.00730979163, z: -.999905825, w: -.011595374}
-      scale: {x: 1.00001621, y: .999999642, z: 1.00000644}
-      transformModified: 1
+      parentName: Heel_roll.L
+      position: {x: 0.0026274817, y: 0.2314277, z: -0.0016538519}
+      rotation: {x: 0.00072276033, y: -0.0073097944, z: -0.9999058, w: -0.011595359}
+      scale: {x: 1.0000162, y: 0.9999999, z: 1.0000067}
     - name: Foot_IK.L
-      position: {x: -.0245553944, y: .169785097, z: .141680866}
-      rotation: {x: .938787758, y: .0642182752, z: -.0151007194, w: -.338120788}
-      scale: {x: .99999994, y: 1.00000024, z: 1.00000036}
-      transformModified: 1
+      parentName: Toe_roll.L
+      position: {x: -0.024555393, y: 0.1697851, z: 0.14168087}
+      rotation: {x: 0.93878776, y: 0.064218275, z: -0.015100714, w: -0.33812073}
+      scale: {x: 0.99999994, y: 1.0000006, z: 1.0000007}
     - name: Foot_IK.L_end
-      position: {x: -0, y: .222494468, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Foot_IK.L
+      position: {x: -0, y: 0.22249445, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: FootRoll_crtl.L
-      position: {x: .0289295781, y: .142081901, z: .0617939159}
-      rotation: {x: -.707819998, y: -.0440797992, z: .0449887663, w: -.703579307}
-      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
-      transformModified: 1
+      parentName: Foot_ctrl.L
+      position: {x: 0.028929576, y: 0.1420819, z: 0.061793912}
+      rotation: {x: -0.70782006, y: -0.044079803, z: 0.04498877, w: -0.70357925}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
     - name: FootRoll_crtl.L_end
-      position: {x: -0, y: .231363326, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: FootRoll_crtl.L
+      position: {x: -0, y: 0.23136331, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Hips_ctrl
-      position: {x: -.000195574976, y: .252791137, z: -1.29366052}
-      rotation: {x: .520526648, y: .478555679, z: .52097702, w: .478141636}
-      scale: {x: .999998569, y: .999999642, z: .99999845}
-      transformModified: 1
+      parentName: Base_bone
+      position: {x: -0.004508607, y: 0.25058106, z: -1.2677145}
+      rotation: {x: 0.52052665, y: 0.47855568, z: 0.52097696, w: 0.47814167}
+      scale: {x: 0.9999983, y: 0.9999993, z: 0.99999833}
     - name: spine_1
-      position: {x: -.0279247034, y: .00920470431, z: -2.41625257e-05}
-      rotation: {x: -.706800997, y: 5.95791576e-08, z: -.707412481, w: -3.73777409e-09}
-      scale: {x: .999999881, y: 1, z: .999999881}
-      transformModified: 1
+      parentName: Hips_ctrl
+      position: {x: -0.030122984, y: -0.016647687, z: -0.00002605845}
+      rotation: {x: -0.70680106, y: 0.00000005960465, z: -0.7074124, w: 0.000000009720566}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
     - name: spine_2
-      position: {x: -1.41473881e-08, y: .337592274, z: -1.16677249e-07}
-      rotation: {x: .0255304929, y: -1.83082398e-06, z: -8.90123744e-08, w: .999674082}
-      scale: {x: .999999166, y: .999998808, z: 1.00000083}
-      transformModified: 1
+      parentName: spine_1
+      position: {x: 0.0000000050718962, y: 0.33759236, z: -0.000000027212078}
+      rotation: {x: 0.025530556, y: -0.0000017893902, z: -0.000000072643154, w: 0.999674}
+      scale: {x: 0.9999992, y: 0.99999917, z: 1.000001}
     - name: spine_3
-      position: {x: 3.81551182e-08, y: .268445253, z: -5.23868913e-08}
-      rotation: {x: .0181336459, y: 8.79526407e-09, z: -1.27257977e-07, w: .99983561}
-      scale: {x: .99999994, y: .999999702, z: 1.00000048}
-      transformModified: 1
+      parentName: spine_2
+      position: {x: 0.000000015919793, y: 0.26844525, z: -0.000000013969837}
+      rotation: {x: 0.17087062, y: -0.00000004021081, z: -0.0000007027685, w: 0.9852935}
+      scale: {x: 1, y: 0.9999996, z: 1.0000005}
     - name: spine_5
-      position: {x: -1.62981439e-09, y: .533986688, z: -4.33356e-08}
-      rotation: {x: .382058144, y: 4.73223565e-07, z: -1.33659739e-06, w: .924138308}
-      scale: {x: 1, y: .999999523, z: 1.00000048}
-      transformModified: 1
+      parentName: spine_3
+      position: {x: 0.000000007217749, y: 0.5339864, z: 0.00000008317874}
+      rotation: {x: -0.0094477665, y: 0.00000040994527, z: -0.00000005702833, w: 0.99995536}
+      scale: {x: 0.9999999, y: 0.9999994, z: 1.0000006}
     - name: Neck
-      position: {x: -3.25962879e-09, y: .326276362, z: -5.41767768e-08}
-      rotation: {x: -.24036406, y: -9.715244e-07, z: 1.03724415e-06, w: .970682859}
-      scale: {x: .999999881, y: .99999994, z: 1.00000012}
-      transformModified: 1
+      parentName: spine_5
+      position: {x: 4.6566123e-10, y: 0.32627633, z: -0.0000000709042}
+      rotation: {x: -0.39309722, y: -0.0000007218243, z: 0.0000015450408, w: 0.91949695}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
     - name: Head
-      position: {x: -9.31322519e-10, y: .162452877, z: 1.97906025e-09}
-      rotation: {x: .0823473707, y: 3.49221864e-06, z: -9.01709214e-08, w: .996603727}
-      scale: {x: 1, y: .99999994, z: 1.00000036}
-      transformModified: 1
+      parentName: Neck
+      position: {x: 0.000000007916241, y: 0.16245289, z: 0.00000017386627}
+      rotation: {x: 0.08234731, y: 0.0000034939903, z: -0.00000013329196, w: 0.9966037}
+      scale: {x: 1, y: 1.0000001, z: 1.0000007}
     - name: Jaw
-      position: {x: -1.86913937e-07, y: .0708072856, z: .0878658816}
-      rotation: {x: .222978175, y: -3.8531871e-09, z: 4.41859697e-07, w: .974823415}
-      scale: {x: .999999583, y: .999999046, z: 1}
-      transformModified: 1
+      parentName: Head
+      position: {x: -0.0000001833408, y: 0.07080724, z: 0.08786584}
+      rotation: {x: 0.22297817, y: -0.0000000045456545, z: 0.00000045354665, w: 0.9748235}
+      scale: {x: 0.9999996, y: 0.9999999, z: 1.000001}
     - name: Jaw_end
-      position: {x: -0, y: .289413571, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Jaw
+      position: {x: -0, y: 0.28941357, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Clavicle.L
-      position: {x: -.0250846688, y: .219915614, z: .251006275}
-      rotation: {x: -.534077048, y: .438202798, z: .462786764, w: .555489421}
-      scale: {x: 1, y: 1, z: .999998331}
-      transformModified: 1
+      parentName: spine_5
+      position: {x: -0.02508467, y: 0.21991555, z: 0.25100625}
+      rotation: {x: -0.5340772, y: 0.43820244, z: 0.46278673, w: 0.5554896}
+      scale: {x: 1, y: 0.99999976, z: 0.9999982}
     - name: Upper_arm.L
-      position: {x: .00525165116, y: .360532016, z: -.0854411349}
-      rotation: {x: .00102968491, y: .0487433113, z: .102679119, w: .993519008}
-      scale: {x: 1.00000119, y: .999997973, z: 1.00000036}
-      transformModified: 1
+      parentName: Clavicle.L
+      position: {x: 0.0052511874, y: 0.36053205, z: -0.08544112}
+      rotation: {x: 0.0010295208, y: 0.048743404, z: 0.10267957, w: 0.99351895}
+      scale: {x: 1.000001, y: 0.9999978, z: 1.0000005}
     - name: Bottom_arm.L
-      position: {x: -1.41561017e-07, y: .571050227, z: -1.45286307e-07}
-      rotation: {x: .0238659531, y: .0879362747, z: -.00492339302, w: .995828032}
-      scale: {x: .999998689, y: 1.00000131, z: 1.00000131}
-      transformModified: 1
+      parentName: Upper_arm.L
+      position: {x: 0.00000008044298, y: 0.57105017, z: 0.000000031664964}
+      rotation: {x: 0.023866743, y: 0.087936476, z: -0.0049233125, w: 0.99582803}
+      scale: {x: 0.9999985, y: 1.0000012, z: 1.0000019}
     - name: Hand.L
-      position: {x: 5.21540606e-08, y: .59054333, z: 1.49011603e-08}
-      rotation: {x: -.14647451, y: -.0214818511, z: -.088986434, w: .984969676}
-      scale: {x: 1.00000155, y: .999998987, z: 1.00000024}
-      transformModified: 1
+      parentName: Bottom_arm.L
+      position: {x: 0.0000000372529, y: 0.5905433, z: -0.000000111758695}
+      rotation: {x: -0.25765613, y: 0.0041364715, z: -0.097882286, w: 0.96125716}
+      scale: {x: 1.0000024, y: 0.9999992, z: 1}
     - name: finger1_1.L
-      position: {x: -.0423863344, y: .17835395, z: -.0140570467}
-      rotation: {x: -.0313272029, y: -.676163614, z: .0924576223, w: .730255425}
-      scale: {x: 1.00000012, y: .999999642, z: 1.00000036}
-      transformModified: 1
+      parentName: Hand.L
+      position: {x: -0.04238626, y: 0.17835388, z: -0.01405712}
+      rotation: {x: -0.031327315, y: -0.6761633, z: 0.09245887, w: 0.73025554}
+      scale: {x: 1.0000001, y: 0.99999905, z: 1.0000004}
     - name: finger1_2.L
-      position: {x: 2.235174e-08, y: .102307387, z: -1.04308121e-07}
-      rotation: {x: .000949680689, y: -.0421239696, z: .0338302813, w: .99853909}
-      scale: {x: .999999344, y: .999999881, z: .999998391}
-      transformModified: 1
+      parentName: finger1_1.L
+      position: {x: -0.000000014901159, y: 0.102307215, z: -0.000000014901159}
+      rotation: {x: 0.0009482497, y: -0.042124335, z: 0.033831667, w: 0.998539}
+      scale: {x: 0.9999994, y: 1.0000001, z: 0.9999982}
     - name: finger1_3.L
-      position: {x: 1.49011603e-08, y: .0805129185, z: -7.45057989e-08}
-      rotation: {x: .0247862227, y: -.665782988, z: .0269720275, w: .745245814}
-      scale: {x: .999999642, y: .999999464, z: 1.0000006}
-      transformModified: 1
+      parentName: finger1_2.L
+      position: {x: -0.000000059604638, y: 0.08051289, z: -0.000000044703476}
+      rotation: {x: 0.02479025, y: -0.6657828, z: 0.02697548, w: 0.7452456}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1.0000008}
     - name: finger1_3.L_end
-      position: {x: -0, y: .0758255571, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger1_3.L
+      position: {x: -0, y: 0.07582556, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Thumb_1.L
-      position: {x: -.0299097728, y: .0709715933, z: -.0125488518}
-      rotation: {x: .306785911, y: -.936629415, z: -.160154194, w: .0543906316}
-      scale: {x: 1.0000006, y: 1, z: .999999583}
-      transformModified: 1
+      parentName: Hand.L
+      position: {x: -0.029909682, y: 0.07097159, z: -0.012548881}
+      rotation: {x: 0.24743287, y: -0.9387423, z: -0.22876433, w: 0.07215797}
+      scale: {x: 1.0000005, y: 0.9999999, z: 0.99999946}
     - name: Thumb_2.L
-      position: {x: 5.96046412e-08, y: .124244206, z: -5.96046412e-08}
-      rotation: {x: -.0153769553, y: .967913151, z: .0267733652, w: -.249380961}
-      scale: {x: .999999404, y: .999999762, z: .999999881}
-      transformModified: 1
+      parentName: Thumb_1.L
+      position: {x: -0, y: 0.12424418, z: 0.000000059604638}
+      rotation: {x: -0.015376532, y: 0.96791315, z: 0.026774077, w: -0.24938105}
+      scale: {x: 0.9999998, y: 1.0000004, z: 1.0000005}
     - name: Thumb_2.L_end
-      position: {x: -0, y: .129705131, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Thumb_2.L
+      position: {x: -0, y: 0.12970513, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: finger2_1.L
-      position: {x: .000649079622, y: .188839719, z: -.0088660745}
-      rotation: {x: -.0658774525, y: -.694332123, z: .0741171762, w: .712790132}
-      scale: {x: .999999106, y: 1.00000072, z: 1.00000036}
-      transformModified: 1
+      parentName: Hand.L
+      position: {x: 0.00064916903, y: 0.18883964, z: -0.008866153}
+      rotation: {x: -0.06587739, y: -0.69433224, z: 0.074117824, w: 0.71278995}
+      scale: {x: 0.9999992, y: 1.0000005, z: 1.0000001}
     - name: finger2_2.L
-      position: {x: 4.470348e-08, y: .0995623097, z: 1.93715081e-07}
-      rotation: {x: -.000963717233, y: -.0605042577, z: .0379454158, w: .997446001}
-      scale: {x: .999999762, y: .999999523, z: .999999762}
-      transformModified: 1
+      parentName: finger2_1.L
+      position: {x: -0.00000013411044, y: 0.09956233, z: -0.000000044703476}
+      rotation: {x: -0.0009644177, y: -0.060504206, z: 0.03794751, w: 0.99744594}
+      scale: {x: 1.0000004, y: 0.99999964, z: 1.0000001}
     - name: finger2_3.L
-      position: {x: -4.470348e-08, y: .0836796686, z: -7.45057989e-08}
-      rotation: {x: .0307122618, y: -.677647769, z: .0218658037, w: .734419703}
-      scale: {x: .999999523, y: .999999464, z: 1.00000036}
-      transformModified: 1
+      parentName: finger2_2.L
+      position: {x: -0.000000014901159, y: 0.08367965, z: 0.000000029802319}
+      rotation: {x: 0.030716263, y: -0.67764777, z: 0.021867605, w: 0.7344194}
+      scale: {x: 0.9999995, y: 0.99999946, z: 0.99999994}
     - name: finger2_3.L_end
-      position: {x: -0, y: .086791046, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger2_3.L
+      position: {x: -0, y: 0.086791046, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: finger3_1.L
-      position: {x: .0407839678, y: .179767743, z: -.0178947356}
-      rotation: {x: -.0801729262, y: -.730525613, z: .0520542637, w: .676162064}
-      scale: {x: .999999642, y: 1.00000095, z: .999997795}
-      transformModified: 1
+      parentName: Hand.L
+      position: {x: 0.040784057, y: 0.17976774, z: -0.017894758}
+      rotation: {x: -0.080175556, y: -0.7305252, z: 0.052054364, w: 0.6761621}
+      scale: {x: 1.0000001, y: 1.0000006, z: 0.99999785}
     - name: finger3_2.L
-      position: {x: 1.49011603e-08, y: .0892323181, z: -1.19209282e-07}
-      rotation: {x: .00737467036, y: -.0998355597, z: .0354897492, w: .994343519}
-      scale: {x: 1.00000012, y: .999999285, z: .999998033}
-      transformModified: 1
+      parentName: finger3_1.L
+      position: {x: 0.00000008940695, y: 0.08923229, z: 0.000000029802319}
+      rotation: {x: 0.007378343, y: -0.0998355, z: 0.035491817, w: 0.99434346}
+      scale: {x: 1.0000004, y: 1, z: 0.99999833}
     - name: finger3_3.L
-      position: {x: -2.98023206e-08, y: .071381323, z: 1.49011598e-07}
-      rotation: {x: -.03300751, y: .686103344, z: -.0169050284, w: -.726558268}
-      scale: {x: .999999046, y: .999999583, z: 1.00000024}
-      transformModified: 1
+      parentName: finger3_2.L
+      position: {x: 0.000000022351738, y: 0.07138148, z: 0}
+      rotation: {x: -0.033005487, y: 0.6861033, z: -0.016906712, w: -0.7265584}
+      scale: {x: 0.9999988, y: 0.9999996, z: 1}
     - name: finger3_3.L_end
-      position: {x: -0, y: .0799542442, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger3_3.L
+      position: {x: -0, y: 0.079954244, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: finger4_1.L
-      position: {x: .0741109177, y: .167109191, z: -.0279541668}
-      rotation: {x: -.0759323314, y: -.809916735, z: .0477416031, w: .579646289}
-      scale: {x: .999999106, y: 1.00000072, z: .999999881}
-      transformModified: 1
+      parentName: Hand.L
+      position: {x: 0.07411101, y: 0.16710912, z: -0.027954195}
+      rotation: {x: -0.07593253, y: -0.80991656, z: 0.04774071, w: 0.5796467}
+      scale: {x: 0.9999994, y: 1.0000002, z: 0.9999999}
     - name: finger4_2.L
-      position: {x: -5.96046412e-08, y: .0776406899, z: -5.96046412e-08}
-      rotation: {x: .0146694742, y: -.129918486, z: .0292117819, w: .990985751}
-      scale: {x: 1.00000036, y: .999998927, z: 1.00000036}
-      transformModified: 1
+      parentName: finger4_1.L
+      position: {x: -0.000000059604638, y: 0.07764066, z: 0.000000059604638}
+      rotation: {x: 0.014675202, y: -0.12991838, z: 0.029217739, w: 0.9909855}
+      scale: {x: 1.0000004, y: 1, z: 1.0000006}
     - name: finger4_3.L
-      position: {x: -7.45057989e-08, y: .0712013766, z: 1.04308121e-07}
-      rotation: {x: -.0311218686, y: .684341431, z: .00457858853, w: -.728482962}
-      scale: {x: .999999702, y: .999999464, z: .999999404}
-      transformModified: 1
+      parentName: finger4_2.L
+      position: {x: -0, y: 0.07120139, z: 0.000000014901159}
+      rotation: {x: -0.031115834, y: 0.6843416, z: 0.004580092, w: -0.728483}
+      scale: {x: 0.99999976, y: 0.99999917, z: 0.9999996}
     - name: finger4_3.L_end
-      position: {x: -0, y: .0783904046, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger4_3.L
+      position: {x: -0, y: 0.078390405, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Clavicle.R
-      position: {x: .0250861645, y: .219915658, z: .251006186}
-      rotation: {x: -.529095948, y: -.445204109, z: -.458529264, w: .558212996}
-      scale: {x: .999999702, y: .999999762, z: .999999762}
-      transformModified: 1
+      parentName: spine_5
+      position: {x: 0.025086163, y: 0.2199155, z: 0.25100616}
+      rotation: {x: -0.5290964, y: -0.4452035, z: -0.45852908, w: 0.55821323}
+      scale: {x: 0.99999964, y: 0.99999976, z: 0.9999997}
     - name: Upper_arm.R
-      position: {x: -.00506547606, y: .343482941, z: -.0895210505}
-      rotation: {x: .00776636228, y: .0406046174, z: .0997487307, w: -.994153559}
-      scale: {x: 1.0000006, y: 1.00000072, z: .999999404}
-      transformModified: 1
+      parentName: Clavicle.R
+      position: {x: -0.005064869, y: 0.3434828, z: -0.08952101}
+      rotation: {x: 0.007766125, y: 0.04060459, z: 0.099749275, w: -0.99415344}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.9999996}
     - name: Bottom_arm.R
-      position: {x: -1.06170766e-07, y: .571050107, z: 1.49011603e-08}
-      rotation: {x: .0237364471, y: -.0878392085, z: .00468882639, w: .995840788}
-      scale: {x: .999999106, y: .999999464, z: 1.00000024}
-      transformModified: 1
+      parentName: Upper_arm.R
+      position: {x: -0.00000014156102, y: 0.57105, z: -0.000000029802319}
+      rotation: {x: 0.023736896, y: -0.087839216, z: 0.0046885116, w: 0.99584085}
+      scale: {x: 1, y: 0.9999997, z: 1.0000008}
     - name: Hand.R
-      position: {x: -4.470348e-08, y: .590543389, z: 1.67638049e-07}
-      rotation: {x: -.150857344, y: .0198735353, z: .0907258391, w: .984182954}
-      scale: {x: 1.0000006, y: 1.00000143, z: 1.00000322}
-      transformModified: 1
+      parentName: Bottom_arm.R
+      position: {x: -0.000000022351738, y: 0.5905435, z: 0.000000052154057}
+      rotation: {x: -0.2625946, y: -0.0045557, z: 0.0966135, w: 0.96004647}
+      scale: {x: 1.0000013, y: 1.0000021, z: 1.0000038}
     - name: finger1_1.R
-      position: {x: .0423864089, y: .178353921, z: -.014057151}
-      rotation: {x: -.0313278735, y: .676163495, z: -.0924578607, w: .730255485}
-      scale: {x: .999999464, y: .999999642, z: .999999762}
-      transformModified: 1
+      parentName: Hand.R
+      position: {x: 0.04238644, y: 0.17835385, z: -0.014056979}
+      rotation: {x: -0.03132855, y: 0.67616314, z: -0.092459224, w: 0.7302556}
+      scale: {x: 0.9999998, y: 1, z: 1}
     - name: finger1_2.R
-      position: {x: -1.49011598e-07, y: .102307267, z: 0}
-      rotation: {x: -.000951766269, y: -.0421240181, z: .0338290706, w: -.998539031}
-      scale: {x: .999999046, y: .999999523, z: .999998093}
-      transformModified: 1
+      parentName: finger1_1.R
+      position: {x: -0.000000029802319, y: 0.1023073, z: 0.00000013411044}
+      rotation: {x: -0.00095217663, y: -0.042123944, z: 0.03383052, w: -0.9985391}
+      scale: {x: 0.9999991, y: 0.99999946, z: 0.99999815}
     - name: finger1_3.R
-      position: {x: 1.93715081e-07, y: .0805129781, z: -1.19209282e-07}
-      rotation: {x: .0247877631, y: .665783167, z: -.0269742832, w: .745245516}
-      scale: {x: 1.00000024, y: .99999994, z: 1.00000012}
-      transformModified: 1
+      parentName: finger1_2.R
+      position: {x: -0.000000014901159, y: 0.0805131, z: 0.000000044703476}
+      rotation: {x: 0.024787843, y: 0.6657832, z: -0.0269749, w: 0.7452454}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999997}
     - name: finger1_3.R_end
-      position: {x: -0, y: .0758255571, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger1_3.R
+      position: {x: -0, y: 0.07582556, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Thumb_1.R
-      position: {x: .0299098473, y: .0709715933, z: -.0125490269}
-      rotation: {x: -.304846555, y: -.936720252, z: -.163020253, w: -.0552109592}
-      scale: {x: .99999994, y: 1.00000024, z: .99999845}
-      transformModified: 1
+      parentName: Hand.R
+      position: {x: 0.029909845, y: 0.07097161, z: -0.012548996}
+      rotation: {x: -0.24408054, y: -0.9388349, z: -0.23175585, w: -0.072820984}
+      scale: {x: 1.0000005, y: 1.0000007, z: 0.99999946}
     - name: Thumb_2.R
-      position: {x: -5.96046412e-08, y: .12424431, z: 1.93715081e-07}
-      rotation: {x: .0153774079, y: .967913151, z: .0267764907, w: .249380812}
-      scale: {x: 1.00000083, y: .999999166, z: .999999523}
-      transformModified: 1
+      parentName: Thumb_1.R
+      position: {x: -0, y: 0.124244295, z: 0.000000055879347}
+      rotation: {x: 0.0153780375, y: 0.9679131, z: 0.026777355, w: 0.24938057}
+      scale: {x: 1.0000013, y: 0.9999991, z: 0.99999934}
     - name: Thumb_2.R_end
-      position: {x: -0, y: .129705131, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Thumb_2.R
+      position: {x: -0, y: 0.12970513, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: finger2_1.R
-      position: {x: -.000649064721, y: .188839629, z: -.00886635389}
-      rotation: {x: .0658764988, y: -.694332242, z: .0741177276, w: -.712790072}
-      scale: {x: .999998271, y: .999999821, z: .999999702}
-      transformModified: 1
+      parentName: Hand.R
+      position: {x: -0.0006490349, y: 0.18883957, z: -0.008866153}
+      rotation: {x: 0.06587722, y: -0.6943321, z: 0.074115634, w: -0.7127903}
+      scale: {x: 0.99999887, y: 1, z: 1}
     - name: finger2_2.R
-      position: {x: -8.94069601e-08, y: .0995623022, z: -1.19209282e-07}
-      rotation: {x: -.000964462059, y: .0605044588, z: -.0379453562, w: .997446001}
-      scale: {x: 1.00000024, y: .999999702, z: .99999994}
-      transformModified: 1
+      parentName: finger2_1.R
+      position: {x: -0.0000001788139, y: 0.099562116, z: 0.00000008940695}
+      rotation: {x: -0.00096366473, y: 0.060504235, z: -0.037946094, w: 0.99744594}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
     - name: finger2_3.R
-      position: {x: 1.19209282e-07, y: .083679758, z: -8.94069601e-08}
-      rotation: {x: .0307152867, y: .677647591, z: -.0218691323, w: .734419525}
-      scale: {x: .999999702, y: .999999464, z: .999999404}
-      transformModified: 1
+      parentName: finger2_2.R
+      position: {x: -0.000000029802319, y: 0.08367961, z: -0.00000008940695}
+      rotation: {x: 0.030712731, y: 0.67764777, z: -0.021866055, w: 0.73441964}
+      scale: {x: 0.99999994, y: 0.9999997, z: 0.9999998}
     - name: finger2_3.R_end
-      position: {x: -0, y: .086791046, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger2_3.R
+      position: {x: -0, y: 0.086791046, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: finger3_1.R
-      position: {x: -.0407838784, y: .179767728, z: -.0178949442}
-      rotation: {x: .0801765695, y: -.730525136, z: .0520554371, w: -.676162004}
-      scale: {x: 1, y: 1.00000024, z: .999998152}
-      transformModified: 1
+      parentName: Hand.R
+      position: {x: -0.04078385, y: 0.17976774, z: -0.017894773}
+      rotation: {x: 0.0801747, y: -0.730525, z: 0.052051842, w: -0.6761626}
+      scale: {x: 0.9999997, y: 1.0000001, z: 0.9999979}
     - name: finger3_2.R
-      position: {x: -2.98023206e-08, y: .0892323181, z: 8.94069601e-08}
-      rotation: {x: .00737582939, y: .0998357981, z: -.0354894213, w: .99434346}
-      scale: {x: .999999762, y: 1, z: .999998212}
-      transformModified: 1
+      parentName: finger3_1.R
+      position: {x: -0.000000029802319, y: 0.089232326, z: 0.000000029802319}
+      rotation: {x: 0.007378414, y: 0.09983602, z: -0.03549336, w: 0.9943433}
+      scale: {x: 1.0000004, y: 1.0000005, z: 0.9999986}
     - name: finger3_3.R
-      position: {x: 3.53902543e-08, y: .0713813752, z: 4.470348e-08}
-      rotation: {x: -.0330043584, y: -.686103404, z: .0169047639, w: -.726558506}
-      scale: {x: .999999046, y: .999999523, z: .999999642}
-      transformModified: 1
+      parentName: finger3_2.R
+      position: {x: -0.0000000018626449, y: 0.071381375, z: 0.00000008940695}
+      rotation: {x: -0.033000562, y: -0.6861035, z: 0.016902264, w: -0.7265586}
+      scale: {x: 0.99999887, y: 0.9999992, z: 0.99999946}
     - name: finger3_3.R_end
-      position: {x: -0, y: .0799542442, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger3_3.R
+      position: {x: -0, y: 0.079954244, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: finger4_1.R
-      position: {x: -.0741108581, y: .167109162, z: -.0279543679}
-      rotation: {x: .0759338215, y: -.809916556, z: .0477429293, w: -.579646289}
-      scale: {x: .999999702, y: 1.00000048, z: .999999642}
-      transformModified: 1
+      parentName: Hand.R
+      position: {x: -0.07411086, y: 0.16710912, z: -0.027954195}
+      rotation: {x: 0.07593458, y: -0.8099165, z: 0.047742434, w: -0.57964635}
+      scale: {x: 1.0000001, y: 1.0000007, z: 0.9999998}
     - name: finger4_2.R
-      position: {x: 2.98023206e-08, y: .0776406452, z: 1.86264497e-08}
-      rotation: {x: .0146712242, y: .129918516, z: -.0292131957, w: .990985632}
-      scale: {x: .999999642, y: .999999523, z: 1.00000024}
-      transformModified: 1
+      parentName: finger4_1.R
+      position: {x: -0.000000119209275, y: 0.077640586, z: 0.000000048428767}
+      rotation: {x: 0.014672329, y: 0.12991852, z: -0.029209817, w: 0.99098575}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000006}
     - name: finger4_3.R
-      position: {x: -5.587935e-09, y: .0712014511, z: -4.84287703e-08}
-      rotation: {x: -.0311182849, y: -.684341431, z: -.00458028633, w: -.728482962}
-      scale: {x: 1.00000083, y: .999999225, z: .999999702}
-      transformModified: 1
+      parentName: finger4_2.R
+      position: {x: 0.000000097788856, y: 0.07120141, z: -0.000000100582824}
+      rotation: {x: -0.03112289, y: -0.68434143, z: -0.004580371, w: -0.7284828}
+      scale: {x: 1.0000007, y: 0.9999991, z: 0.9999997}
     - name: finger4_3.R_end
-      position: {x: -0, y: .0783904046, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: finger4_3.R
+      position: {x: -0, y: 0.078390405, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Upper_leg.L
-      position: {x: -.150489837, y: .113514505, z: -.0517598465}
-      rotation: {x: -.0456701145, y: .156801924, z: .985666096, w: .0423054434}
-      scale: {x: .999999821, y: .999999344, z: .999999762}
-      transformModified: 1
+      parentName: spine_1
+      position: {x: -0.1504898, y: 0.11351457, z: -0.051759724}
+      rotation: {x: -0.045670096, y: 0.15680188, z: 0.9856661, w: 0.042305484}
+      scale: {x: 1.0000004, y: 0.99999964, z: 1.0000001}
     - name: Bottom_low_leg.L
-      position: {x: -1.00582831e-07, y: .70331502, z: 2.42143852e-08}
-      rotation: {x: .0489006229, y: -.940327466, z: .335861117, w: -.0242953431}
-      scale: {x: 1.00000024, y: .999999642, z: 1.00000024}
-      transformModified: 1
+      parentName: Upper_leg.L
+      position: {x: -0.000000011175869, y: 0.70331496, z: -0.0000000055879346}
+      rotation: {x: 0.048900567, y: -0.9403275, z: 0.33586115, w: -0.02429545}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
     - name: Foot.L
-      position: {x: -1.53668207e-08, y: .602789223, z: 1.30385152e-08}
-      rotation: {x: -.609568119, y: -.0390987806, z: -.00326149026, w: .791762233}
-      scale: {x: .999999881, y: 1.00000024, z: 1.00000024}
-      transformModified: 1
+      parentName: Bottom_low_leg.L
+      position: {x: 0.000000009778886, y: 0.6027892, z: -0.000000011175869}
+      rotation: {x: -0.6095681, y: -0.03909868, z: -0.0032614097, w: 0.7917623}
+      scale: {x: 0.99999994, y: 1.0000006, z: 0.9999999}
     - name: Toe.L
-      position: {x: 5.05824538e-08, y: .222494498, z: 8.33824654e-09}
-      rotation: {x: -.0647333488, y: .948742092, z: -.309045076, w: -.0137591697}
-      scale: {x: .99999994, y: 1.00000048, z: .999999404}
-      transformModified: 1
+      parentName: Foot.L
+      position: {x: -0.000000010215444, y: 0.22249448, z: -0.000000034198816}
+      rotation: {x: -0.0647334, y: 0.94874203, z: -0.30904517, w: -0.0137592}
+      scale: {x: 1.0000007, y: 1.000001, z: 0.9999997}
     - name: Toe.L_end
-      position: {x: -0, y: .149192214, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Toe.L
+      position: {x: -0, y: 0.14919221, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Upper_leg.R
-      position: {x: .150489777, y: .113514602, z: -.0517599843}
-      rotation: {x: .0456704386, y: .156802014, z: .985666096, w: -.0423054397}
-      scale: {x: 1.00000048, y: .999999404, z: .999999821}
-      transformModified: 1
+      parentName: spine_1
+      position: {x: 0.15048975, y: 0.11351453, z: -0.05175986}
+      rotation: {x: 0.0456706, y: 0.15680179, z: 0.9856661, w: -0.042305462}
+      scale: {x: 1.0000006, y: 0.9999998, z: 0.9999998}
     - name: Bottom_low_leg.R
-      position: {x: 1.30385146e-07, y: .703315079, z: -6.14672828e-08}
-      rotation: {x: -.0489006191, y: -.940327346, z: .335861385, w: .0242953617}
-      scale: {x: .999999642, y: .999999762, z: 1}
-      transformModified: 1
+      parentName: Upper_leg.R
+      position: {x: 0.00000003352761, y: 0.7033148, z: 0.00000004936009}
+      rotation: {x: -0.04890056, y: -0.9403275, z: 0.33586106, w: 0.024295442}
+      scale: {x: 0.99999976, y: 1.0000004, z: 1.0000002}
     - name: Foot.R
-      position: {x: -3.28291172e-08, y: .602789342, z: 1.86264497e-08}
-      rotation: {x: -.609568357, y: .0390985683, z: .0032612565, w: .791762054}
-      scale: {x: .999999881, y: 1.00000012, z: 1}
-      transformModified: 1
+      parentName: Bottom_low_leg.R
+      position: {x: 0.000000008149072, y: 0.6027892, z: -0.0000000037252899}
+      rotation: {x: -0.6095682, y: 0.03909852, z: 0.0032614395, w: 0.79176223}
+      scale: {x: 0.9999997, y: 1.0000002, z: 1.0000005}
     - name: Toe.R
-      position: {x: 8.98989949e-09, y: .222494468, z: 3.47426954e-09}
-      rotation: {x: .0647332966, y: .948742032, z: -.309045285, w: .0137591995}
-      scale: {x: .999999881, y: 1, z: .999999285}
-      transformModified: 1
+      parentName: Foot.R
+      position: {x: 0.000000008467395, y: 0.22249447, z: 0.000000012169037}
+      rotation: {x: 0.064733274, y: 0.948742, z: -0.3090452, w: 0.013759181}
+      scale: {x: 1.0000004, y: 1.0000006, z: 0.9999997}
     - name: Toe.R_end
-      position: {x: -0, y: .149192214, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Toe.R
+      position: {x: -0, y: 0.14919221, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Hand_IK.L
-      position: {x: -.579551876, y: 1.02028012, z: -1.15100789}
-      rotation: {x: -.99994576, y: .00132821943, z: -.00127437082, w: -.0102548897}
-      scale: {x: .999994099, y: .999999821, z: .999658942}
-      transformModified: 1
+      parentName: Base_bone
+      position: {x: -0.5795519, y: 1.0202801, z: -1.1510079}
+      rotation: {x: -0.99994576, y: 0.0013282194, z: -0.0012743707, w: -0.01025486}
+      scale: {x: 0.9999941, y: 1, z: 0.9996591}
     - name: Elbow_IK.L
-      position: {x: -.237872332, y: 1.04507661, z: -.109920949}
-      rotation: {x: -.0886018351, y: .0142739657, z: -.0138140293, w: .9958691}
-      scale: {x: 1.26454818, y: 1.26454806, z: 1.26454794}
-      transformModified: 1
+      parentName: Hand_IK.L
+      position: {x: -0.23787232, y: 1.0450766, z: -0.10992094}
+      rotation: {x: -0.08860189, y: 0.014273964, z: -0.013814031, w: 0.9958691}
+      scale: {x: 1.2645483, y: 1.2645482, z: 1.2645482}
     - name: Elbow_IK.L_end
-      position: {x: -0, y: .238076285, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Elbow_IK.L
+      position: {x: -0, y: 0.23807627, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Hand_IK.R
-      position: {x: .612426937, y: 1.16194856, z: -1.52374613}
-      rotation: {x: -.99994576, y: -.00132821512, z: .00127483997, w: -.0102548897}
-      scale: {x: .99999404, y: .999999702, z: .99965924}
-      transformModified: 1
+      parentName: Base_bone
+      position: {x: 0.61242694, y: 1.1619486, z: -1.523746}
+      rotation: {x: -0.99994576, y: -0.0013282151, z: 0.00127484, w: -0.01025486}
+      scale: {x: 0.9999942, y: 0.9999996, z: 0.9996591}
     - name: Elbow_IK.R
-      position: {x: -.0556194074, y: 1.15214264, z: .0855439454}
-      rotation: {x: -.088601619, y: -.0142739443, z: .0138140209, w: .99586904}
-      scale: {x: 1.26454806, y: 1.2645483, z: 1.2645483}
-      transformModified: 1
+      parentName: Hand_IK.R
+      position: {x: -0.055619404, y: 1.1521426, z: 0.085543945}
+      rotation: {x: -0.08860167, y: -0.014273944, z: 0.013814023, w: 0.9958691}
+      scale: {x: 1.264548, y: 1.2645481, z: 1.2645485}
     - name: Elbow_IK.R_end
-      position: {x: -0, y: .238076285, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Elbow_IK.R
+      position: {x: -0, y: 0.23807627, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Foot_ctrl.R
-      position: {x: .329971343, y: .260607392, z: -.161258936}
-      rotation: {x: .706368625, y: .00105140219, z: -8.83668617e-05, w: .707843363}
-      scale: {x: 1.00000024, y: .999999702, z: .999999821}
-      transformModified: 1
+      parentName: Base_bone
+      position: {x: 0.32997134, y: 0.2606074, z: -0.16125894}
+      rotation: {x: 0.7063686, y: 0.0010514022, z: -0.00008836691, w: 0.70784336}
+      scale: {x: 1, y: 0.9999997, z: 0.9999997}
     - name: Knee_IK.R
-      position: {x: .0443602838, y: -.523475707, z: -.897953033}
-      rotation: {x: -.000151989108, y: .749052405, z: -.662509978, w: .00104479713}
-      scale: {x: .999999881, y: .999999821, z: .99999994}
-      transformModified: 1
+      parentName: Foot_ctrl.R
+      position: {x: 0.044360284, y: -0.5234757, z: -0.897953}
+      rotation: {x: -0.00015198906, y: 0.74905235, z: -0.66251004, w: 0.0010447974}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
     - name: Knee_IK.R_end
-      position: {x: -0, y: .307957262, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Knee_IK.R
+      position: {x: -0, y: 0.30795726, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Heel_roll.R
-      position: {x: -.0289295763, y: .142081916, z: .0617939532}
-      rotation: {x: .0317059979, y: .708727121, z: -.704015553, w: .0325988717}
-      scale: {x: .99999994, y: .999999821, z: 1}
-      transformModified: 1
+      parentName: Foot_ctrl.R
+      position: {x: -0.028929574, y: 0.14208192, z: 0.06179395}
+      rotation: {x: 0.031706, y: 0.7087271, z: -0.70401555, w: 0.032598875}
+      scale: {x: 1.0000002, y: 1, z: 1}
     - name: Toe_roll.R
-      position: {x: -.00262737297, y: .231427789, z: -.00165385439}
-      rotation: {x: -.000722747296, y: -.00730979163, z: -.999905825, w: .0115953628}
-      scale: {x: 1.00001621, y: .999999702, z: 1.00000644}
-      transformModified: 1
+      parentName: Heel_roll.R
+      position: {x: -0.002627373, y: 0.23142777, z: -0.0016538543}
+      rotation: {x: -0.0007227455, y: -0.0073097353, z: -0.9999058, w: 0.011595358}
+      scale: {x: 1.0000162, y: 0.9999999, z: 1.0000067}
     - name: Foot_IK.R
-      position: {x: .0245554466, y: .169785097, z: .141680852}
-      rotation: {x: .938787758, y: -.0642182827, z: .0151006933, w: -.338120788}
-      scale: {x: .999999881, y: 1, z: 1.00000024}
-      transformModified: 1
+      parentName: Toe_roll.R
+      position: {x: 0.024555445, y: 0.1697851, z: 0.14168085}
+      rotation: {x: 0.93878776, y: -0.06421828, z: 0.015100694, w: -0.33812073}
+      scale: {x: 0.99999994, y: 1.0000005, z: 1.0000005}
     - name: Foot_IK.R_end
-      position: {x: -0, y: .222494468, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Foot_IK.R
+      position: {x: -0, y: 0.22249445, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: FootRoll_crtl.R
-      position: {x: -.0289295763, y: .142081916, z: .0617939234}
-      rotation: {x: -.707819939, y: .0440798104, z: -.0449887514, w: -.703579366}
-      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
-      transformModified: 1
+      parentName: Foot_ctrl.R
+      position: {x: -0.028929574, y: 0.14208192, z: 0.06179392}
+      rotation: {x: -0.70782, y: 0.044079814, z: -0.044988755, w: -0.70357937}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
     - name: FootRoll_crtl.R_end
-      position: {x: -0, y: .231363326, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: FootRoll_crtl.R
+      position: {x: -0, y: 0.23136331, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: Horror1_LP
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: hor_mon_1.2_5(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

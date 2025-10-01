@@ -450,7 +450,7 @@ Transform:
   m_GameObject: {fileID: 938901632}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.796, y: 0.621, z: 8.64}
+  m_LocalPosition: {x: 2.91, y: 0.621, z: -21.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -504,11 +504,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac373d2409e0e50daaffc80608ef2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damager
-  baseDamageAmount: 10
-  velocityMultiplier: 2
-  minimumVelocity: 1
-  maxVelocity: 10
-  showDebugInfo: 1
+  baseDamageAmount: 1
+  velocityMultiplier: 1
+  minimumVelocity: 7
+  maxVelocity: 40
+  showDebugInfo: 0
 --- !u!54 &1027977133
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -662,8 +662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106908960fda2aeeea002be915803174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HordeManager
-  monsterPrefab: {fileID: 127060, guid: 95ff2b139e7da8a43baedd7f27edf718, type: 3}
+  monsterPrefab: {fileID: 230423928272235807, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
   player: {fileID: 1329638792}
+  hordeSpawnSize: 1
   spawnPoints:
   - {fileID: 938901636}
 --- !u!1001 &1329638790
@@ -1262,9 +1263,10 @@ PrefabInstance:
     - {fileID: 3134197776139583180, guid: 73d345d43c5a84a25b562943d2f0622d, type: 3}
     - {fileID: 4668269616162120406, guid: 73d345d43c5a84a25b562943d2f0622d, type: 3}
     - {fileID: 1174083001276821139, guid: 73d345d43c5a84a25b562943d2f0622d, type: 3}
+    - {fileID: 4014652377224814731, guid: 73d345d43c5a84a25b562943d2f0622d, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6738124653625601901, guid: 73d345d43c5a84a25b562943d2f0622d, type: 3}
-      insertIndex: 26
+      insertIndex: 25
       addedObject: {fileID: 1083638137}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73d345d43c5a84a25b562943d2f0622d, type: 3}

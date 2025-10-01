@@ -807,10 +807,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 461196}
-  - component: {fileID: 5064004360191846741}
-  - component: {fileID: 4682852464436400254}
   - component: {fileID: 3967509157053607033}
   - component: {fileID: 701201337147671647}
+  - component: {fileID: 6444711684510738290}
+  - component: {fileID: 8342494241786414640}
   m_Layer: 0
   m_Name: hor_mon_1.2_5
   m_TagString: Untagged
@@ -835,44 +835,6 @@ Transform:
   - {fileID: 418554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!114 &5064004360191846741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ef6be668a38816c8d9d21db32ca657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MonsterTest
-  health: 100
-  target: {fileID: 0}
-  chaseSpeed: 3
-  attackRange: 3
-  attackCooldown: 2
---- !u!135 &4682852464436400254
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127060}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.92
-  m_Center: {x: 0, y: 1.17, z: 0}
 --- !u!95 &3967509157053607033
 Animator:
   serializedVersion: 7
@@ -883,7 +845,7 @@ Animator:
   m_GameObject: {fileID: 127060}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8ac9a17e368a9564d9913fbee50048a9, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0c49e5fd8e3c80a44b2c266b955b02c6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6b1ca738adcd42041a3d79bb9610ea15, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -904,7 +866,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 127060}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -917,6 +879,45 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6444711684510738290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ef6be668a38816c8d9d21db32ca657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterTest
+  monsterData: {fileID: 11400000, guid: 5d422c4a3528b2337907d57a765515a5, type: 2}
+  target: {fileID: 0}
+  startCrawling: 0
+  crawlSpeed: 1
+--- !u!136 &8342494241786414640
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127060}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &127234
 GameObject:
   m_ObjectHideFlags: 0

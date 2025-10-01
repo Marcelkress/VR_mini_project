@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1190364153764522503
+--- !u!1001 &1149482809579507790
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9767385
+      value: -6.8192787
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.445545
+      value: -20.296227
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,14 +50,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
       propertyPath: m_Name
-      value: Zombie Idle
+      value: ZombiePrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 6684295394808222897, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+    - target: {fileID: 5866666021909216657, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
+      propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 2100000, guid: 9ab890119ac01acd69049e58087270ea, type: 2}
+      objectReference: {fileID: 9100000, guid: 6b1ca738adcd42041a3d79bb9610ea15, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4132444195198156341}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2300862554132278163}
   m_SourcePrefab: {fileID: 100100000, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
+--- !u!1 &230423928272235807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9950fd45d6101c06ca2f8beb32cf977b, type: 3}
+  m_PrefabInstance: {fileID: 1149482809579507790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &4132444195198156341
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230423928272235807}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &2300862554132278163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230423928272235807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ef6be668a38816c8d9d21db32ca657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterTest
+  monsterData: {fileID: 11400000, guid: a067efd4fc66c86d983c207d4cf40edf, type: 2}
+  target: {fileID: 0}
+  startCrawling: 0
+  crawlSpeed: 1

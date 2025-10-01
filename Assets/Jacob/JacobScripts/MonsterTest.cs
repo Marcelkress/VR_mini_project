@@ -1,18 +1,19 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using NUnit.Compatibility;
 
 public class MonsterTest : MonoBehaviour, IDamagable
 {
     [Header("Health & Combat")]
-    public int health = 100;
-    
+    [SerializeField] private MonsterData monsterData;
+
     [Header("Horde AI Settings")]
     public Transform target; // Player target - assign this to make monster chase
-    public float chaseSpeed = 3f;
-    public float attackRange = 2.5f;
-    public float attackCooldown = 2f;
-    
+    [SerializeField]
+    [Tooltip("If true, the monster will use its crawling animation and crawl speed.")]
+    private bool startCrawling = false;
+
     // Private variables
     private Animator animator;
     private NavMeshAgent agent;
@@ -20,12 +21,20 @@ public class MonsterTest : MonoBehaviour, IDamagable
     private bool isDead = false;
     private bool isAttacking = false;
     
-    // Animation parameters
-    private readonly int battleParam = Animator.StringToHash("battle");
-    private readonly int movingParam = Animator.StringToHash("moving");
+    // Animation parameters matching the animator controller
+    private readonly int isCrawlingParam = Animator.StringToHash("IsCrawling");
+    private readonly int runningParam = Animator.StringToHash("Running");
+    private readonly int attackParam = Animator.StringToHash("Attack");
+    private readonly int deathParam = Animator.StringToHash("Death");
+    
+    // Crawl speed (optional override). If zero, uses monsterData.speed
+    [SerializeField]
+    private float crawlSpeed = 1f;
 
     void Start()
     {
+        monsterData.Initialize();
+        
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         
@@ -39,9 +48,13 @@ public class MonsterTest : MonoBehaviour, IDamagable
             Debug.LogError("NavMeshAgent component not found on the monster.");
         }
         
-        // Set up for chasing behavior
-        animator.SetInteger(battleParam, 1); // Run mode for chasing
-        agent.speed = chaseSpeed;
+        // Initialize animation state - start in idle
+        animator.SetBool(isCrawlingParam, startCrawling);
+        animator.SetInteger(runningParam, 0); // 0 = Idle
+        animator.SetInteger(attackParam, 0);
+        
+    // Set up NavMeshAgent for chasing (respect crawling)
+    agent.speed = startCrawling ? (crawlSpeed > 0f ? crawlSpeed : monsterData.speed) : monsterData.chaseSpeed; // chase speed if not crawling
     }
     
     void Update()
@@ -53,8 +66,9 @@ public class MonsterTest : MonoBehaviour, IDamagable
         {
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
             
-            if (distanceToTarget <= attackRange)
+            if (distanceToTarget <= monsterData.attackRange)
             {
+                agent.stoppingDistance = monsterData.attackRange - 0.5f;
                 // Stop and attack
                 agent.ResetPath();
                 AttackTarget();
@@ -76,33 +90,26 @@ public class MonsterTest : MonoBehaviour, IDamagable
         if (isAttacking) return;
 
         // Check attack cooldown
-        if (Time.time - lastAttackTime < attackCooldown) return;
+        if (Time.time - lastAttackTime < monsterData.attackCooldown) return;
 
-        StartCoroutine(LookAtTarget());
-        // Trigger random attack animation
+        // Trigger attack animation using trigger parameter
         isAttacking = true;
         lastAttackTime = Time.time;
 
-        int attackType = Random.Range(0, 4);
-        switch (attackType)
-        {
-            case 0:
-                animator.SetInteger(movingParam, 4); // Attack 1
-                break;
-            case 1:
-                animator.SetInteger(movingParam, 5); // Attack 2
-                break;
-            case 2:
-                animator.SetInteger(movingParam, 7); // Bite
-                break;
-            case 3:
-                animator.SetInteger(movingParam, 8); // Roar
-                break;
-        }
+        // stop movement during attack
+        agent.ResetPath();
+        agent.velocity = Vector3.zero;
+        agent.isStopped = true;
 
-        // Reset animation after delay
-        StartCoroutine(ResetAnimationAfterDelay(1.5f));
-        StopCoroutine(LookAtTarget());
+
+        animator.SetTrigger(attackParam);
+
+        // Look at target during attack
+        StartCoroutine(LookAtTarget());
+
+        // Reset attacking flag after animation
+        StartCoroutine(ResetAttackingState(monsterData.attackCooldown));
+        agent.isStopped = false; // Resume movement after attack
     }
     
    private IEnumerator LookAtTarget()
@@ -125,13 +132,46 @@ public class MonsterTest : MonoBehaviour, IDamagable
 
         float velocity = agent.velocity.magnitude;
 
+        // If crawling, force the crawling bool and don't set running states
+        if (animator.GetBool(isCrawlingParam))
+        {
+            // Ensure agent speed respects crawling
+            agent.speed = crawlSpeed > 0f ? crawlSpeed : monsterData.speed;
+            
+            // Set Running to 1 for crawl movement, 0 for crawl idle
+            if (velocity > 0.1f)
+            {
+                animator.SetInteger(runningParam, 1); // Crawl moving
+            }
+            else
+            {
+                animator.SetInteger(runningParam, 0); // Crawl idle
+            }
+            return;
+        }
+
+        // Normal running/idle states
         if (velocity > 0.1f)
         {
-            animator.SetInteger(movingParam, 2); // Run animation
+            animator.SetInteger(runningParam, 2); // Run animation
         }
         else
         {
-            animator.SetInteger(movingParam, 0); // Idle animation
+            animator.SetInteger(runningParam, 0); // Idle animation
+        }
+    }
+
+    // Publicly switch crawling mode at runtime
+    public void SetCrawling(bool crawling)
+    {
+        animator.SetBool(isCrawlingParam, crawling);
+        if (crawling)
+        {
+            agent.speed = crawlSpeed > 0f ? crawlSpeed : monsterData.speed;
+        }
+        else
+        {
+            agent.speed = monsterData.chaseSpeed;
         }
     }
     
@@ -141,7 +181,15 @@ public class MonsterTest : MonoBehaviour, IDamagable
         if (!isDead)
         {
             isAttacking = false;
-            animator.SetInteger(movingParam, 0);
+        }
+    }
+    
+    private IEnumerator ResetAttackingState(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (!isDead)
+        {
+            isAttacking = false;
         }
     }
     
@@ -176,8 +224,9 @@ public class MonsterTest : MonoBehaviour, IDamagable
         // Only take damage if the weapon is moving fast enough
         if (damage > 0)
         {
-            TakeDamage(damage);
-            Debug.Log($"Monster hit by {other.name} for {damage} damage based on velocity.");
+            
+                TakeDamage(damage);
+                Debug.Log($"Monster hit by {other.name} for {damage} damage based on velocity.");
         }
         else
         {
@@ -194,30 +243,19 @@ public class MonsterTest : MonoBehaviour, IDamagable
     {
         if (isDead) return;
         
-        health -= damage;
-        Debug.Log($"Monster took {damage} damage, remaining health: {health}");
+        monsterData.currentHealth -= damage;
 
-        // Trigger hit animation
-        int hitType = Random.Range(0, 2);
-        if (hitType == 0)
-        {
-            animator.SetInteger(movingParam, 10); // Hit animation 1
-        }
-        else
-        {
-            animator.SetInteger(movingParam, 11); // Hit animation 2
-        }
+        // Trigger hit animation - you can add hit reactions to your animator if needed
+        // For now, we'll just log the damage
         
-        // Reset hit animation after delay
-        StartCoroutine(ResetAnimationAfterDelay(1f));
-
-        if (health <= 0)
+        Debug.Log($"Monster took {damage} damage, current health: {monsterData.currentHealth}/{monsterData.maxHealth}");
+        if (monsterData.currentHealth <= 0)
         {
             Die();
         }
     }
 
-    private void Die()
+    public void Die()
     {
         if (isDead) return;
         
@@ -229,15 +267,8 @@ public class MonsterTest : MonoBehaviour, IDamagable
         agent.enabled = false;
         
         // Trigger random death animation
-        int deathType = Random.Range(0, 2);
-        if (deathType == 0)
-        {
-            animator.SetInteger(movingParam, 12); // Death animation 1
-        }
-        else
-        {
-            animator.SetInteger(movingParam, 13); // Death animation 2
-        }
+        int deathType = Random.Range(1, 3); // Death parameter values are 1 or 2
+        animator.SetInteger(deathParam, deathType);
         
         // Destroy after death animation
         StartCoroutine(DestroyAfterDelay(3f));
