@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4277c84f4eb45414089869ec9eed16a9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 131004
+  packageName: Full Medieval Room
+  packageVersion: 1.0
+  assetPath: Assets/Room/prefabs/door.prefab
+  uploadId: 278357

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - CinemachineTarget
+  - DoorKey
   layers:
   - Default
   - TransparentFX

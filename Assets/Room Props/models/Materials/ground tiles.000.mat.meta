@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 048a3b5e98a7dd342ac2af39c2226308
+timeCreated: 1542045485
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 131004
+  packageName: Full Medieval Room
+  packageVersion: 1.0
+  assetPath: Assets/Room/models/Materials/ground tiles.000.mat
+  uploadId: 278357

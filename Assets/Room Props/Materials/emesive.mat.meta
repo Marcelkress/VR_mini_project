@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 87124d99a2e036247997145a1e6ebe65
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 131004
+  packageName: Full Medieval Room
+  packageVersion: 1.0
+  assetPath: Assets/Room/Materials/emesive.mat
+  uploadId: 278357

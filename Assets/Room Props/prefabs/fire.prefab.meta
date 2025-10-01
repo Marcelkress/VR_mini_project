@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4672393f346060446996dc28733539e7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 131004
+  packageName: Full Medieval Room
+  packageVersion: 1.0
+  assetPath: Assets/Room/prefabs/fire.prefab
+  uploadId: 278357
