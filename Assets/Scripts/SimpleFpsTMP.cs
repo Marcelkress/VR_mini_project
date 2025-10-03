@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -16,6 +17,11 @@ public class SimpleFpsTMP : MonoBehaviour
     float nextUpdate;
 
     void Reset() => label = GetComponent<TMP_Text>();
+
+    private void Start()
+    { 
+        
+    }
 
     void Update()
     {
