@@ -1,0 +1,2 @@
+/Volumes/Mathias J SSD/Unity Projects/5 semester /Unity/Miniproject VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Volumes/Mathias J SSD/Unity Projects/5 semester /Unity/Miniproject VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt
