@@ -6060,7 +6060,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: abc00000000003032342792905531315, type: 2}
     - target: {fileID: 2931606132876296656, guid: e0400ba5e966c490c804ae7731814b5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.95
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 2931606132876296656, guid: e0400ba5e966c490c804ae7731814b5d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24207,7 +24207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
-  m_Material: {fileID: 2100000, guid: abc00000000003794367890854650985, type: 2}
+  m_Material: {fileID: 2100000, guid: abc00000000009866270375055188705, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -25159,7 +25159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
-  m_Material: {fileID: 2100000, guid: abc00000000007329399273700113526, type: 2}
+  m_Material: {fileID: 2100000, guid: abc00000000009866270375055188705, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -30157,7 +30157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
-  m_Material: {fileID: 2100000, guid: abc00000000007329399273700113526, type: 2}
+  m_Material: {fileID: 2100000, guid: abc00000000009866270375055188705, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -35647,7 +35647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
-  m_Material: {fileID: 2100000, guid: abc00000000007329399273700113526, type: 2}
+  m_Material: {fileID: 2100000, guid: abc00000000009866270375055188705, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
