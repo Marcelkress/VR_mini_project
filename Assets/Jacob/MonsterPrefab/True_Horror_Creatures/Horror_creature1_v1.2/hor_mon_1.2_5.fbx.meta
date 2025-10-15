@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8ac9a17e368a9564d9913fbee50048a9
 ModelImporter:
-  serializedVersion: 24200
+  serializedVersion: 22200
   internalIDToNameTable:
   - first:
       1: 100000
@@ -665,64 +665,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Creature_armature1|attack_3' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Upper_arm.L' has translation
-      animation that will be discarded.\n\t'Upper_arm.R' has translation animation
-      that will be discarded.\n\nClip 'Creature_armature1|bite' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Upper_arm.L' has translation
-      animation that will be discarded.\n\t'Upper_arm.R' has translation animation
-      that will be discarded.\n\nClip 'Creature_armature1|crawl' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
-      animation that will be discarded.\n\t'finger2_1.L' has translation animation
-      that will be discarded.\n\t'finger3_1.L' has translation animation that will
-      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
-      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
-      animation that will be discarded.\n\t'finger3_1.R' has translation animation
-      that will be discarded.\n\t'finger4_1.R' has translation animation that will
-      be discarded.\n\nClip 'Creature_armature1|crawl_root_motion' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
-      animation that will be discarded.\n\t'finger2_1.L' has translation animation
-      that will be discarded.\n\t'finger3_1.L' has translation animation that will
-      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
-      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
-      animation that will be discarded.\n\t'finger3_1.R' has translation animation
-      that will be discarded.\n\t'finger4_1.R' has translation animation that will
-      be discarded.\n\nClip 'Creature_armature1|crawl_to_state' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
-      animation that will be discarded.\n\t'finger2_1.L' has translation animation
-      that will be discarded.\n\t'finger3_1.L' has translation animation that will
-      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
-      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
-      animation that will be discarded.\n\t'finger3_1.R' has translation animation
-      that will be discarded.\n\t'finger4_1.R' has translation animation that will
-      be discarded.\n\nClip 'Creature_armature1|crawl_to_state.001' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
-      animation that will be discarded.\n\t'finger2_1.L' has translation animation
-      that will be discarded.\n\t'finger3_1.L' has translation animation that will
-      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
-      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
-      animation that will be discarded.\n\t'finger3_1.R' has translation animation
-      that will be discarded.\n\t'finger4_1.R' has translation animation that will
-      be discarded.\n\nClip 'Creature_armature1|jump' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Upper_arm.L' has translation animation
-      that will be discarded.\n\t'Upper_arm.R' has translation animation that will
-      be discarded.\n\nClip 'Creature_armature1|state_to_crawl' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'finger1_1.L' has translation
-      animation that will be discarded.\n\t'finger2_1.L' has translation animation
-      that will be discarded.\n\t'finger3_1.L' has translation animation that will
-      be discarded.\n\t'finger4_1.L' has translation animation that will be discarded.\n\t'finger1_1.R'
-      has translation animation that will be discarded.\n\t'finger2_1.R' has translation
-      animation that will be discarded.\n\t'finger3_1.R' has translation animation
-      that will be discarded.\n\t'finger4_1.R' has translation animation that will
-      be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -6351,9 +6294,6 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    generateMeshLods: 0
-    meshLodGenerationFlags: 0
-    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8

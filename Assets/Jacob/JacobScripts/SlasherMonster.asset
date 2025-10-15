@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77a644b92a7dfb1d873993ef427509e, type: 3}
   m_Name: SlasherMonster
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  currentHealth: 0
-  maxHealth: 30
+  currentHealth: 116
+  maxHealth: 200
   speed: 1
   chaseSpeed: 5
   attackRange: 1
