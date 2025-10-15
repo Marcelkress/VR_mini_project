@@ -1,14 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 
 public class HordeManager : MonoBehaviour
 {
     [Header("Horde Settings")]
     public GameObject monsterPrefab;
     public Transform player; // Assign your player here
+
+    public int hordeSpawnSize = 20; // Max number of monsters in a horde
     
     [Header("Spawn Points (Optional)")]
     public Transform[] spawnPoints; // If you want specific spawn locations
+
     
     private List<MonsterTest> spawnedMonsters = new List<MonsterTest>();
     
@@ -23,8 +27,9 @@ public class HordeManager : MonoBehaviour
             else
                 Debug.LogError("Player not found! Please assign the player transform.");
         }
-        
-        SpawnHorde(20, spawnPoints[0].position, 15f, 20f);
+
+
+        SpawnHorde(hordeSpawnSize, spawnPoints[0].position, spawnRadius: 15f, spawnDistance: 20f);
     }
     
     // Kan kaldes fra et script hvor vi vil spawn en horde af monstre, fx når spilleren når et bestemt område
@@ -87,7 +92,7 @@ public class HordeManager : MonoBehaviour
         return spawnedMonsters.Count;
     }
     
-    // Change target for all monsters (useful if player changes)
+    // ændrer target for alle monstre i horde til newTarget hvis vi får brug for det
     public void UpdateAllTargets(Transform newTarget)
     {
         player = newTarget;
