@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.meta.xr.sdk.core": {
+    "com.meta.xr.simulator": {
       "version": "78.0.0",
       "depth": 0,
       "source": "registry",

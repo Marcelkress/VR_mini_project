@@ -8,3 +8,11 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 327467
+  packageName: Modular Dungeon (Gothic Dungeon, Medieval Dungeon, Fantasy Dungeon,
+    Dungeon)
+  packageVersion: 1.0
+  assetPath: Assets/Mathias/Assets/Shaders/S_Brick.shadergraph
+  uploadId: 775964
