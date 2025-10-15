@@ -5,6 +5,7 @@ public class NERoomsManager : MonoBehaviour
 {
     public GameObject[] rooms;
     public GameObject corridor;
+    public GameObject bars;
     
     public int lastRoomIndex;
 
@@ -29,6 +30,7 @@ public class NERoomsManager : MonoBehaviour
             if (roomIndex == rooms.Length - 1)
             {
                 corridor.SetActive(true);
+                bars.SetActive(false);
             }
             
             if (roomIndex == 0)

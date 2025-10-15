@@ -112,7 +112,7 @@ Material:
     - _Brightness: 1
     - _CastShadows: 1
     - _ConservativeDepthOffsetEnable: 0
-    - _Contrast1: 1.01
+    - _Contrast1: 1
     - _Cull: 2
     - _CullMode: 2
     - _CullModeForward: 2
