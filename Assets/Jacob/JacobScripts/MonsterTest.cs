@@ -223,10 +223,10 @@ public class MonsterTest : MonoBehaviour, IDamagable
         
         // Only take damage if the weapon is moving fast enough
         if (damage > 0)
-        {
-            
-                TakeDamage(damage);
-                Debug.Log($"Monster hit by {other.name} for {damage} damage based on velocity.");
+        {       
+            animator.SetTrigger("TakeHit");
+            TakeDamage(damage);
+            Debug.Log($"Monster hit by {other.name} for {damage} damage based on velocity.");
         }
         else
         {
@@ -261,22 +261,18 @@ public class MonsterTest : MonoBehaviour, IDamagable
         
         isDead = true;
         Debug.Log("Monster died!");
-        
+
         // Stop all movement
         agent.ResetPath();
         agent.enabled = false;
+
+        GetComponent<Collider>().enabled = false; // Disable collider to prevent further interactions
+    
+        // Disable animator to enable ragdoll        
+        animator.enabled = false; // Disable animator to stop all animations
         
-        // Trigger random death animation
-        int deathType = Random.Range(1, 3); // Death parameter values are 1 or 2
-        animator.SetInteger(deathParam, deathType);
         
-        // Destroy after death animation
-        StartCoroutine(DestroyAfterDelay(3f));
+        
     }
     
-    private IEnumerator DestroyAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        Destroy(gameObject);
-    }
 }
