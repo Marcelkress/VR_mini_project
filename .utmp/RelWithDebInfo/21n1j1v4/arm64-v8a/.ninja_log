@@ -1,0 +1,19 @@
+# ninja log v5
+6	1673	1760531888953685201	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	25e0a185a3d5ed2d
+5	1675	1760531888953383285	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	db7eade9d7457ec7
+4	1674	1760531888959754226	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	9cad3c22e7f28e47
+6	1687	1760531888974646853	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	344029cdba6fbdf5
+2030	2246	1760531889539977493	/Volumes/Mathias J SSD/Unity Projects/5 semester/Unity/Miniproject VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/21n1j1v4/obj/arm64-v8a/libgame.so	c861ec77af8e2b7e
+4	1703	1760531888995342213	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	dd8d937fd0ca3955
+7	1757	1760531889047917905	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	be53aeb369b72126
+5	1923	1760531889214009873	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f7c0c0161274e871
+3	2030	1760531889322238748	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	59bfcef8570b8372
+5	699	1760605989685416383	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	25e0a185a3d5ed2d
+3	726	1760605989710475972	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	9cad3c22e7f28e47
+4	727	1760605989705305655	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	db7eade9d7457ec7
+5	766	1760605989751509846	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	344029cdba6fbdf5
+4	791	1760605989777763182	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	dd8d937fd0ca3955
+5	815	1760605989798868492	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	be53aeb369b72126
+4	964	1760605989947581366	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f7c0c0161274e871
+3	1072	1760605990056210115	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	59bfcef8570b8372
+1072	1145	1760605990132681546	/Volumes/Mathias J SSD/Unity Projects/5 semester/Unity/Miniproject VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/21n1j1v4/obj/arm64-v8a/libgame.so	c861ec77af8e2b7e

@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"MetaXRAudio": "UnrealEditor-MetaXRAudio.dll",
+		"MetaXRAudioEditor": "UnrealEditor-MetaXRAudioEditor.dll"
+	}
+}

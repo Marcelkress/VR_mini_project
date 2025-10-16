@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="Bank" id="{048a5137-c7c0-4e2e-a5e4-2411b3541a22}">
+		<property name="name">
+			<value>Spatialized sound</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d2dc2da8-0de8-479f-9009-88bff77f695d}</destination>
+		</relationship>
+	</object>
+</objects>

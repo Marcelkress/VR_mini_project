@@ -1,0 +1,5 @@
+/Volumes/Mathias J SSD/Unity Projects/5 semester/Unity/Miniproject VR/.utmp/RelWithDebInfo/1a651ri1/arm64-v8a/CMakeFiles/edit_cache.dir
+/Volumes/Mathias J SSD/Unity Projects/5 semester/Unity/Miniproject VR/.utmp/RelWithDebInfo/1a651ri1/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Volumes/Mathias J SSD/Unity Projects/5 semester/Unity/Miniproject VR/.utmp/RelWithDebInfo/1a651ri1/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Volumes/Mathias J SSD/Unity Projects/5 semester/Unity/Miniproject VR/.utmp/RelWithDebInfo/1a651ri1/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Volumes/Mathias J SSD/Unity Projects/5 semester/Unity/Miniproject VR/.utmp/RelWithDebInfo/1a651ri1/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
