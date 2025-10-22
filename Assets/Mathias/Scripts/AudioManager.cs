@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
     {
         
             backgroundMusic = FMODUnity.RuntimeManager.CreateInstance(FmodEvents.Instance.Fightmusic);
-            backgroundMusic.start();
+           // backgroundMusic.start();
          
 
     }

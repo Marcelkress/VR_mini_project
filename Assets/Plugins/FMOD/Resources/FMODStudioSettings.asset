@@ -202,8 +202,10 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Plugins:
-      Value: []
-      HasValue: 0
+      Value:
+      - MetaXRAudioFMOD
+      - resonanceaudio
+      HasValue: 1
     StaticPlugins:
       Value: []
       HasValue: 0
@@ -350,8 +352,10 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Plugins:
-      Value: []
-      HasValue: 0
+      Value:
+      - MetaXRAudioFMOD
+      - resonanceaudio
+      HasValue: 1
     StaticPlugins:
       Value: []
       HasValue: 0
@@ -391,7 +395,7 @@ MonoBehaviour:
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
-  ImportType: 1
+  ImportType: 0
   TargetAssetPath: FMODBanks
   TargetBankFolder: 
   EventLinkage: 1
@@ -408,6 +412,8 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Environment
+  - Environment.assets
   - Master.assets
   - Music
   - Music.assets
@@ -718,6 +724,7 @@ MonoBehaviour:
     Plugins:
       Value:
       - MetaXRAudioFMOD
+      - resonanceaudio
       HasValue: 1
     StaticPlugins:
       Value: []
@@ -865,7 +872,7 @@ MonoBehaviour:
     Plugins:
       Value:
       - MetaXRAudioFMOD
-      - 
+      - resonanceaudio
       HasValue: 1
     StaticPlugins:
       Value: []
