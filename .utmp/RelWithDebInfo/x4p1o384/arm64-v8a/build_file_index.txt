@@ -1,0 +1,2 @@
+/Users/marcelkress/Desktop/Unity Projects/VR_mini_project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/marcelkress/Desktop/Unity Projects/VR_mini_project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt
