@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     
     [field: SerializeField] private FmodEvents events;
     public static AudioManager Instance { get; private set; }
-   FMOD.Studio.EventInstance backgroundMusic;
+    FMOD.Studio.EventInstance backgroundMusic;
 
     private void Awake()
     {
