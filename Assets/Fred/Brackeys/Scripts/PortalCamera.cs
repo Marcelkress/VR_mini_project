@@ -6,21 +6,49 @@ public class PortalCamera : MonoBehaviour
     public Transform portal;
     public Transform otherPortal;
 
+    public bool rotationWorks = false;
+
     // Update is called once per frame
-    void Update()
+    // void Update()
+    // {
+    //     Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
+    //     transform.position = portal.position + playerOffsetFromPortal;
+
+    //     float angularDifferenceBetweenPortalRotations = Quaternion.Angle(portal.rotation, otherPortal.rotation);
+
+    //     Quaternion portalRotationalDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
+    //     Vector3 newCameraDirection = portalRotationalDifference * playerCamera.forward;
+    //     transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
+
+    //    // TODO: 
+    //    // - Vi skal fikse rotation pï¿½ x-aksen
+    //    // - Ting skal vidst i Late Update, sï¿½ den opdaterer mere korrekt ifï¿½lge yt kommentarer.
+
+    // }
+    void LateUpdate()
     {
-        Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
-        transform.position = portal.position + playerOffsetFromPortal;
+        // Step 1: Convert player's position relative to other portal
+        Vector3 playerRelativePosition = otherPortal.InverseTransformPoint(playerCamera.position);
 
-        float angularDifferenceBetweenPortalRotations = Quaternion.Angle(portal.rotation, otherPortal.rotation);
+        // Step 2: Apply that relative position to the current portal
+        transform.position = portal.TransformPoint(playerRelativePosition);
 
-        Quaternion portalRotationalDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
-        Vector3 newCameraDirection = portalRotationalDifference * playerCamera.forward;
-        transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
+        // Step 3: Convert player's rotation to other portal's local space
+        Quaternion playerRelativeRotation = Quaternion.Inverse(otherPortal.rotation) * playerCamera.rotation;
 
-        // TODO: 
-        // - Vi skal fikse rotation på x-aksen
-        // - Ting skal vidst i Late Update, så den opdaterer mere korrekt ifølge yt kommentarer.
+        // Step 4: Apply that rotation to current portal's rotation
+        transform.rotation = portal.rotation * playerRelativeRotation;
 
+        // Debug
+        if (otherPortal.forward == portal.forward)
+        {
+            rotationWorks = true;
+        }
+        else
+        {
+            rotationWorks = false;
+        }
+
+        Debug.Log(rotationWorks);
     }
 }
