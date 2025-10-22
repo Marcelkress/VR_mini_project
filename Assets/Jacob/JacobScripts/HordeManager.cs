@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 public class HordeManager : MonoBehaviour
 {
     [Header("Horde Settings")]
-    public GameObject monsterPrefab;
+    public GameObject[] monsterPrefab; // Array of monster prefabs to spawn
     public Transform player; // Assign your player here
 
     public int hordeSpawnSize = 20; // Max number of monsters in a horde
@@ -15,7 +15,7 @@ public class HordeManager : MonoBehaviour
 
     
     private List<MonsterTest> spawnedMonsters = new List<MonsterTest>();
-    
+
     void Start()
     {
         if (player == null)
@@ -29,19 +29,24 @@ public class HordeManager : MonoBehaviour
         }
 
 
-        SpawnHorde(hordeSpawnSize, spawnPoints[0].position, spawnRadius: 15f, spawnDistance: 20f);
+        // SpawnHorde(monsterPrefab, hordeSpawnSize, spawnPoints[0].position, spawnRadius: 15f, spawnDistance: 20f);
+    }
+    
+    public void HordeMonsterPopulator(int monsterIndex)
+    {
+        SpawnHorde(monsterIndex, hordeSpawnSize, player.position, spawnRadius: 1f, spawnDistance: 1f);
     }
     
     // Kan kaldes fra et script hvor vi vil spawn en horde af monstre, fx når spilleren når et bestemt område
-    public void SpawnHorde(int hordeSize, Vector3 spawnpoint, float spawnRadius, float spawnDistance)
+    public void SpawnHorde(int monsterIndex, int hordeSize, Vector3 spawnpoint, float spawnRadius, float spawnDistance)
     {
         if (monsterPrefab == null || player == null) return;
 
         for (int i = 0; i < hordeSize; i++)
         {
             Vector3 spawnPosition = GetSpawnPosition(i, spawnRadius, spawnDistance, hordeSize);
-
-            GameObject monster = Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
+            
+            GameObject monster = Instantiate(monsterPrefab[monsterIndex], spawnPosition, Quaternion.identity);
             MonsterTest monsterScript = monster.GetComponent<MonsterTest>();
 
             if (monsterScript != null)
