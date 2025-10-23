@@ -397,7 +397,7 @@ MonoBehaviour:
   EncryptionKey: 
   ImportType: 0
   TargetAssetPath: FMODBanks
-  TargetBankFolder: Assets/FMODBanks
+  TargetBankFolder: 
   EventLinkage: 1
   SerializeGUIDsOnly: 0
   LoggingLevel: 4
