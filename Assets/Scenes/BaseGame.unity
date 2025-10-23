@@ -14478,6 +14478,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 993810818604515808, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1138323682549609981, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
       propertyPath: m_Name
       value: ZombiePrefab
@@ -14521,6 +14525,18 @@ PrefabInstance:
     - target: {fileID: 2764413874123408899, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365411445320618159, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Mass
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966794475378517062, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966794475378517062, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Mass
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6482792527939117730, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
       propertyPath: target
