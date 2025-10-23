@@ -107,9 +107,28 @@ public class MonsterTest : MonoBehaviour, IDamagable
         // Look at target during attack
         StartCoroutine(LookAtTarget());
 
+        OverlapSphereDamage();
+
         // Reset attacking flag after animation
         StartCoroutine(ResetAttackingState(monsterData.attackCooldown));
         agent.isStopped = false; // Resume movement after attack
+    }
+
+    private void OverlapSphereDamage()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, monsterData.attackRange);
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.transform == target)
+            {
+                PlayerHealthSystem playerHealthSystem = hitCollider.GetComponent<PlayerHealthSystem>();
+                if (playerHealthSystem != null)
+                {
+                    playerHealthSystem.TakeDamage(monsterData.damageAmount);
+                    Debug.Log("Monster dealt " + monsterData.damageAmount + " damage to " + hitCollider.name);
+                }
+            }
+        }
     }
     
    private IEnumerator LookAtTarget()

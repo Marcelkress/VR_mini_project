@@ -14478,6 +14478,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 993810818604515808, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1138323682549609981, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
       propertyPath: m_Name
       value: ZombiePrefab
@@ -14521,6 +14525,18 @@ PrefabInstance:
     - target: {fileID: 2764413874123408899, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365411445320618159, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Mass
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966794475378517062, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966794475378517062, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
+      propertyPath: m_Mass
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6482792527939117730, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
       propertyPath: target
@@ -15735,9 +15751,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: scene
       objectReference: {fileID: 0}
+    - target: {fileID: 8460220877130045472, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
       propertyPath: handAnimator
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: selectAction.m_Action.m_Name
+      value: Select
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
