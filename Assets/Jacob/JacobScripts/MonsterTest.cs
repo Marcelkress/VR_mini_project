@@ -32,7 +32,7 @@ public class MonsterTest : MonoBehaviour, IDamagable
     [SerializeField]
     private float crawlSpeed = 1f;
     
-    private UnityEvent AttackEvent, TakeDamageEvent, DeadEvent, ScreamEvent;
+    public UnityEvent AttackEvent, TakeDamageEvent, DeadEvent, ScreamEvent;
 
     void Start()
     {
