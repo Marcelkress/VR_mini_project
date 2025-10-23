@@ -409,16 +409,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks:
-  - Master
-  Banks:
-  - Environment
-  - Environment.assets
-  - Master.assets
-  - Music
-  - Music.assets
-  - Spatialized sound
-  - Spatialized sound.assets
+  MasterBanks: []
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
