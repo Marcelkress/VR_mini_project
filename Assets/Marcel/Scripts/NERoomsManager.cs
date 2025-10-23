@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class NERoomsManager : MonoBehaviour
 {
@@ -30,9 +31,8 @@ public class NERoomsManager : MonoBehaviour
             if (roomIndex == rooms.Length - 1)
             {
                 corridor.SetActive(true);
-                bars.SetActive(false);
             }
-            
+
             if (roomIndex == 0)
             {
                 rooms[rooms.Length - 1].SetActive(false);
@@ -52,13 +52,13 @@ public class NERoomsManager : MonoBehaviour
 
             // Turn off room behind player
             if (roomIndex - 2 >= 0)
-            { 
+            {
                 rooms[roomIndex - 2].SetActive(false);
             }
-            
+
             lastRoomIndex = roomIndex;
         }
-        
+
         if (roomIndex < lastRoomIndex)
         {
             if (roomIndex == 0)
@@ -69,14 +69,19 @@ public class NERoomsManager : MonoBehaviour
             {
                 rooms[roomIndex - 1].SetActive(true);
             }
-            
+
             if (roomIndex + 2 <= rooms.Length)
             {
                 rooms[roomIndex + 2].SetActive(false);
             }
-            
+
             lastRoomIndex = roomIndex;
         }
+    }
+    
+    public void openBarsEvent()
+    {
+        bars.transform.DOMoveY(-10f, 2f).SetEase(Ease.InQuad);
     }
     
 }
