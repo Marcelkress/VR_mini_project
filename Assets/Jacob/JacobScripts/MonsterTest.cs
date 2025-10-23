@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using NUnit.Compatibility;
+using UnityEngine.Events;
 
 public class MonsterTest : MonoBehaviour, IDamagable
 {
@@ -30,6 +31,8 @@ public class MonsterTest : MonoBehaviour, IDamagable
     // Crawl speed (optional override). If zero, uses monsterData.speed
     [SerializeField]
     private float crawlSpeed = 1f;
+    
+    private UnityEvent AttackEvent, TakeDamageEvent, DeadEvent, ScreamEvent;
 
     void Start()
     {
@@ -94,6 +97,7 @@ public class MonsterTest : MonoBehaviour, IDamagable
 
         // Trigger attack animation using trigger parameter
         isAttacking = true;
+        AttackEvent.Invoke();
         lastAttackTime = Time.time;
 
         // stop movement during attack
@@ -263,6 +267,8 @@ public class MonsterTest : MonoBehaviour, IDamagable
         if (isDead) return;
         
         monsterData.currentHealth -= damage;
+        
+        TakeDamageEvent.Invoke();
 
         // Trigger hit animation - you can add hit reactions to your animator if needed
         // For now, we'll just log the damage
@@ -279,6 +285,7 @@ public class MonsterTest : MonoBehaviour, IDamagable
         if (isDead) return;
         
         isDead = true;
+        DeadEvent.Invoke();
         Debug.Log("Monster died!");
 
         // Stop all movement
