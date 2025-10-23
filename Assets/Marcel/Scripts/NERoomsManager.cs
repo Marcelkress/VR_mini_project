@@ -7,8 +7,10 @@ public class NERoomsManager : MonoBehaviour
     public GameObject[] rooms;
     public GameObject corridor;
     public GameObject bars;
-    
+
     public int lastRoomIndex;
+
+    private bool reachedEnd = false;
 
     private void Start()
     {
@@ -21,16 +23,19 @@ public class NERoomsManager : MonoBehaviour
         
         rooms[rooms.Length - 1].SetActive(true);
         rooms[0].SetActive(true);
+
+        reachedEnd = false;
     }
 
     public void EnteredRoom(int roomIndex)
     {
-        if (roomIndex > lastRoomIndex)
+        if (roomIndex > lastRoomIndex && !reachedEnd)
         {
             // Turn on corridor when reaching end
             if (roomIndex == rooms.Length - 1)
             {
                 corridor.SetActive(true);
+                reachedEnd = true;
             }
 
             if (roomIndex == 0)
@@ -58,6 +63,7 @@ public class NERoomsManager : MonoBehaviour
 
             lastRoomIndex = roomIndex;
         }
+        /*
 
         if (roomIndex < lastRoomIndex)
         {
@@ -76,7 +82,7 @@ public class NERoomsManager : MonoBehaviour
             }
 
             lastRoomIndex = roomIndex;
-        }
+        }*/
     }
     
     public void openBarsEvent()
