@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
 	<object class="Workspace" id="{91cdc162-8a5a-42be-a8ac-8e922bb791c5}">
-		<property name="builtBanksOutputDirectory">
-			<value>../../Assets/FMODBanks</value>
-		</property>
+		<property name="builtBanksOutputDirectory" />
 		<property name="builtBanksSeparateAssets">
 			<value>true</value>
 		</property>
