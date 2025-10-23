@@ -15751,9 +15751,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: scene
       objectReference: {fileID: 0}
+    - target: {fileID: 8460220877130045472, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
       propertyPath: handAnimator
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: selectAction.m_Action.m_Name
+      value: Select
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
