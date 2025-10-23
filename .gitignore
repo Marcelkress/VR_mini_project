@@ -83,6 +83,10 @@ crashlytics-build.properties
 !/[Aa]ssets/Gizmos/FMOD/*
 !/[Aa]ssets/Editor Default Resources/FMOD/*
 
+# Don't ignore the builds folder 
+!FMODAssets/FMOD SYSTEM/Build
+!FMODAssets/FMOD SYSTEM/Build/**/*
+
 # Ignore the Cache folder since it is updated locally.
 /[Aa]ssets/Plugins/FMOD/Cache/*
 
