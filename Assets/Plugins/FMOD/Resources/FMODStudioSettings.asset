@@ -397,8 +397,8 @@ MonoBehaviour:
   EncryptionKey: 
   ImportType: 0
   TargetAssetPath: FMODBanks
-  TargetBankFolder: 
-  EventLinkage: 0
+  TargetBankFolder: Assets/FMODBanks
+  EventLinkage: 1
   SerializeGUIDsOnly: 0
   LoggingLevel: 4
   SpeakerModeSettings: []
@@ -415,6 +415,8 @@ MonoBehaviour:
   - Environment
   - Environment.assets
   - Master.assets
+  - Monsters
+  - Monsters.assets
   - Music
   - Music.assets
   - Spatialized sound
