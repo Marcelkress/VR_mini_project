@@ -6,25 +6,24 @@ public class PortalCamera : MonoBehaviour
     public Transform portal;
     public Transform otherPortal;
 
-    public bool rotationWorks = false;
+    void LateUpdate()
+    {
+       Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
+       transform.position = portal.position + playerOffsetFromPortal;
 
-    // Update is called once per frame
-    // void Update()
-    // {
-    //     Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
-    //     transform.position = portal.position + playerOffsetFromPortal;
+       float angularDifferenceBetweenPortalRotations = Quaternion.Angle(portal.rotation, otherPortal.rotation);
 
-    //     float angularDifferenceBetweenPortalRotations = Quaternion.Angle(portal.rotation, otherPortal.rotation);
+       Quaternion portalRotationalDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
+       Vector3 newCameraDirection = portalRotationalDifference * playerCamera.forward;
+       transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
 
-    //     Quaternion portalRotationalDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
-    //     Vector3 newCameraDirection = portalRotationalDifference * playerCamera.forward;
-    //     transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
+      // TODO: 
+      // - Vi skal fikse rotation p� x-aksen
+      // - Ting skal vidst i Late Update, s� den opdaterer mere korrekt if�lge yt kommentarer.
 
-    //    // TODO: 
-    //    // - Vi skal fikse rotation p� x-aksen
-    //    // - Ting skal vidst i Late Update, s� den opdaterer mere korrekt if�lge yt kommentarer.
+    }
 
-    // }
+    /*
     void LateUpdate()
     {
         // Step 1: Convert player's position relative to other portal
@@ -38,17 +37,6 @@ public class PortalCamera : MonoBehaviour
 
         // Step 4: Apply that rotation to current portal's rotation
         transform.rotation = portal.rotation * playerRelativeRotation;
-
-        // Debug
-        if (otherPortal.forward == portal.forward)
-        {
-            rotationWorks = true;
-        }
-        else
-        {
-            rotationWorks = false;
-        }
-
-        Debug.Log(rotationWorks);
     }
+    */
 }
