@@ -5857,7 +5857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  bloodVignette: {fileID: 4191899913309336725}
+  bloodVignette: {fileID: 7455947453375633204}
   LowHealthEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -17834,14 +17834,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8429981633443581377, guid: 6c8af5c8012f01440af6cb2bc3eb987c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4191899913309336725}
+      addedObject: {fileID: 7455947453375633204}
   m_SourcePrefab: {fileID: 100100000, guid: 6c8af5c8012f01440af6cb2bc3eb987c, type: 3}
 --- !u!1 &1197683806865146728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8429981633443581377, guid: 6c8af5c8012f01440af6cb2bc3eb987c, type: 3}
   m_PrefabInstance: {fileID: 7233423881138572969}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4191899913309336725
+--- !u!114 &7455947453375633204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17853,7 +17853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efebcea78a9c5dc188d4d52063c971a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealthSystem: {fileID: 0}
+  playerHealthSystem: {fileID: 3804322830691106379}
   bloodVignetteMaterial: {fileID: 2100000, guid: 8840e7ff12d29afc3ae998a2df6e146c, type: 2}
   materialCutoffEaseValue: 0.5
   apertureEaseValue: 0.5
