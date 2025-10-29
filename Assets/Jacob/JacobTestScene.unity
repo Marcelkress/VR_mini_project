@@ -449,6 +449,7 @@ MonoBehaviour:
   velocityMultiplier: 1
   minimumVelocity: 7
   maxVelocity: 40
+  canKnockBack: 1
   knockBackForceMultiplier: 1.5
   weaponVelocityTracker: {fileID: 1134733428}
   showDebugInfo: 0
