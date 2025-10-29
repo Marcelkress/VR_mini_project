@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77a644b92a7dfb1d873993ef427509e, type: 3}
   m_Name: UndeadSkeletonData
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  currentHealth: 250
   maxHealth: 250
-  speed: 0.8
-  chaseSpeed: 2
+  speed: 0.6
+  chaseSpeed: 1
   attackRange: 3
   attackCooldown: 4
   hitReactionTime: 0.5
