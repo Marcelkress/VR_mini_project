@@ -10,16 +10,23 @@ public class PortalTeleporter : MonoBehaviour
     private bool playerIsOverlapping = false;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if (!playerIsOverlapping)
+        {
+            Debug.Log("Not overlapping...");
+        }
+
         if (playerIsOverlapping)
         {
+            Debug.Log("Is overlapping!!");
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
 
             // If this is true, the player has moved across the portal
             if (dotProduct < 0f)
             {
+                Debug.Log("We have crossed the portal!");
                 float rotationDiff = Quaternion.Angle(transform.rotation, receiver.rotation);
 
                 // Det her er til specifikt det her scenarie, da vi ved hvordan at portalerne er placeret.
@@ -46,8 +53,11 @@ public class PortalTeleporter : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+
         if (other.tag == "Player")
         {
+            Debug.Log("Is NOT overlapping!!");
+
             playerIsOverlapping = false;
         }
     }
