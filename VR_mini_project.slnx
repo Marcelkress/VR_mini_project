@@ -77,7 +77,6 @@
   <Project Path="Unity.AI.Navigation.Updater.csproj" />
   <Project Path="Unity.XR.ARSubsystems.Editor.csproj" />
   <Project Path="Unity.Performance.Profile-Analyzer.Editor.csproj" />
-  <Project Path="Unity.XR.Management.Editor.csproj" />
   <Project Path="UnityEditor.UI.csproj" />
   <Project Path="glTFast.Newtonsoft.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.007.csproj" />
@@ -95,6 +94,7 @@
   <Project Path="FMODUnity.csproj" />
   <Project Path="Unity.XR.Interaction.Toolkit.Analytics.Editor.csproj" />
   <Project Path="Unity.ProBuilder.KdTree.csproj" />
+  <Project Path="Unity.XR.Management.Editor.csproj" />
   <Project Path="Unity.ProBuilder.AddOns.Editor.csproj" />
   <Project Path="Unity.XR.OpenXR.Features.MetaQuestSupport.Editor.csproj" />
   <Project Path="Unity.AppUI.Navigation.csproj" />

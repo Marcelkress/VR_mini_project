@@ -8907,6 +8907,9 @@ MonoBehaviour:
   velocityMultiplier: 2
   minimumVelocity: 1
   maxVelocity: 10
+  canKnockBack: 1
+  knockBackForceMultiplier: 1.5
+  weaponVelocityTracker: {fileID: 0}
   showDebugInfo: 1
 --- !u!54 &1192269681
 Rigidbody:
@@ -13648,6 +13651,9 @@ MonoBehaviour:
   velocityMultiplier: 2
   minimumVelocity: 1
   maxVelocity: 10
+  canKnockBack: 1
+  knockBackForceMultiplier: 1.5
+  weaponVelocityTracker: {fileID: 0}
   showDebugInfo: 1
 --- !u!54 &1910929111
 Rigidbody:
@@ -14333,6 +14339,9 @@ MonoBehaviour:
   velocityMultiplier: 2
   minimumVelocity: 1
   maxVelocity: 10
+  canKnockBack: 1
+  knockBackForceMultiplier: 1.5
+  weaponVelocityTracker: {fileID: 0}
   showDebugInfo: 1
 --- !u!54 &2018273212
 Rigidbody:
@@ -15379,7 +15388,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7715926269257257218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c69deeb5f527455c803c1424bee344a, type: 3}
   m_Name: 
@@ -15477,7 +15486,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7335220006603588523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c69deeb5f527455c803c1424bee344a, type: 3}
   m_Name: 
@@ -15932,7 +15941,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7887753549703353581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e22831eab08194b259809a36998a16d2, type: 3}
   m_Name: 
@@ -16418,7 +16427,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6409024302663316514}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c69deeb5f527455c803c1424bee344a, type: 3}
   m_Name: 
@@ -16471,7 +16480,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6517837967084465714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c69deeb5f527455c803c1424bee344a, type: 3}
   m_Name: 
@@ -16585,7 +16594,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6328594303778689169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c69deeb5f527455c803c1424bee344a, type: 3}
   m_Name: 
@@ -18460,7 +18469,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170180119502799267}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c69deeb5f527455c803c1424bee344a, type: 3}
   m_Name: 
