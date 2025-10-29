@@ -33,6 +33,9 @@ public class Damager : MonoBehaviour
     
     void Update()
     {
+        if (weaponVelocityTracker == null)
+            return;
+        
         // Calculate velocity manually for more accurate VR tracking
         currentVelocity = UnityEngine.Vector3.Distance(weaponVelocityTracker.position, lastPosition) / Time.deltaTime;
         lastPosition = transform.position;
