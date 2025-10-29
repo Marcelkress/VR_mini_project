@@ -8,6 +8,8 @@ public class PlayerHealthSystem : MonoBehaviour
     public int currentHealth;
     private bool lowHealthTriggered = false;
 
+    public BloodVignette bloodVignette;
+
     public UnityEvent LowHealthEvent, TakeDamageEvent, DeathEvent;
 
     void Start()
@@ -41,6 +43,7 @@ public class PlayerHealthSystem : MonoBehaviour
         if (healAmount <= 0 || currentHealth == maxHealth) return;
 
         currentHealth += healAmount;
+        bloodVignette.UpdateVignetteParameters();
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
@@ -52,11 +55,20 @@ public class PlayerHealthSystem : MonoBehaviour
         currentHealth -= damage;
         Debug.Log("Player took " + damage + " damage. Current health: " + currentHealth);
         TakeDamageEvent.Invoke();
+        bloodVignette.UpdateVignetteParameters();
         if (currentHealth <= 0)
         {
             Die();
         }
+
+
     }
+
+    public float GetHealthPercentage()
+    {
+        return (float)currentHealth / maxHealth;
+    }
+
     private void Die()
     {
         Debug.Log("Player has died.");
