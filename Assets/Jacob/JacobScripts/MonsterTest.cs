@@ -135,6 +135,8 @@ public class MonsterTest : MonoBehaviour, IDamagable
                 {
                     playerHealthSystem.TakeDamage(monsterData.damageAmount);
                     Debug.Log("Monster dealt " + monsterData.damageAmount + " damage to " + hitCollider.name);
+
+                    
                 }
             }
         }
@@ -248,18 +250,34 @@ public class MonsterTest : MonoBehaviour, IDamagable
         if (damager == null) return;
 
         int damage = damager.GetDamageAmount();
-        
+
         // Only take damage if the weapon is moving fast enough
         if (damage > 0)
-        {       
+        {
             animator.SetTrigger("TakeHit");
             TakeDamage(damage);
             Debug.Log($"Monster hit by {other.name} for {damage} damage based on velocity.");
+
+            ApplyKnockBack(damager.GetKnockBackForce(), other.transform.position);
         }
         else
         {
             Debug.Log($"Weapon {other.name} hit but was moving too slowly to cause damage.");
         }
+    }
+    
+    private void ApplyKnockBack(float force, UnityEngine.Vector3 currentHitPosition)
+    {
+        if (force <= 0f) return;
+
+        Vector3 knockBackDirection = (transform.position - currentHitPosition).normalized;
+        knockBackDirection.y = 0; // Keep knockback horizontal
+
+        // Apply knockback by moving the NavMeshAgent backwards
+        Vector3 knockBackTarget = transform.position + knockBackDirection * force;
+        agent.Warp(knockBackTarget);
+        
+        Debug.Log($"Monster knocked back by force {force}.");
     }
 
     public void OnTriggerExit(Collider other)

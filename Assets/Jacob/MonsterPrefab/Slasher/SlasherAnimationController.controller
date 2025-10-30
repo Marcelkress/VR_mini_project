@@ -201,7 +201,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: Death
+    m_ConditionEvent: hh
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4247762797424540103}
@@ -453,9 +453,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 7
-    m_ConditionEvent: Death
-    m_EventTreshold: 1
   - m_ConditionMode: 1
     m_ConditionEvent: TakeHit
     m_EventTreshold: 0
@@ -562,7 +559,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: Death
+    m_ConditionEvent: hh
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6608603044996619990}
