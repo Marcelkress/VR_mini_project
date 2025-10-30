@@ -3,6 +3,9 @@ using UnityEngine.AI;
 using System.Collections;
 using NUnit.Compatibility;
 using UnityEngine.Events;
+using FMODUnity;
+using FMOD.Studio;
+
 
 public class MonsterTest : MonoBehaviour, IDamagable
 {
@@ -107,6 +110,8 @@ public class MonsterTest : MonoBehaviour, IDamagable
 
 
         animator.SetTrigger(attackParam);
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
+        
 
         // Look at target during attack
         StartCoroutine(LookAtTarget());

@@ -16305,9 +16305,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: scene
       objectReference: {fileID: 0}
+    - target: {fileID: 8460220877130045472, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 376581308}
     - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
       propertyPath: handAnimator
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906549709323762978, guid: feacc4b6940f8445cb52ead34f120aa4, type: 3}
+      propertyPath: selectAction.m_Action.m_Name
+      value: Select
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17114,7 +17122,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f152e37e8deb64ec3bbff213131e20b2, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7ca4b7b1b458d4ac3bffe7e0f6ed2b01, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &7147046178998602046
 Transform:

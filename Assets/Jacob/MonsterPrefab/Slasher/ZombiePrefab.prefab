@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8515914638573466214}
   - component: {fileID: 6482792527939117730}
   - component: {fileID: 8551104774829430669}
+  - component: {fileID: 6448215821421185022}
   m_Layer: 0
   m_Name: ZombiePrefab
   m_TagString: Untagged
@@ -131,6 +132,18 @@ MonoBehaviour:
   target: {fileID: 0}
   startCrawling: 0
   crawlSpeed: 1
+  AttackEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  TakeDamageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  DeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ScreamEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!136 &8551104774829430669
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -154,6 +167,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &6448215821421185022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138323682549609981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1736304458
+      Data2: 1333904297
+      Data3: 1656598974
+      Data4: -1463457324
+    Path: event:/MonsterAttack
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1299419249214308865
 GameObject:
   m_ObjectHideFlags: 0
