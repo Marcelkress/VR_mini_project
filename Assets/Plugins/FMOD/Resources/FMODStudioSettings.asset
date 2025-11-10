@@ -414,6 +414,8 @@ MonoBehaviour:
   Banks:
   - Environment
   - Environment.assets
+  - Footsteps
+  - Footsteps.assets
   - Master.assets
   - Monsters
   - Monsters.assets

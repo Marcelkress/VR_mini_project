@@ -97,6 +97,7 @@
 		<relationship name="effects">
 			<destination>{a2a606be-2bdd-4d62-9369-e39c24fdc2f6}</destination>
 			<destination>{1cf5e16e-5c8f-465c-92eb-4e106c8699f7}</destination>
+			<destination>{bbf0c26d-5853-4251-a763-39762227cba8}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{0768b197-1b62-4ab1-9e40-418e28b5b1f1}" />
@@ -111,6 +112,14 @@
 		<relationship name="plugin">
 			<destination>{9cacf7f8-aee9-4bf9-b6bc-89b74668af1f}</destination>
 		</relationship>
+	</object>
+	<object class="ThreeEQEffect" id="{bbf0c26d-5853-4251-a763-39762227cba8}">
+		<property name="lowGain">
+			<value>-2.5</value>
+		</property>
+		<property name="midGain">
+			<value>-13.5</value>
+		</property>
 	</object>
 	<object class="Plugin" id="{9cacf7f8-aee9-4bf9-b6bc-89b74668af1f}">
 		<property name="identifier">
@@ -211,7 +220,7 @@
 			<value>Reverb Send</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-7.5</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-60.000000)(1.000000,-40.000000)(2.000000,-20.000000)(3.000000,-12.000000)(4.000000,-6.000000)(5.000000,-2.000000)(6.000000,0.000000)(7.000000,2.000000)(8.000000,6.000000)(9.000000,12.000000)(10.000000,20.000000)}</value>
@@ -233,7 +242,7 @@
 			<value>V. Radius</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>0.650000036</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)(2.000000,4.000000)(3.000000,11.000000)(4.000000,25.000000)(5.000000,100.000000)(6.000000,1000.000000)}</value>
@@ -269,7 +278,7 @@
 			<value>Dtv. Intensity</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0.649999976</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -288,7 +297,7 @@
 			<value>Reverb Reach</value>
 		</property>
 		<property name="value">
-			<value>0.5</value>
+			<value>0.299999982</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
