@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.meta.xr.sdk.acoustics": {
+      "version": "file:../FMODAssets/FMOD SYSTEM/MetaXRSDKAcousticsFMOD.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.meta.xr.simulator": {
       "version": "78.0.0",
       "depth": 0,

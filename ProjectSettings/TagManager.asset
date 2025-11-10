@@ -7,6 +7,11 @@ TagManager:
   - Anchor
   - CinemachineTarget
   - DoorKey
+  - Hallway
+  - Room 0 og 4
+  - Room 1 og 5
+  - Room 3
+  - Room 4
   layers:
   - Default
   - TransparentFX
