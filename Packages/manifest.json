@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.meta.xr.sdk.acoustics": "file:../FMODAssets/FMOD SYSTEM/MetaXRSDKAcousticsFMOD.tgz",
     "com.meta.xr.simulator": "78.0.0",
     "com.unity.ai.inference": "2.3.0",
     "com.unity.ai.navigation": "2.0.9",
