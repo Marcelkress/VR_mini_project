@@ -1,14 +1,14 @@
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 
 public class HordeManager : MonoBehaviour
 {
     [Header("Horde Settings")]
     public GameObject[] monsterPrefab; // Array of monster prefabs to spawn
     public Transform player; // Assign your player here
-
     public int hordeSpawnSize = 20; // Max number of monsters in a horde
+    public float spawnInterval = 1;
     
     [Header("Spawn Points (Optional)")]
     public Transform[] spawnPoints; // If you want specific spawn locations
@@ -27,20 +27,23 @@ public class HordeManager : MonoBehaviour
             else
                 Debug.LogError("Player not found! Please assign the player transform.");
         }
-
-
+        
+        // Horde test:
         // SpawnHorde(monsterPrefab, hordeSpawnSize, spawnPoints[0].position, spawnRadius: 15f, spawnDistance: 20f);
     }
     
     public void HordeMonsterPopulator(int monsterIndex)
     {
-        SpawnHorde(monsterIndex, hordeSpawnSize, player.position, spawnRadius: 1f, spawnDistance: 1f);
+        StartCoroutine(SpawnHorde(monsterIndex, hordeSpawnSize, player.position, spawnRadius: 1f, spawnDistance: 1f));
     }
     
     // Kan kaldes fra et script hvor vi vil spawn en horde af monstre, fx når spilleren når et bestemt område
-    public void SpawnHorde(int monsterIndex, int hordeSize, Vector3 spawnpoint, float spawnRadius, float spawnDistance)
+    public IEnumerator SpawnHorde(int monsterIndex, int hordeSize, Vector3 spawnpoint, float spawnRadius, float spawnDistance)
     {
-        if (monsterPrefab == null || player == null) return;
+        if (monsterPrefab == null || player == null)
+        {
+            yield break;
+        }
 
         for (int i = 0; i < hordeSize; i++)
         {
@@ -55,6 +58,8 @@ public class HordeManager : MonoBehaviour
                 monsterScript.SetTarget(player);
                 spawnedMonsters.Add(monsterScript);
             }
+
+            yield return new WaitForSeconds(spawnInterval);
         }
 
         Debug.Log($"Spawned {hordeSize} monsters targeting player!");
