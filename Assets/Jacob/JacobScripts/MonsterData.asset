@@ -16,13 +16,7 @@ MonoBehaviour:
   maxHealth: 100
   speed: 1
   chaseSpeed: 3
-  attackRange: 2.5
+  attackRange: 3
   attackCooldown: 2
   hitReactionTime: 0.5
   damageAmount: 10
-  attackAnimationName: Attack
-  hitReactionAnimationName: 
-  deathAnimationName: Death
-  idleAnimationName: Running
-  walkAnimationName: Running
-  runAnimationName: Running

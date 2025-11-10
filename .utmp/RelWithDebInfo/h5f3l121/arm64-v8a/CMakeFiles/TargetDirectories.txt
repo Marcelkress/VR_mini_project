@@ -1,0 +1,5 @@
+/Users/marcelkress/Desktop/Unity Projects/VR_mini_project/.utmp/RelWithDebInfo/h5f3l121/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/marcelkress/Desktop/Unity Projects/VR_mini_project/.utmp/RelWithDebInfo/h5f3l121/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/marcelkress/Desktop/Unity Projects/VR_mini_project/.utmp/RelWithDebInfo/h5f3l121/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/marcelkress/Desktop/Unity Projects/VR_mini_project/.utmp/RelWithDebInfo/h5f3l121/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/marcelkress/Desktop/Unity Projects/VR_mini_project/.utmp/RelWithDebInfo/h5f3l121/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

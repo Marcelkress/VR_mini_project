@@ -6,6 +6,8 @@ public class GateLock : MonoBehaviour
 {
     public GameObject leftLock, rightLock;
     public float keyFloatDuration;
+
+    private bool leftOpen, rightOpen;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +16,7 @@ public class GateLock : MonoBehaviour
             if (!other.GetComponent<XRGrabInteractable>().isSelected)
             {
                 Unlock(other.gameObject, true);
+                leftOpen = true;
             }
         }
         else if (other.CompareTag("GateKeyRight"))
@@ -21,6 +24,7 @@ public class GateLock : MonoBehaviour
             if (!other.GetComponent<XRGrabInteractable>().isSelected)
             {
                 Unlock(other.gameObject, false);
+                rightOpen = true;
             }
         }
     }
@@ -31,13 +35,20 @@ public class GateLock : MonoBehaviour
         {
             key.transform.parent = this.transform;
             key.transform.DOMove(leftLock.transform.position, keyFloatDuration, false);
-            //key.transform.DORotate(new Vector3(0, 0, 90), keyFloatDuration);
+            key.transform.DORotate(new Vector3(-90, 0, 0), keyFloatDuration);
         }
         else
         {
             key.transform.parent = this.transform;
             key.transform.DOMove(rightLock.transform.position, keyFloatDuration, false);
-            //key.transform.DORotate(new Vector3(0, 0, 90), keyFloatDuration);
+            key.transform.DORotate(new Vector3(-90, 0, 0), keyFloatDuration);
+        }
+        
+        key.GetComponent<Rigidbody>().isKinematic = true;
+
+        if (leftOpen && rightOpen)
+        {
+            // WIN!!
         }
     }
 
