@@ -278,60 +278,6 @@ Transform:
   - {fileID: 542562643}
   m_Father: {fileID: 1130160400940755753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &67873900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 67873901}
-  - component: {fileID: 67873902}
-  m_Layer: 0
-  m_Name: AudioRoomReflectionsMaster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &67873901
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67873900}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2077262430}
-  - {fileID: 1292719373}
-  - {fileID: 1233253486}
-  - {fileID: 775691390}
-  - {fileID: 503651782}
-  m_Father: {fileID: 358696198}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &67873902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67873900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 857d0bd1ee2714169aefe87a2b53794c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioRoomsReflectionsMaster
-  HallwayRoomReflections: {fileID: 2077262429}
-  Room0Reflections: {fileID: 1292719372}
-  Room1Reflections: {fileID: 1292719372}
-  Room2Reflections: {fileID: 1233253485}
-  Room3Reflections: {fileID: 775691389}
 --- !u!1001 &71145311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2605,39 +2551,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15345933, y: 3.0673258, z: 1.6203251}
   m_Center: {x: -0.045708608, y: 1.5026485, z: -0.77961564}
---- !u!1 &358696197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 358696198}
-  m_Layer: 0
-  m_Name: Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &358696198
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358696197}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.7583, y: 2.31625, z: 15.5326}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1158962015}
-  - {fileID: 67873901}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364835207
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,61 +3881,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 495761869}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &503651781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 503651782}
-  - component: {fileID: 503651783}
-  m_Layer: 0
-  m_Name: 'Room3Reflections '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &503651782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503651781}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.15, y: 0, z: 2.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 67873901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &503651783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503651781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3115f71c5841078600752259d33fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Meta.XR.Acoustics::MetaXRAudioRoomAcousticProperties
-  lockPositionToListener: 0
-  width: 11.6
-  height: 3.53
-  depth: 11.57
-  leftMaterial: 28
-  rightMaterial: 28
-  ceilingMaterial: 28
-  floorMaterial: 28
-  frontMaterial: 28
-  backMaterial: 28
-  clutterFactor: 0.5
 --- !u!4 &504079121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
@@ -6773,61 +6631,6 @@ MonoBehaviour:
   m_FadeFactor: 1
   version: 1
   m_DecalLayerMask: 1
---- !u!1 &775691389
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 775691390}
-  - component: {fileID: 775691391}
-  m_Layer: 0
-  m_Name: Room2Reflections
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &775691390
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775691389}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.98, y: 0, z: 2.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 67873901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &775691391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775691389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3115f71c5841078600752259d33fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Meta.XR.Acoustics::MetaXRAudioRoomAcousticProperties
-  lockPositionToListener: 0
-  width: 11.9
-  height: 3.53
-  depth: 11.7
-  leftMaterial: 28
-  rightMaterial: 28
-  ceilingMaterial: 28
-  floorMaterial: 28
-  frontMaterial: 28
-  backMaterial: 28
-  clutterFactor: 0.5
 --- !u!1 &796777035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1030978644, guid: abc00000000003540144621454288417, type: 3}
@@ -8678,7 +8481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HordeManager
   monsterPrefab:
   - {fileID: 1138323682549609981, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
-  player: {fileID: 1454031041}
+  player: {fileID: 0}
   hordeSpawnSize: 5
   spawnPoints:
   - {fileID: 1358924099}
@@ -8895,55 +8698,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158680235}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1158962014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1158962015}
-  - component: {fileID: 1158962016}
-  m_Layer: 0
-  m_Name: AudioMethodMaster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1158962015
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158962014}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 358696198}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1158962016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158962014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6752d4e65caca45038b2f01438130ae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioMethodMaster
-  MonsterAttack: {fileID: 6448215821421185022, guid: fc1a3978de6e297d1b71097abee84fd3, type: 3}
-  HandsClick: {fileID: 0}
-  VHSTapeInsert: {fileID: 0}
-  whiteNoise: {fileID: 0}
-  VHSgrab: {fileID: 0}
 --- !u!1001 &1176603122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9172,61 +8926,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030978645, guid: abc00000000003540144621454288417, type: 3}
   m_PrefabInstance: {fileID: 1490765003}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1233253485
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1233253486}
-  - component: {fileID: 1233253487}
-  m_Layer: 0
-  m_Name: Room1Reflections
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1233253486
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233253485}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.24, y: 0, z: -9.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 67873901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1233253487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233253485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3115f71c5841078600752259d33fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Meta.XR.Acoustics::MetaXRAudioRoomAcousticProperties
-  lockPositionToListener: 0
-  width: 11.6
-  height: 3.53
-  depth: 11.2
-  leftMaterial: 28
-  rightMaterial: 28
-  ceilingMaterial: 28
-  floorMaterial: 28
-  frontMaterial: 28
-  backMaterial: 28
-  clutterFactor: 0.5
 --- !u!1 &1250717781
 GameObject:
   m_ObjectHideFlags: 0
@@ -9752,61 +9451,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284343516}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1292719372
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1292719373}
-  - component: {fileID: 1292719374}
-  m_Layer: 0
-  m_Name: Room0Reflections
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1292719373
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292719372}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.083, y: 0, z: -9.44}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 67873901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1292719374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292719372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3115f71c5841078600752259d33fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Meta.XR.Acoustics::MetaXRAudioRoomAcousticProperties
-  lockPositionToListener: 0
-  width: 10.98
-  height: 3.53
-  depth: 10.64
-  leftMaterial: 28
-  rightMaterial: 28
-  ceilingMaterial: 28
-  floorMaterial: 28
-  frontMaterial: 28
-  backMaterial: 28
-  clutterFactor: 0.5
 --- !u!1001 &1294339340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10937,11 +10581,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 1451772589}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1454031041 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9095131086348497521, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
-  m_PrefabInstance: {fileID: 1524746844}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1464748771
 GameObject:
   m_ObjectHideFlags: 0
@@ -11714,6 +11353,10 @@ PrefabInstance:
     - target: {fileID: 2975349732984493802, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       propertyPath: m_Name
       value: XR ORIGIN FRFR
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975349732984493802, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9095131086348497521, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15278,61 +14921,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 2043455264}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2077262429
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2077262430}
-  - component: {fileID: 2077262431}
-  m_Layer: 0
-  m_Name: HallwayRoomReflection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2077262430
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077262429}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.47, y: -0.33, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 67873901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2077262431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077262429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3115f71c5841078600752259d33fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Meta.XR.Acoustics::MetaXRAudioRoomAcousticProperties
-  lockPositionToListener: 0
-  width: 33.1
-  height: 3.35
-  depth: 8
-  leftMaterial: 28
-  rightMaterial: 28
-  ceilingMaterial: 28
-  floorMaterial: 28
-  frontMaterial: 28
-  backMaterial: 28
-  clutterFactor: 0.5
 --- !u!4 &2095741984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
@@ -16366,11 +15954,11 @@ GameObject:
   - component: {fileID: 8993373184733170914}
   m_Layer: 0
   m_Name: Room no arches 1
-  m_TagString: Room 1 og 5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1172026539854028205
 Transform:
   m_ObjectHideFlags: 0
@@ -17619,7 +17207,7 @@ GameObject:
   - component: {fileID: 6328594303778689170}
   m_Layer: 0
   m_Name: Room no arches 5
-  m_TagString: Room 1 og 5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17738,7 +17326,7 @@ GameObject:
   - component: {fileID: 6409024302663316515}
   m_Layer: 0
   m_Name: Room no arches 4
-  m_TagString: Room 0 og 4
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17931,7 +17519,7 @@ GameObject:
   - component: {fileID: 6517837967084465715}
   m_Layer: 0
   m_Name: Room no arches 2
-  m_TagString: Room 3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18390,7 +17978,7 @@ GameObject:
   - component: {fileID: 7335220006603588524}
   m_Layer: 0
   m_Name: Room no arches 0
-  m_TagString: Room 0 og 4
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18575,7 +18163,7 @@ GameObject:
   - component: {fileID: 7715926269257257219}
   m_Layer: 0
   m_Name: Room no arches 3
-  m_TagString: Room 4
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18948,7 +18536,7 @@ GameObject:
   - component: {fileID: 7887753549703353582}
   m_Layer: 0
   m_Name: Hallway prefab
-  m_TagString: Hallway
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -19657,4 +19245,3 @@ SceneRoots:
   - {fileID: 588472419}
   - {fileID: 840567659}
   - {fileID: 1524746844}
-  - {fileID: 358696198}
