@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Gravity;
 
 public class SimpleFpsTMP : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class SimpleFpsTMP : MonoBehaviour
     float emaDelta = 1f / 60f;
     float nextUpdate;
 
+    public GravityProvider gravityProvider;
+
     void Reset() => label = GetComponent<TMP_Text>();
 
     private void Start()
@@ -24,6 +27,12 @@ public class SimpleFpsTMP : MonoBehaviour
     }
 
     void Update()
+    {
+        //FPS();
+        Grounded();
+    }
+
+    void FPS()
     {
         // Smooth delta (EMA)
         emaDelta = Mathf.Lerp(emaDelta, Time.unscaledDeltaTime, 1f - smoothing);
@@ -36,5 +45,10 @@ public class SimpleFpsTMP : MonoBehaviour
 
         if (label)
             label.text = $"FPS: {fps.ToString($"F{fpsDecimals}")}  ({ms.ToString("F1")} ms)";
+    }
+
+    void Grounded()
+    {
+        label.text = gravityProvider.isGrounded.ToString();
     }
 }
