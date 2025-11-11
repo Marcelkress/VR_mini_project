@@ -10658,6 +10658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1185801632}
   - component: {fileID: 1185801633}
+  - component: {fileID: 1185801634}
   m_Layer: 7
   m_Name: FootstepsSound
   m_TagString: Untagged
@@ -10711,6 +10712,33 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1185801634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185801631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4b88cc1d79442818b004e89c09a92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleFootstep
+  leftThumbstick:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Thumbstick
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9226cb5f-42c9-4062-8bbb-df0fa0b4c5c6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  footstepEmitter: {fileID: 1185801633}
+  stepInterval: 0.5
+  moveDeadzone: 0.1
 --- !u!1 &1211978132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1030978644, guid: abc00000000003540144621454288417, type: 3}
