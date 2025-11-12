@@ -7,7 +7,10 @@ public class FakePortal : MonoBehaviour
 
     private Vector3 localposition;
 
-    public int portalCounter;
+    private int portalCounter;
+    public int portalCounterTrigger;
+
+    public GameObject newObjects;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +26,16 @@ public class FakePortal : MonoBehaviour
             other.transform.localPosition = localposition;
 
             portalCounter++;
+
+            if (portalCounter >= portalCounterTrigger)
+            {
+                SpawnNewObject();
+            }
         }
+    }
+
+    void SpawnNewObject()
+    {
+        newObjects.SetActive(true);
     }
 }
