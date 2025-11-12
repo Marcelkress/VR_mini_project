@@ -15,6 +15,9 @@ public class FmodEvents : MonoBehaviour
     
     [field: Header ("TestClick")]
     [field: SerializeField] public EventReference TestClick { get; private set; }  
+    
+   // [field: Header ("MonsterAttack")]
+    //[field: SerializeField] public EventReference MonsterAttack { get; private set; }
    
     // All dialogue are played through FMOD eventEmitter in SOUNDDIALOGUE COMPONENT USING TIMELINE
     

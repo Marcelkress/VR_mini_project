@@ -36,6 +36,7 @@ public class NERoomsManager : MonoBehaviour
             {
                 corridor.SetActive(true);
                 reachedEnd = true;
+                openBarsEvent();
             }
 
             if (roomIndex == 0)
