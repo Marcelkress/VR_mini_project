@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{3eb2287d-01dc-4ad2-b977-07ad48067ecd}">
+	<object class="AudioFile" id="{b972a99b-c2d6-4f05-8ecf-b80e30ada836}">
 		<property name="assetPath">
-			<value>MonsterSlasher/Monster 4-MonsterBreathe MON01_66_4.wav</value>
+			<value>MonsterSlasher/Monster L.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.7647083333333333</value>
+			<value>4.4582312925170067</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{dedbe953-dec6-4167-b80c-5c1df9fa75e8}</destination>

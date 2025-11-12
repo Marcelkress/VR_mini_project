@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{939888df-62ca-4d7f-aabc-62bbd3ff2b25}">
 		<property name="assetPath">
-			<value>MonsterAttack/Monster 1-MonsterBreathe MON01_66_4.wav</value>
+			<value>MonsterSlasher/Monster 1-MonsterBreathe MON01_66_4.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
