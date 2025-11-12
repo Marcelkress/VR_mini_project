@@ -19,6 +19,7 @@ public class DoorPuzzle : MonoBehaviour
         doorBody = GetComponentInChildren<Rigidbody>();
 
         doorBody.freezeRotation = true;
+        doorBody.isKinematic = true;
     }
 
     private void Unlock(GameObject key)
@@ -27,7 +28,8 @@ public class DoorPuzzle : MonoBehaviour
         key.transform.DOMove(keySnapPos.position, keyFlyDuratio, false);
         key.transform.DORotate(new Vector3(0, 0, 90), keyFlyDuratio);
         //key.GetComponent<Rigidbody>().isKinematic = true;
-        
+
+        doorBody.isKinematic = false;
         doorBody.freezeRotation = false;
         doorBody.AddTorque(unlockPushTorque, ForceMode.Impulse);
     }

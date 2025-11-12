@@ -400,7 +400,7 @@ MonoBehaviour:
   TargetBankFolder: Assets/FMODBanks
   EventLinkage: 1
   SerializeGUIDsOnly: 0
-  LoggingLevel: 4
+  LoggingLevel: 0
   SpeakerModeSettings: []
   SampleRateSettings: []
   LiveUpdateSettings: []
