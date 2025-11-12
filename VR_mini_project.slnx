@@ -36,7 +36,6 @@
   <Project Path="Unity.VisualStudio.Editor.csproj" />
   <Project Path="Unity.XR.Oculus.Editor.csproj" />
   <Project Path="Unity.InputSystem.csproj" />
-  <Project Path="Unity.XR.Hands.Samples.VisualizerSample.csproj" />
   <Project Path="Unity.XR.Interaction.Toolkit.Editor.csproj" />
   <Project Path="Unity.XR.OpenXR.csproj" />
   <Project Path="Unity.InferenceEngine.csproj" />
@@ -81,6 +80,7 @@
   <Project Path="glTFast.Newtonsoft.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.007.csproj" />
   <Project Path="Unity.XR.Hands.Analytics.Editor.csproj" />
+  <Project Path="Unity.XR.Hands.Samples.VisualizerSample.csproj" />
   <Project Path="Unity.XR.CoreUtils.Editor.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
   <Project Path="FMODUnityResonanceEditor.csproj" />

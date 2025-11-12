@@ -8524,6 +8524,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1855480640644494483, guid: 67f967bd0526951a39309df90a64adfe, type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3190276770909258113, guid: 67f967bd0526951a39309df90a64adfe, type: 3}
       propertyPath: m_Name
       value: halberd
@@ -20230,6 +20234,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6636224727673711872, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.063
@@ -22371,7 +22379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &966967464671680361
 Transform:
   m_ObjectHideFlags: 0
