@@ -7,7 +7,7 @@
       "dependencies": {}
     },
     "com.meta.xr.simulator": {
-      "version": "78.0.0",
+      "version": "81.0.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -403,7 +403,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.hands": {
-      "version": "1.6.2",
+      "version": "1.6.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
