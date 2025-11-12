@@ -265,21 +265,48 @@ public class MonsterTest : MonoBehaviour, IDamagable
             Debug.Log($"Weapon {other.name} hit but was moving too slowly to cause damage.");
         }
     }
-    
+
+    private bool isKnockedback = false;
     private void ApplyKnockBack(float force, UnityEngine.Vector3 currentHitPosition)
     {
         if (force <= 0f) return;
 
-        Vector3 knockBackDirection = (transform.position - currentHitPosition).normalized;
-        knockBackDirection.y = 0; // Keep knockback horizontal
+        Vector3 knockBackDirection = (transform.position - currentHitPosition);
+        knockBackDirection.y = 0f;
+        if (knockBackDirection.sqrMagnitude < 0.0001f)
+        {
+            knockBackDirection = transform.forward;
+        }
 
-        // Apply knockback by moving the NavMeshAgent backwards
-        Vector3 knockBackTarget = transform.position + knockBackDirection * force;
-        agent.Warp(knockBackTarget);
-        
-        Debug.Log($"Monster knocked back by force {force}.");
+        // Duration scales with force; clamp to reasonable bounds
+        float duration = Mathf.Clamp(force / 10f, 0.1f, 0.6f);
+        StartCoroutine(KnockbackCoroutine(knockBackDirection.normalized, force, duration));
     }
+    
+    private IEnumerator KnockbackCoroutine(Vector3 direction, float force, float duration)
+    {
+        if (isKnockedback) yield break;
+        isKnockedback = true;
+        
+        agent.ResetPath();
+        agent.isStopped = true;
 
+        float elapsed = 0f;
+        float speed = force / Mathf.Max(duration, 0.0001f);
+        
+        while (elapsed < duration)
+        {
+            float dt = Time.deltaTime;
+            Vector3 move = direction * speed * dt;
+            agent.Move(move);
+            elapsed += dt;
+            yield return null;
+        }
+
+        agent.isStopped = false;
+        isKnockedback = false;
+
+    }
     public void OnTriggerExit(Collider other)
     {
         // Optional: Handle logic when the collider exits, if needed
