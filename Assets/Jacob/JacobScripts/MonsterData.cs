@@ -17,6 +17,8 @@ public class MonsterData : ScriptableObject
     public float hitReactionTime = 0.5f;
     public int damageAmount = 10;
 
+    public AnimationCurve knockBackCurve = AnimationCurve.EaseInOut(0,1,1,0);
+
 
     public void Initialize()
     {

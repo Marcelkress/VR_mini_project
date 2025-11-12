@@ -1,329 +1,128 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
-using NUnit.Compatibility;
 using UnityEngine.Events;
-using FMODUnity;
-using FMOD.Studio;
 
-
+[RequireComponent(typeof(Animator), typeof(NavMeshAgent), typeof(Collider))]
 public class MonsterTest : MonoBehaviour, IDamagable
 {
     [Header("Health & Combat")]
     [SerializeField] private MonsterData monsterData;
+    [SerializeField] private GameObject bloodEffectPrefab;
 
-    [Header("Horde AI Settings")]
-    public Transform target; // Player target - assign this to make monster chase
-    [SerializeField]
-    [Tooltip("If true, the monster will use its crawling animation and crawl speed.")]
-    private bool startCrawling = false;
+    [Header("AI Settings")]
+    public Transform target; // Player target
+    [SerializeField] private bool startCrawling = false;
+    [SerializeField] private float crawlSpeed = 1f;
 
-    // Private variables
+    [Header("Knockback Settings")]
+    [Tooltip("An animation curve to control the knockback speed over time. (0,1) is start, (1,0) is end.")]
+    [SerializeField] private AnimationCurve knockbackCurve = AnimationCurve.EaseInOut(0, 1, 1, 0);
+    [Tooltip("How long the knockback effect should last.")]
+    [SerializeField] private float knockbackDuration = 0.4f;
+
+    // --- Component References ---
     private Animator animator;
     private NavMeshAgent agent;
-    private float lastAttackTime = 0f;
+
+    // --- State Management ---
     private bool isDead = false;
     private bool isAttacking = false;
-    
-    // Animation parameters matching the animator controller
+    private float lastAttackTime = 0f;
+    private Coroutine knockbackCoroutine; // To manage the knockback state
+
+    // --- Animation Hashes (for performance) ---
     private readonly int isCrawlingParam = Animator.StringToHash("IsCrawling");
     private readonly int runningParam = Animator.StringToHash("Running");
     private readonly int attackParam = Animator.StringToHash("Attack");
-    private readonly int deathParam = Animator.StringToHash("Death");
-    
-    // Crawl speed (optional override). If zero, uses monsterData.speed
-    [SerializeField]
-    private float crawlSpeed = 1f;
-    
-    public UnityEvent AttackEvent, TakeDamageEvent, DeadEvent, ScreamEvent;
+    private readonly int takeHitParam = Animator.StringToHash("TakeHit");
 
-    void Start()
+    // --- Events ---
+    public UnityEvent AttackEvent, TakeDamageEvent, DeadEvent;
+
+    #region Unity Methods
+
+    private void Awake()
     {
         monsterData.Initialize();
-        
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        
-        if (animator == null)
-        {
-            Debug.LogError("Animator component not found on the monster.");
-        }
-        
-        if (agent == null)
-        {
-            Debug.LogError("NavMeshAgent component not found on the monster.");
-        }
-        
-        // Initialize animation state - start in idle
-        animator.SetBool(isCrawlingParam, startCrawling);
-        animator.SetInteger(runningParam, 0); // 0 = Idle
-        animator.SetInteger(attackParam, 0);
-        
-    // Set up NavMeshAgent for chasing (respect crawling)
-    agent.speed = startCrawling ? (crawlSpeed > 0f ? crawlSpeed : monsterData.speed) : monsterData.chaseSpeed; // chase speed if not crawling
     }
-    
-    void Update()
+
+    private void Start()
     {
-        if (isDead) return;
-        
-        // Simple horde AI: if target is assigned, chase and attack
+        animator.SetBool(isCrawlingParam, startCrawling);
+        SetCrawling(startCrawling); // Use the method to set speed correctly
+    }
+
+    private void Update()
+    {
+        // A monster that is dead or being knocked back should not run AI logic.
+        if (isDead || knockbackCoroutine != null)
+        {
+            return;
+        }
+
         if (target != null)
         {
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
             
             if (distanceToTarget <= monsterData.attackRange)
             {
-                agent.stoppingDistance = monsterData.attackRange - 0.5f;
-                // Stop and attack
                 agent.ResetPath();
                 AttackTarget();
             }
             else
             {
-                // Chase the target
+                isAttacking = false; // Ensure we are not stuck in attacking state if player moves away
+                agent.isStopped = false;
                 agent.destination = target.position;
-                isAttacking = false;
             }
-            
-            // Update movement animation based on velocity
-            UpdateMovementAnimation();
         }
+        UpdateMovementAnimation();
     }
 
-    private void AttackTarget()
+    private void OnTriggerEnter(Collider other)
     {
-        if (isAttacking) return;
+        if (isDead) return;
 
-        // Check attack cooldown
-        if (Time.time - lastAttackTime < monsterData.attackCooldown) return;
-
-        // Trigger attack animation using trigger parameter
-        isAttacking = true;
-        AttackEvent.Invoke();
-        lastAttackTime = Time.time;
-
-        // stop movement during attack
-        agent.ResetPath();
-        agent.velocity = Vector3.zero;
-        agent.isStopped = true;
-
-
-        animator.SetTrigger(attackParam);
-        GetComponent<FMODUnity.StudioEventEmitter>().Play();
-        
-
-        // Look at target during attack
-        StartCoroutine(LookAtTarget());
-
-        OverlapSphereDamage();
-
-        // Reset attacking flag after animation
-        StartCoroutine(ResetAttackingState(monsterData.attackCooldown));
-        agent.isStopped = false; // Resume movement after attack
-    }
-
-    private void OverlapSphereDamage()
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, monsterData.attackRange);
-        foreach (var hitCollider in hitColliders)
+        if (other.TryGetComponent<Damager>(out Damager damager))
         {
-            if (hitCollider.transform == target)
+            if (damager.TryCalculateHit(out int damage, out float knockbackForce))
             {
-                PlayerHealthSystem playerHealthSystem = hitCollider.GetComponent<PlayerHealthSystem>();
-                if (playerHealthSystem != null)
-                {
-                    playerHealthSystem.TakeDamage(monsterData.damageAmount);
-                    Debug.Log("Monster dealt " + monsterData.damageAmount + " damage to " + hitCollider.name);
+                // 1. Process Damage
+                TakeDamage(damage);
 
-                    
+                // 2. Play Effects
+                animator.SetTrigger(takeHitParam);
+                if (bloodEffectPrefab != null)
+                {
+                    Instantiate(bloodEffectPrefab, other.ClosestPoint(transform.position), Quaternion.identity);
+                }
+                
+                // 3. Apply Knockback
+                if (knockbackForce > 0)
+                {
+                    Vector3 hitSourcePosition = other.transform.position;
+                    ApplyKnockback(knockbackForce, hitSourcePosition);
                 }
             }
         }
     }
-    
-   private IEnumerator LookAtTarget()
-    {
-        while (isAttacking)
-        {
-            Vector3 lookDirection = (target.position - transform.position).normalized;
-            lookDirection.y = 0;
-            if (lookDirection != Vector3.zero)
-            {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.deltaTime * 5f);
-            }
-            yield return null;
-        }
-    }
-    
-    private void UpdateMovementAnimation()
-    {
-        if (isAttacking) return;
 
-        float velocity = agent.velocity.magnitude;
+    #endregion
 
-        // If crawling, force the crawling bool and don't set running states
-        if (animator.GetBool(isCrawlingParam))
-        {
-            // Ensure agent speed respects crawling
-            agent.speed = crawlSpeed > 0f ? crawlSpeed : monsterData.speed;
-            
-            // Set Running to 1 for crawl movement, 0 for crawl idle
-            if (velocity > 0.1f)
-            {
-                animator.SetInteger(runningParam, 1); // Crawl moving
-            }
-            else
-            {
-                animator.SetInteger(runningParam, 0); // Crawl idle
-            }
-            return;
-        }
-
-        // Normal running/idle states
-        if (velocity > 0.1f)
-        {
-            animator.SetInteger(runningParam, 2); // Run animation
-        }
-        else
-        {
-            animator.SetInteger(runningParam, 0); // Idle animation
-        }
-    }
-
-    // Publicly switch crawling mode at runtime
-    public void SetCrawling(bool crawling)
-    {
-        animator.SetBool(isCrawlingParam, crawling);
-        if (crawling)
-        {
-            agent.speed = crawlSpeed > 0f ? crawlSpeed : monsterData.speed;
-        }
-        else
-        {
-            agent.speed = monsterData.chaseSpeed;
-        }
-    }
-    
-    private IEnumerator ResetAnimationAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        if (!isDead)
-        {
-            isAttacking = false;
-        }
-    }
-    
-    private IEnumerator ResetAttackingState(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        if (!isDead)
-        {
-            isAttacking = false;
-        }
-    }
-    
-    // Public method to set target (for easy horde management)
-    public void SetTarget(Transform newTarget)
-    {
-        target = newTarget;
-    }
-    
-    // Public method to force attack (for testing/debugging)
-    public void ForceAttack()
-    {
-        if (!isDead)
-        {
-            AttackTarget();
-        }
-    }
-    
-    // Check if monster is currently attacking
-    public bool IsAttacking()
-    {
-        return isAttacking;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        var damager = other.GetComponent<Damager>();
-        if (damager == null) return;
-
-        int damage = damager.GetDamageAmount();
-
-        // Only take damage if the weapon is moving fast enough
-        if (damage > 0)
-        {
-            animator.SetTrigger("TakeHit");
-            TakeDamage(damage);
-            Debug.Log($"Monster hit by {other.name} for {damage} damage based on velocity.");
-
-            ApplyKnockBack(damager.GetKnockBackForce(), other.transform.position);
-        }
-        else
-        {
-            Debug.Log($"Weapon {other.name} hit but was moving too slowly to cause damage.");
-        }
-    }
-
-    private bool isKnockedback = false;
-    private void ApplyKnockBack(float force, UnityEngine.Vector3 currentHitPosition)
-    {
-        if (force <= 0f) return;
-
-        Vector3 knockBackDirection = (transform.position - currentHitPosition);
-        knockBackDirection.y = 0f;
-        if (knockBackDirection.sqrMagnitude < 0.0001f)
-        {
-            knockBackDirection = transform.forward;
-        }
-
-        // Duration scales with force; clamp to reasonable bounds
-        float duration = Mathf.Clamp(force / 10f, 0.1f, 0.6f);
-        StartCoroutine(KnockbackCoroutine(knockBackDirection.normalized, force, duration));
-    }
-    
-    private IEnumerator KnockbackCoroutine(Vector3 direction, float force, float duration)
-    {
-        if (isKnockedback) yield break;
-        isKnockedback = true;
-        
-        agent.ResetPath();
-        agent.isStopped = true;
-
-        float elapsed = 0f;
-        float speed = force / Mathf.Max(duration, 0.0001f);
-        
-        while (elapsed < duration)
-        {
-            float dt = Time.deltaTime;
-            Vector3 move = direction * speed * dt;
-            agent.Move(move);
-            elapsed += dt;
-            yield return null;
-        }
-
-        agent.isStopped = false;
-        isKnockedback = false;
-
-    }
-    public void OnTriggerExit(Collider other)
-    {
-        // Optional: Handle logic when the collider exits, if needed
-    }
+    #region Combat & Damage
 
     public void TakeDamage(int damage)
     {
         if (isDead) return;
         
         monsterData.currentHealth -= damage;
-        
         TakeDamageEvent.Invoke();
-
-        // Trigger hit animation - you can add hit reactions to your animator if needed
-        // For now, we'll just log the damage
         
         Debug.Log($"Monster took {damage} damage, current health: {monsterData.currentHealth}/{monsterData.maxHealth}");
+        
         if (monsterData.currentHealth <= 0)
         {
             Die();
@@ -338,17 +137,143 @@ public class MonsterTest : MonoBehaviour, IDamagable
         DeadEvent.Invoke();
         Debug.Log("Monster died!");
 
-        // Stop all movement
-        agent.ResetPath();
-        agent.enabled = false;
+        // Stop all movement and AI
+        if (agent.isOnNavMesh) agent.enabled = false;
+        GetComponent<Collider>().enabled = false;
+        
+        // Stop the animator to allow for ragdoll physics or a static death pose
+        animator.enabled = false;
+    }
 
-        GetComponent<Collider>().enabled = false; // Disable collider to prevent further interactions
-    
-        // Disable animator to enable ragdoll        
-        animator.enabled = false; // Disable animator to stop all animations
+    private void AttackTarget()
+    {
+        if (isAttacking || Time.time - lastAttackTime < monsterData.attackCooldown) return;
+
+        isAttacking = true;
+        lastAttackTime = Time.time;
+
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+
+        // Look at target during attack
+        Vector3 lookDirection = (target.position - transform.position);
+        lookDirection.y = 0;
+        transform.rotation = Quaternion.LookRotation(lookDirection);
+
+        animator.SetTrigger(attackParam);
+        AttackEvent.Invoke();
+        GetComponent<FMODUnity.StudioEventEmitter>()?.Play();
+
+        // Perform damage check after a short delay to sync with animation
+        StartCoroutine(PerformAttackDamage(0.1f)); // Magic Number oh no, should be synced with animation, we can improve later with animation events
+        StartCoroutine(ResetAttackingState(monsterData.attackCooldown));
+    }
+
+    // Separated the damage logic for better timing with animations
+    private IEnumerator PerformAttackDamage(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (isDead) yield break;
         
-        
-        
+        // Check if target is still in range after the animation windup
+        if (Vector3.Distance(transform.position, target.position) <= monsterData.attackRange + 0.5f) // Small buffer
+        {
+            if (target.TryGetComponent<PlayerHealthSystem>(out var playerHealth))
+            {
+                playerHealth.TakeDamage(monsterData.damageAmount);
+            }
+        }
     }
     
+    private IEnumerator ResetAttackingState(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isAttacking = false;
+        if (!isDead && knockbackCoroutine == null)
+        {
+            agent.isStopped = false;
+        }
+    }
+
+    #endregion
+
+    #region Knockback System
+
+    // NEW & IMPROVED: This is the public method to call.
+    public void ApplyKnockback(float force, Vector3 hitSourcePosition)
+    {
+        if (isDead || force <= 0f) return;
+
+        // If a knockback is already happening, stop it and start the new one.
+        // This makes the monster react realistically to rapid hits.
+        if (knockbackCoroutine != null)
+        {
+            StopCoroutine(knockbackCoroutine);
+        }
+
+        Vector3 knockbackDirection = (transform.position - hitSourcePosition).normalized;
+        knockbackDirection.y = 0; // Keep knockback horizontal
+
+        // Failsafe if direction is somehow zero
+        if (knockbackDirection.sqrMagnitude < 0.001f)
+        {
+            knockbackDirection = -transform.forward;
+        }
+
+        knockbackCoroutine = StartCoroutine(KnockbackCoroutine(knockbackDirection, force));
+    }
+    
+    private IEnumerator KnockbackCoroutine(Vector3 direction, float initialForce)
+    {
+        // --- On Knockback Start ---
+        isAttacking = false; // Interrupt any attack
+        agent.isStopped = true;
+        agent.ResetPath();
+
+        float elapsedTime = 0f;
+        while (elapsedTime < knockbackDuration)
+        {
+            // The curve evaluates from 1 down to 0, creating a smooth deceleration.
+            float speedMultiplier = knockbackCurve.Evaluate(elapsedTime / knockbackDuration);
+            float currentSpeed = initialForce * speedMultiplier;
+
+            agent.Move(direction * currentSpeed * Time.deltaTime);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // --- On Knockback End ---
+        if (!isDead)
+        {
+            agent.isStopped = false;
+        }
+        knockbackCoroutine = null; // Signal that the knockback is finished.
+    }
+
+    #endregion
+
+    #region Animation & Movement
+
+    private void UpdateMovementAnimation()
+    {
+        float velocity = agent.velocity.magnitude;
+        int runState = (velocity > 0.1f) ? (animator.GetBool(isCrawlingParam) ? 1 : 2) : 0;
+        animator.SetInteger(runningParam, runState);
+    }
+
+    public void SetCrawling(bool crawling)
+    {
+        startCrawling = crawling;
+        animator.SetBool(isCrawlingParam, crawling);
+        agent.speed = crawling ? crawlSpeed : monsterData.chaseSpeed;
+    }
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
+
+    #endregion
 }

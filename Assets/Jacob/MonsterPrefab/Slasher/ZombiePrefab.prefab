@@ -131,6 +131,7 @@ MonoBehaviour:
   monsterData: {fileID: 11400000, guid: a067efd4fc66c86d983c207d4cf40edf, type: 2}
   target: {fileID: 0}
   startCrawling: 0
+  bloodEffectPrefab: {fileID: 1829294476064008891, guid: 352da21a5d12172a7bfa70fdbbbb8c5f, type: 3}
   crawlSpeed: 1
   AttackEvent:
     m_PersistentCalls:

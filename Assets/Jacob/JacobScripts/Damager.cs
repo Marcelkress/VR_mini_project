@@ -1,95 +1,89 @@
 using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(Collider)), RequireComponent(typeof(Rigidbody))]
 public class Damager : MonoBehaviour
 {
-    [Header("Damage Settings")]
-    public int baseDamageAmount = 10;
-    public float velocityMultiplier = 2f;
-    public float minimumVelocity = 1f; // Minimum velocity required to cause damage
-    public float maxVelocity = 10f; // Cap the velocity for damage calculation
+    [Header("Impact Settings")]
+    [Tooltip("The base damage dealt on any valid hit.")]
+    public int baseDamage = 10;
+    [Tooltip("How much damage is added per unit of velocity above the minimum.")]
+    public float velocityDamageMultiplier = 2f;
+    [Tooltip("How much knockback force is added per unit of velocity above the minimum.")]
+    public float knockbackForceMultiplier = 5f;
 
+    [Header("Velocity Thresholds")]
+    [Tooltip("The minimum speed the weapon must travel to register a hit.")]
+    public float minimumVelocity = 1f;
+    [Tooltip("The maximum speed used for damage and knockback calculations.")]
+    public float maxVelocity = 10f;
+    
+    [Header("Configuration")]
     public bool canKnockBack = true;
-    public float knockBackForceMultiplier = 1.5f; // Multiplier for knockback force calculation
-
+    [Tooltip("An empty GameObject on the controller/hand to accurately track swing speed.")]
     public Transform weaponVelocityTracker;
-    
-    [Header("Debug")]
-    public bool showDebugInfo = true;
-    
-    private Rigidbody rb;
-    private Vector3 lastPosition;
-    private float currentVelocity;
-    
-    void Start()
+
+    private Vector3 lastTrackerPosition;
+    private float currentSwingSpeed;
+
+    private void Awake()
     {
-        GetComponent<Collider>().isTrigger = false;
-        rb = GetComponent<Rigidbody>();
+        Rigidbody rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
+
+    }
+
+    private void OnEnable()
+    {
+        // Reset position tracking when the object is enabled to prevent a large velocity spike
+        if (weaponVelocityTracker != null)
+        {
+            lastTrackerPosition = weaponVelocityTracker.position;
+        }
+    }
+
+    private void Update()
+    {
+        if (weaponVelocityTracker == null) return;
         
-        lastPosition = transform.position;
+        // Calculate the speed of the tracker, which is more reliable than the sword's transform
+        currentSwingSpeed = Vector3.Distance(weaponVelocityTracker.position, lastTrackerPosition) / Time.deltaTime;
+        lastTrackerPosition = weaponVelocityTracker.position;
     }
-    
-    void Update()
+
+    /// <summary>
+    /// Calculates all hit-related data based on the current swing speed.
+    /// </summary>
+    /// <param name="damage">The calculated damage amount.</param>
+    /// <param name="knockbackForce">The calculated knockback force.</param>
+    /// <returns>True if the swing was fast enough to be a valid hit, false otherwise.</returns>
+    public bool TryCalculateHit(out int damage, out float knockbackForce)
     {
-        if (weaponVelocityTracker == null)
-            return;
+        // Set default values for the 'out' parameters
+        damage = 0;
+        knockbackForce = 0f;
+
+        // If we're not swinging fast enough, it's not a valid hit.
+        if (currentSwingSpeed < minimumVelocity)
+        {
+            return false;
+        }
+
+        // Clamp the velocity to our defined min/max range for consistent results
+        float effectiveVelocity = Mathf.Clamp(currentSwingSpeed, minimumVelocity, maxVelocity);
+
+        // Calculate the "impact power" based on how much faster we are than the minimum
+        float impactVelocity = effectiveVelocity - minimumVelocity;
         
-        // Calculate velocity manually for more accurate VR tracking
-        currentVelocity = UnityEngine.Vector3.Distance(weaponVelocityTracker.position, lastPosition) / Time.deltaTime;
-        lastPosition = transform.position;
-        
-        if (showDebugInfo && currentVelocity > minimumVelocity)
+        // 1. Calculate Damage
+        damage = Mathf.RoundToInt(baseDamage + (impactVelocity * velocityDamageMultiplier));
+
+        // 2. Calculate Knockback Force
+        if (canKnockBack)
         {
-          //  Debug.Log($"Weapon velocity: {currentVelocity:F2} m/s");
-        }
-    }
-
-    // Helper: compute the raw (unclamped) final velocity combining tracked and rigidbody velocity
-    private float GetRawFinalVelocity()
-    {
-        float rbVelocity = rb.linearVelocity.magnitude;
-        return Mathf.Max(currentVelocity, rbVelocity);
-    }
-
-    public int GetDamageAmount()
-    {
-        float finalVelocity = GetRawFinalVelocity();
-
-        // Only cause damage if moving fast enough
-        if (finalVelocity < minimumVelocity)
-        {
-            return 0;
+            knockbackForce = impactVelocity * knockbackForceMultiplier;
         }
 
-        // Cap the velocity and calculate damage
-        finalVelocity = Mathf.Clamp(finalVelocity, minimumVelocity, maxVelocity);
-        float velocityDamage = (finalVelocity - minimumVelocity) * velocityMultiplier;
-        int totalDamage = Mathf.RoundToInt(baseDamageAmount + velocityDamage);
-
-        if (showDebugInfo)
-        {
-            Debug.Log($"Velocity: {finalVelocity:F2}, Base Damage: {baseDamageAmount}, Velocity Damage: {velocityDamage:F2}, Total: {totalDamage}");
-        }
-
-        return totalDamage;
+        return true;
     }
-    
-    public float GetKnockBackForce()
-    {
-        if (!canKnockBack) return 0f;
-        // Knockback force proportional to velocity
-        float finalVelocity = GetRawFinalVelocity();
 
-        if (finalVelocity < minimumVelocity)
-        {
-            return 0f;
-        }
-
-        finalVelocity = Mathf.Clamp(finalVelocity, minimumVelocity, maxVelocity);
-        float knockBackForce = (finalVelocity - minimumVelocity) * knockBackForceMultiplier; // Adjust multiplier as needed
-
-        return knockBackForce;
-    }
 }

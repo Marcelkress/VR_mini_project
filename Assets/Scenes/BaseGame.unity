@@ -8572,6 +8572,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8302676693794305461, guid: 67f967bd0526951a39309df90a64adfe, type: 3}
+      propertyPath: maxVelocity
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9435,14 +9439,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac373d2409e0e50daaffc80608ef2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damager
-  baseDamageAmount: 10
-  velocityMultiplier: 2
+  baseDamage: 10
+  velocityDamageMultiplier: 2
+  knockbackForceMultiplier: 5
   minimumVelocity: 1
   maxVelocity: 10
   canKnockBack: 1
-  knockBackForceMultiplier: 1.5
   weaponVelocityTracker: {fileID: 839857800}
-  showDebugInfo: 1
 --- !u!54 &885897306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16613,6 +16616,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: maxVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7897292803940986244, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.917
@@ -19892,6 +19899,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 81.641
       objectReference: {fileID: 0}
+    - target: {fileID: 8618037617581187678, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: maxVelocity
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19944,14 +19955,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac373d2409e0e50daaffc80608ef2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamageAmount: 10
-  velocityMultiplier: 2
+  baseDamage: 10
+  velocityDamageMultiplier: 2
+  knockbackForceMultiplier: 5
   minimumVelocity: 1
   maxVelocity: 10
   canKnockBack: 1
-  knockBackForceMultiplier: 1.1
   weaponVelocityTracker: {fileID: 2086092901}
-  showDebugInfo: 1
 --- !u!54 &1910929111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20234,6 +20244,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1821664347962247707, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: maxVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
       propertyPath: m_UseDynamicAttach
       value: 1
@@ -20838,14 +20852,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac373d2409e0e50daaffc80608ef2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamageAmount: 10
-  velocityMultiplier: 2
+  baseDamage: 10
+  velocityDamageMultiplier: 2
+  knockbackForceMultiplier: 5
   minimumVelocity: 1
   maxVelocity: 10
   canKnockBack: 1
-  knockBackForceMultiplier: 1.1
   weaponVelocityTracker: {fileID: 672437959}
-  showDebugInfo: 1
 --- !u!54 &2018273212
 Rigidbody:
   m_ObjectHideFlags: 0

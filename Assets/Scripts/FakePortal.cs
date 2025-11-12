@@ -19,10 +19,11 @@ public class FakePortal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Wal");
+
             other.transform.SetParent(fakeRooms.transform);
 
             localposition = other.transform.localPosition;
-            
+            HordeManager.CleanupDeadMonsters(); // Call to clear dead so you cant see them laying in the new room
             other.transform.SetParent(realRooms.transform);
 
             other.transform.localPosition = localposition;
@@ -36,6 +37,11 @@ public class FakePortal : MonoBehaviour
                 SpawnNewObject();
             }
         }
+    }
+    
+    private void ClearDeadMonsters()
+    {
+        
     }
 
     void SpawnNewObject()
