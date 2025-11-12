@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7551213340844821462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VelocityTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4610469298044964300}
   - component: {fileID: 1469537042520463519}
   - component: {fileID: 1821664347962247707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Damager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 2862410663173862811}
   - component: {fileID: 4933183098524407436}
   - component: {fileID: 8848672571342374525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mace
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 555816182782626659}
   - component: {fileID: 909122771718493587}
   - component: {fileID: 3117899675790045220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stiel_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 6647326793352837026}
   - component: {fileID: 1166132403753695117}
   - component: {fileID: 8840676979594365516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 5671603554509469780}
   - component: {fileID: 715740173095037576}
   - component: {fileID: 5959097345260766956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 6786657484158701616}
   - component: {fileID: 6904513111298411401}
   - component: {fileID: 8618037617581187678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Damager
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -29,7 +29,7 @@ public class FakePortal : MonoBehaviour
 
             portalCounter++;
 
-            StartCoroutine(HordeManager.SpawnHorde(0, 1, monsterSpawnPoint.position, 1, 1));
+            StartCoroutine(HordeManager.SpawnHorde(1, 1, monsterSpawnPoint.position, 1, 1));
 
             if (portalCounter >= portalCounterTrigger)
             {
