@@ -47,9 +47,9 @@ public class HordeManager : MonoBehaviour
 
         for (int i = 0; i < hordeSize; i++)
         {
-            Vector3 spawnPosition = GetSpawnPosition(i, spawnRadius, spawnDistance, hordeSize);
+            //Vector3 spawnPosition = GetSpawnPosition(i, spawnRadius, spawnDistance, hordeSize);
             
-            GameObject monster = Instantiate(monsterPrefab[monsterIndex], spawnPosition, Quaternion.identity);
+            GameObject monster = Instantiate(monsterPrefab[monsterIndex], spawnpoint, Quaternion.identity);
             MonsterTest monsterScript = monster.GetComponent<MonsterTest>();
 
             if (monsterScript != null)

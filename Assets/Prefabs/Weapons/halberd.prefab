@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3718649641558491124}
   - component: {fileID: 3405308029894946203}
   - component: {fileID: 1855480640644494483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: halberd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6662987171425096225}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VelocityTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 2660278758292446705}
   - component: {fileID: 8994798739499779220}
   - component: {fileID: 8302676693794305461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Damager
   m_TagString: Untagged
   m_Icon: {fileID: 0}

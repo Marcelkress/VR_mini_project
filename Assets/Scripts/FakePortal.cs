@@ -4,6 +4,8 @@ using UnityEngine;
 public class FakePortal : MonoBehaviour
 {
     public GameObject realRooms, fakeRooms;
+    public HordeManager HordeManager;
+    public Transform monsterSpawnPoint;
 
     private Vector3 localposition;
 
@@ -26,6 +28,8 @@ public class FakePortal : MonoBehaviour
             other.transform.localPosition = localposition;
 
             portalCounter++;
+
+            StartCoroutine(HordeManager.SpawnHorde(1, 1, monsterSpawnPoint.position, 1, 1));
 
             if (portalCounter >= portalCounterTrigger)
             {
