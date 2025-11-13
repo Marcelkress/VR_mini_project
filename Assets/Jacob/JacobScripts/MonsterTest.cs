@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using UnityEngine.Events;
+using FMODUnity;
+using FMOD.Studio;
 
 [RequireComponent(typeof(Animator), typeof(NavMeshAgent), typeof(Collider))]
 public class MonsterTest : MonoBehaviour, IDamagable
@@ -39,7 +41,11 @@ public class MonsterTest : MonoBehaviour, IDamagable
 
     // --- Events ---
     public UnityEvent AttackEvent, TakeDamageEvent, DeadEvent;
-
+    
+    //Audio 
+    private SkeletonAudio monsteraudio;
+    
+    
     #region Unity Methods
 
     private void Awake()
@@ -47,6 +53,7 @@ public class MonsterTest : MonoBehaviour, IDamagable
         monsterData.Initialize();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        monsteraudio = GetComponent<SkeletonAudio>();
     }
 
     private void Start()
@@ -99,6 +106,7 @@ public class MonsterTest : MonoBehaviour, IDamagable
                 {
                     Instantiate(bloodEffectPrefab, other.ClosestPoint(transform.position), Quaternion.identity);
                 }
+                monsteraudio.PlaySkeletonDamage();
                 
                 // 3. Apply Knockback
                 if (knockbackForce > 0)
@@ -120,12 +128,22 @@ public class MonsterTest : MonoBehaviour, IDamagable
         
         monsterData.currentHealth -= damage;
         TakeDamageEvent.Invoke();
+      
         
         Debug.Log($"Monster took {damage} damage, current health: {monsterData.currentHealth}/{monsterData.maxHealth}");
         
         if (monsterData.currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (monsterData != null)
+        {
+            monsteraudio.PlaySkeletonBreath();
+            
         }
     }
 
@@ -143,6 +161,9 @@ public class MonsterTest : MonoBehaviour, IDamagable
         
         // Stop the animator to allow for ragdoll physics or a static death pose
         animator.enabled = false;
+        
+        // stop all sound
+        monsteraudio.StopSkeletonBreath();
     }
 
     private void AttackTarget()
@@ -162,7 +183,7 @@ public class MonsterTest : MonoBehaviour, IDamagable
 
         animator.SetTrigger(attackParam);
         AttackEvent.Invoke();
-        GetComponent<FMODUnity.StudioEventEmitter>()?.Play();
+        //GetComponent<FMODUnity.StudioEventEmitter>()?.Play();
 
         // Perform damage check after a short delay to sync with animation
         StartCoroutine(PerformAttackDamage(0.1f)); // Magic Number oh no, should be synced with animation, we can improve later with animation events

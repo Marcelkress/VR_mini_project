@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 2839174449836597713}
   - component: {fileID: 2726503568090842321}
   - component: {fileID: 4549956298830180793}
+  - component: {fileID: -6276719357509670276}
   m_Layer: 0
   m_Name: SkeletonPrefab
   m_TagString: Untagged
@@ -93,12 +94,13 @@ Transform:
   m_GameObject: {fileID: 169010584867109220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.795094, y: 0, z: -13.117881}
+  m_LocalPosition: {x: 5.795094, y: 0.104, z: -13.117881}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1996327102287938842}
   - {fileID: 2150103461896227918}
+  - {fileID: 4760151399927030371}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7452168916243921525
@@ -158,10 +160,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterData: {fileID: 11400000, guid: 3895688d133d73abca0b632331bb937f, type: 2}
+  bloodEffectPrefab: {fileID: 1829294476064008891, guid: 352da21a5d12172a7bfa70fdbbbb8c5f, type: 3}
   target: {fileID: 0}
   startCrawling: 0
-  bloodEffectPrefab: {fileID: 1829294476064008891, guid: 352da21a5d12172a7bfa70fdbbbb8c5f, type: 3}
   crawlSpeed: 1
+  knockbackCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  knockbackDuration: 0.4
   AttackEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -169,9 +196,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   DeadEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  ScreamEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!136 &4549956298830180793
@@ -197,6 +221,32 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0.16}
+--- !u!114 &-6276719357509670276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169010584867109220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd369502615a4ac3a7e08b9d01598b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkeletonAudio
+  SkeletonDamage:
+    Guid:
+      Data1: -914329206
+      Data2: 1320844664
+      Data3: -1640943192
+      Data4: 1916240943
+    Path: event:/Monsters/Skeleton/SkeletonDamage
+  SkeletonBreath:
+    Guid:
+      Data1: -703301877
+      Data2: 1118041216
+      Data3: 2118124936
+      Data4: -1514685361
+    Path: event:/Monsters/Skeleton/SkeletonWalk
 --- !u!1 &582190123385085757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1589,69 @@ Transform:
   - {fileID: 4819451315743642913}
   m_Father: {fileID: 5847304454371013194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6189768724697612144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4760151399927030371}
+  - component: {fileID: 3743645302645421920}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4760151399927030371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189768724697612144}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.99729687, z: -0, w: -0.07347791}
+  m_LocalPosition: {x: 0.145, y: 2.571, z: 0.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1349670899072306024}
+  m_LocalEulerAnglesHint: {x: 0, y: 188.428, z: 0}
+--- !u!114 &3743645302645421920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189768724697612144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -914329206
+      Data2: 1320844664
+      Data3: -1640943192
+      Data4: 1916240943
+    Path: event:/Monsters/Skeleton/SkeletonDamage
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6192466325689953189
 GameObject:
   m_ObjectHideFlags: 0

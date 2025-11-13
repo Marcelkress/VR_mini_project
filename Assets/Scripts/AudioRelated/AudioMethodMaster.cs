@@ -7,6 +7,7 @@ public class AudioMethodMaster : MonoBehaviour
     
     public StudioEventEmitter MonsterAttack;
     public StudioEventEmitter Weponwoosh;
+    public StudioEventEmitter SkeletonDamage;
    
     
     public void monsterAttack()
@@ -23,6 +24,15 @@ public class AudioMethodMaster : MonoBehaviour
         if (Weponwoosh != null)
         {
             Weponwoosh.Play();
+        }
+        
+    }
+    
+    public void skeletonDamage()
+    {
+        if (SkeletonDamage != null)
+        {
+            SkeletonDamage.Play();
         }
         
     }
