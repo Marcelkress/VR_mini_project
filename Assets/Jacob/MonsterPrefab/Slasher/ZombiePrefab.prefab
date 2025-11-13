@@ -129,10 +129,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterTest
   monsterData: {fileID: 11400000, guid: a067efd4fc66c86d983c207d4cf40edf, type: 2}
+  bloodEffectPrefab: {fileID: 1829294476064008891, guid: 352da21a5d12172a7bfa70fdbbbb8c5f, type: 3}
   target: {fileID: 0}
   startCrawling: 0
-  bloodEffectPrefab: {fileID: 1829294476064008891, guid: 352da21a5d12172a7bfa70fdbbbb8c5f, type: 3}
   crawlSpeed: 1
+  knockbackCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  knockbackDuration: 0.4
   AttackEvent:
     m_PersistentCalls:
       m_Calls:
@@ -152,9 +177,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   DeadEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  ScreamEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!136 &8551104774829430669
@@ -199,7 +221,7 @@ MonoBehaviour:
       Data2: 1333904297
       Data3: 1656598974
       Data4: -1463457324
-    Path: event:/MonsterAttack
+    Path: event:/Monsters/MonsterAttack
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

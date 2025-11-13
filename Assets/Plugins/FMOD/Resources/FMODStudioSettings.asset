@@ -421,8 +421,8 @@ MonoBehaviour:
   - Monsters.assets
   - Music
   - Music.assets
-  - Spatialized sound
-  - Spatialized sound.assets
+  - SFX
+  - SFX.assets
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

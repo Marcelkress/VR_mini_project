@@ -227,7 +227,7 @@
 			<value>Atten. Mode</value>
 		</property>
 		<property name="value">
-			<value>3</value>
+			<value>0</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>

@@ -14,6 +14,7 @@ TagManager:
   - Room 4
   - GateKeyLeft
   - GateKeyRight
+  - Room 2
   layers:
   - Default
   - TransparentFX

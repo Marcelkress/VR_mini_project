@@ -16,9 +16,20 @@ public class AudioRoomsReflectionsMaster : MonoBehaviour
     HallwayRoomReflections.SetActive(true);
    
     }
-
-    public void ActivateRoom1Reflections()
+    
+    public void ActivateHallwayReflections()
     {
+        HallwayRoomReflections.SetActive(true);
+        Room0Reflections.SetActive(false);
+        Room1Reflections.SetActive(false);
+        Room2Reflections.SetActive(false);
+        Room3Reflections.SetActive(false);
+        
+    }
+
+    public void ActivateRoom0Reflections()
+    {
+        
         if (Room0Reflections!=null)
         {
         HallwayRoomReflections.SetActive(false);
@@ -29,7 +40,7 @@ public class AudioRoomsReflectionsMaster : MonoBehaviour
       
         }
     }
-    public void ActivateRoom1Refelctions()
+    public void ActivateRoom1Reflections()
     {
         if (Room2Reflections!= null)
         {
@@ -67,7 +78,13 @@ public class AudioRoomsReflectionsMaster : MonoBehaviour
         }
     }
    
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            ;    
+        }
+    }
     
     // Update is called once per frame
     void Update()

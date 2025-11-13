@@ -6,10 +6,8 @@ public class AudioMethodMaster : MonoBehaviour
 {
     
     public StudioEventEmitter MonsterAttack;
-    public StudioEventEmitter HandsClick;
-    public StudioEventEmitter VHSTapeInsert;
-    public StudioEventEmitter whiteNoise;
-    public StudioEventEmitter VHSgrab;
+    public StudioEventEmitter Weponwoosh;
+   
     
     public void monsterAttack()
     {
@@ -20,45 +18,15 @@ public class AudioMethodMaster : MonoBehaviour
        
         
     }
-
-    public void testaudio2()
+    public void weponWoosh()
     {
-        if (HandsClick != null)
+        if (Weponwoosh != null)
         {
-            HandsClick.Play();
+            Weponwoosh.Play();
         }
         
     }
     
-    
-    public void VHSAudio()
-    {
-        if (VHSTapeInsert != null)
-        {
-            VHSTapeInsert.Play();
-        }
-        
-    }
-    
-    public void WhiteNoiseAudio()
-    {
-        if (whiteNoise != null)
-        {
-            whiteNoise.Play();
-            
-            
-        }
-        
-    }
-    
-    public void VhsGrabAudio()
-    {
-        if (VHSgrab != null)
-        {
-            VHSgrab.Play();
-        }
-        
-    }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

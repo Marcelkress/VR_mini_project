@@ -155,9 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioRoomsReflectionsMaster
   HallwayRoomReflections: {fileID: 2332442620828134579}
   Room0Reflections: {fileID: 3397956920221905874}
-  Room1Reflections: {fileID: 3397956920221905874}
-  Room2Reflections: {fileID: 7809246867332690214}
-  Room3Reflections: {fileID: 1568840526318816305}
+  Room1Reflections: {fileID: 7809246867332690214}
+  Room2Reflections: {fileID: 1568840526318816305}
+  Room3Reflections: {fileID: 3672626363056003224}
 --- !u!1 &2332442620828134579
 GameObject:
   m_ObjectHideFlags: 0
