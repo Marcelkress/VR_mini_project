@@ -10,9 +10,8 @@ public class FakePortal : MonoBehaviour
     private Vector3 localposition;
 
     private int portalCounter;
-    public int portalCounterTrigger;
 
-    public GameObject newObjects;
+    public GameObject bonFire, Key;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,20 +31,16 @@ public class FakePortal : MonoBehaviour
 
             StartCoroutine(HordeManager.SpawnHorde(1, 1, monsterSpawnPoint.position, 1, 1));
 
-            if (portalCounter >= portalCounterTrigger)
+            if (portalCounter == 2)
             {
-                SpawnNewObject();
+                bonFire.SetActive(true);
+            }
+            else if (portalCounter == 3)
+            {
+                Key.SetActive(true);
+                bonFire.SetActive(false);
             }
         }
     }
     
-    private void ClearDeadMonsters()
-    {
-        
-    }
-
-    void SpawnNewObject()
-    {
-        newObjects.SetActive(true);
-    }
 }

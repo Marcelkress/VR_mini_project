@@ -7,7 +7,8 @@ public class GateLock : MonoBehaviour
     public GameObject leftLock, rightLock;
     public Transform leftKeyPos, rightKeyPos;
     public Vector3 rotation;
-    public float emissionIntensity = 1f;
+    public Light leftLight, rightLight;
+    public float lightTargetIntensity, ligthFadeTime = 2f;
     
     public float keyFloatDuration;
 
@@ -21,10 +22,10 @@ public class GateLock : MonoBehaviour
             {
                 Unlock(other.gameObject, true);
                 leftOpen = true;
-                
-                
-                EnableEmission(other.GetComponent<MeshRenderer>(), Color.red, emissionIntensity);
+                leftLight.DOIntensity(lightTargetIntensity, ligthFadeTime);
             }
+
+            other.GetComponent<XRGrabInteractable>().enabled = false;
         }
         else if (other.CompareTag("GateKeyRight"))
         {
@@ -32,27 +33,13 @@ public class GateLock : MonoBehaviour
             {
                 Unlock(other.gameObject, false);
                 rightOpen = true;
+                rightLight.DOIntensity(lightTargetIntensity, ligthFadeTime);
             }
+            
+            other.GetComponent<XRGrabInteractable>().enabled = false;
         }
-    }
-    
-    private void EnableEmission(Renderer renderer, Color color, float intensity = 1f)
-    {
-        if (renderer == null) return;
-
-        var mat = renderer.material; // instance, not shared
-        var emissive = color * intensity;
-
-        if (mat.HasProperty("_EmissionColor"))
-            mat.SetColor("_EmissionColor", emissive);
-        else if (mat.HasProperty("_EmissiveColor"))
-            mat.SetColor("_EmissiveColor", emissive);
         
-        mat.EnableKeyword("_EMISSION");
-        mat.globalIlluminationFlags = MaterialGlobalIlluminationFlags.RealtimeEmissive;
-        DynamicGI.SetEmissive(renderer, emissive);
     }
-
     private void Unlock(GameObject key, bool left)
     {
         if (left)
