@@ -7,8 +7,6 @@ public class GateLock : MonoBehaviour
     public GameObject leftLock, rightLock;
     public Transform leftKeyPos, rightKeyPos;
     public Vector3 rotation;
-    public Light leftLight, rightLight;
-    public float lightTargetIntensity, ligthFadeTime = 2f;
     
     public float keyFloatDuration;
 
@@ -22,7 +20,6 @@ public class GateLock : MonoBehaviour
             {
                 Unlock(other.gameObject, true);
                 leftOpen = true;
-                leftLight.DOIntensity(lightTargetIntensity, ligthFadeTime);
             }
 
             other.GetComponent<XRGrabInteractable>().enabled = false;
@@ -33,10 +30,14 @@ public class GateLock : MonoBehaviour
             {
                 Unlock(other.gameObject, false);
                 rightOpen = true;
-                rightLight.DOIntensity(lightTargetIntensity, ligthFadeTime);
             }
             
             other.GetComponent<XRGrabInteractable>().enabled = false;
+        }
+
+        if (rightOpen && leftOpen)
+        {
+            
         }
         
     }

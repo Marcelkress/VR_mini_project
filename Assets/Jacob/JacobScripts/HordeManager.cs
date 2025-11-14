@@ -122,12 +122,8 @@ public class HordeManager : MonoBehaviour
 
     private IEnumerator specialHordeCoroutine()
     {
-        yield return SpawnHorde(0, 10, spawnPoints[0].transform.position, spawnRadius: 5f, spawnDistance: 10f);
+        StartCoroutine(SpawnHorde(0, 1, spawnPoints[0].transform.position, spawnRadius: 5f, spawnDistance: 10f));
         yield return new WaitForSeconds(3f);
-        yield return SpawnHorde(1, 5, spawnPoints[2].transform.position, spawnRadius: 5f, spawnDistance: 10f);
-        yield return new WaitForSeconds(3f);
-        yield return SpawnHorde(1, 3, spawnPoints[0].transform.position, spawnRadius: 5f, spawnDistance: 10f);
-
-        yield return null;
+        StartCoroutine(SpawnHorde(1, 1, spawnPoints[2].transform.position, spawnRadius: 5f, spawnDistance: 10f));
     }
 }

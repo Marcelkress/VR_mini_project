@@ -10,7 +10,6 @@ public class DoorPuzzle : MonoBehaviour
     public Transform keySnapPos;
     public float keyFlyDuratio = 1f;
     
-    
     public Vector3 unlockPushTorque;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,10 +37,8 @@ public class DoorPuzzle : MonoBehaviour
     {
         if (other.CompareTag("DoorKey"))
         {
-            if (!other.GetComponent<XRGrabInteractable>().isSelected)
-            {
-                Unlock(other.gameObject);
-            }
+            //other.GetComponent<XRGrabInteractable>().selectExited.
+            Unlock(other.gameObject);
         }
     }
 }
