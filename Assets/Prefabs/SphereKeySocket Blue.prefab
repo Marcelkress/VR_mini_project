@@ -155,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 930f3c5a6f0c8c946ba5820890934b32, type: 2}
+  - {fileID: 2100000, guid: a83130db0903f7e4aa864dd223eec401, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,7 +244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a26c4cfc170f4d45a0700aff9ce93fd, type: 2}
+  - {fileID: 2100000, guid: 480c982305146a6459ef69e4a9877e0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,7 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589635099987262504}
   m_Layer: 0
-  m_Name: SphereKeySocket Red
+  m_Name: SphereKeySocket Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

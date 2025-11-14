@@ -36,6 +36,7 @@
   <Project Path="Unity.VisualStudio.Editor.csproj" />
   <Project Path="Unity.XR.Oculus.Editor.csproj" />
   <Project Path="Unity.InputSystem.csproj" />
+  <Project Path="PPv2URPConverters.csproj" />
   <Project Path="Unity.XR.Interaction.Toolkit.Editor.csproj" />
   <Project Path="Unity.XR.OpenXR.csproj" />
   <Project Path="Unity.InferenceEngine.csproj" />
@@ -43,7 +44,6 @@
   <Project Path="Unity.XR.Simulation.Editor.csproj" />
   <Project Path="Unity.Searcher.Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="PPv2URPConverters.csproj" />
   <Project Path="Unity.ProBuilder.Editor.csproj" />
   <Project Path="Unity.XR.Hands.csproj" />
   <Project Path="UnityEditor.TestRunner.csproj" />
