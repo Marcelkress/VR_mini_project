@@ -1,5 +1,6 @@
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PotionDrink : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class PotionDrink : MonoBehaviour
     public GameObject EmptyBottlePrefab;
 
     private bool hasBeenDrunk = false;
+
+    public UnityEvent OnPotionDrunk;
     
 
 
@@ -39,12 +42,8 @@ public class PotionDrink : MonoBehaviour
         hasBeenDrunk = true;
         Debug.Log("Potion consumed! Healing player by " + healAmount);
         
+        OnPotionDrunk.Invoke();
         healthSystem.Heal(healAmount);
-        UnityEngine.Vector3 transformRef = this.transform.position;
-        UnityEngine.Quaternion rotationRef = this.transform.rotation;
-
-        // Destroy the potion after drinking
-        Destroy(gameObject, 0.5f);
         
         EmptyBottlePrefab.SetActive(false);     
 
