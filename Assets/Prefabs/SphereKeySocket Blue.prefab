@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 3048202386653808745}
   - component: {fileID: 2609901505794215960}
   - component: {fileID: 3894618876845432147}
+  - component: {fileID: 2587273542018830274}
   m_Layer: 0
   m_Name: SphereKeySocketLines
   m_TagString: Untagged
@@ -267,6 +268,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &2587273542018830274
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051595927820059603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5646a877a3de28a47ae967c163f042d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8482744325712674091
 GameObject:
   m_ObjectHideFlags: 0
