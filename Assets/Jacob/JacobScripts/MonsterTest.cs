@@ -221,7 +221,6 @@ public class MonsterTest : MonoBehaviour, IDamagable
 
     #region Knockback System
 
-    // NEW & IMPROVED: This is the public method to call.
     public void ApplyKnockback(float force, Vector3 hitSourcePosition)
     {
         if (isDead || force <= 0f) return;
