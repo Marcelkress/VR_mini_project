@@ -114,4 +114,18 @@ public class HordeManager : MonoBehaviour
             }
         }
     }
+
+    public void SpawnHordeForKey(int monsterIndex)
+    {
+        StartCoroutine(specialHordeCoroutine());
+    }
+
+    private IEnumerator specialHordeCoroutine()
+    {
+        yield return SpawnHorde(0, 10, player.position, spawnRadius: 5f, spawnDistance: 10f);
+        yield return new WaitForSeconds(3f);
+        yield return SpawnHorde(1, 5, player.position, spawnRadius: 5f, spawnDistance: 10f);
+        yield return new WaitForSeconds(3f);
+        yield return SpawnHorde(1, 3, player.position, spawnRadius: 5f, spawnDistance: 10f);
+    }
 }
