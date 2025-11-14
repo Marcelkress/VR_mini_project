@@ -115,7 +115,7 @@ public class HordeManager : MonoBehaviour
         }
     }
 
-    public void SpawnHordeForKey(int monsterIndex)
+    public void SpawnHordeForKey()
     {
         StartCoroutine(specialHordeCoroutine());
     }
