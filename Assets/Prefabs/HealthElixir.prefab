@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 60
-  drinkHeight: 0.3
+  drinkHeight: 0.1
   playerHead: {fileID: 0}
   healthSystem: {fileID: 0}
   EmptyBottlePrefab: {fileID: 7386084472978003094}
