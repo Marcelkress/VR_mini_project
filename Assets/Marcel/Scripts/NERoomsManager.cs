@@ -36,7 +36,6 @@ public class NERoomsManager : MonoBehaviour
             {
                 corridor.SetActive(true);
                 reachedEnd = true;
-                openBarsEvent();
             }
 
             if (roomIndex == 0)
@@ -89,6 +88,8 @@ public class NERoomsManager : MonoBehaviour
     public void openBarsEvent()
     {
         bars.transform.DOMoveY(-10f, 2f).SetEase(Ease.InQuad);
+
+        // Maybe play a sound effect here
     }
     
 }
