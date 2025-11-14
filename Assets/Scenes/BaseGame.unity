@@ -12533,10 +12533,6 @@ MonoBehaviour:
   leftKeyPos: {fileID: 426732388}
   rightKeyPos: {fileID: 1536595711}
   rotation: {x: 0, y: 0, z: 0}
-  leftLight: {fileID: 0}
-  rightLight: {fileID: 0}
-  lightTargetIntensity: 0.4
-  ligthFadeTime: 2
   keyFloatDuration: 1
 --- !u!4 &1168915229 stripped
 Transform:
@@ -16644,12 +16640,56 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2975349732984493802, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1626308348}
+    - targetCorrespondingSourceObject: {fileID: 3079313029500324428, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1524746849}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
 --- !u!4 &1524746845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7932327281091973520, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
   m_PrefabInstance: {fileID: 1524746844}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1524746846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8338491538349504142, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+  m_PrefabInstance: {fileID: 1524746844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1524746847 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2191759446255657927, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+  m_PrefabInstance: {fileID: 1524746844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1524746848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3079313029500324428, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+  m_PrefabInstance: {fileID: 1524746844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1524746849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524746848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5665b2f77070f46584dc451aa768015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  hapticImpulsePlayerLeft: {fileID: 1524746847}
+  hapticImpulsePlayerRight: {fileID: 1524746846}
 --- !u!1001 &1530286380
 PrefabInstance:
   m_ObjectHideFlags: 0

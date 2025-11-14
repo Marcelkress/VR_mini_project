@@ -89,6 +89,8 @@ public class NERoomsManager : MonoBehaviour
     {
         bars.transform.DOMoveY(-10f, 2f).SetEase(Ease.InQuad);
 
+        CameraShake.instance.TriggerShake(duration: 0.5f, magnitude: 0.2f);
+
         // Maybe play a sound effect here
     }
     
