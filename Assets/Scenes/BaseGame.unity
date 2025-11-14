@@ -15812,11 +15812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2193311791871386993, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       propertyPath: m_SlopeLimit
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2193311791871386993, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       propertyPath: m_StepOffset
-      value: 0.001
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2193311791871386993, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
