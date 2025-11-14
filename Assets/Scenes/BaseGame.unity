@@ -8997,6 +8997,10 @@ PrefabInstance:
       propertyPath: maxVelocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8302676693794305461, guid: 67f967bd0526951a39309df90a64adfe, type: 3}
+      propertyPath: minimumVelocity
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10131,8 +10135,8 @@ MonoBehaviour:
   baseDamage: 80
   velocityDamageMultiplier: 1.1
   knockbackForceMultiplier: 2
-  minimumVelocity: 1
-  maxVelocity: 2
+  minimumVelocity: 5
+  maxVelocity: 8
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 839857800}
 --- !u!54 &885897306
@@ -17348,6 +17352,10 @@ PrefabInstance:
       propertyPath: maxVelocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: minimumVelocity
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7897292803940986244, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.917
@@ -21161,6 +21169,10 @@ PrefabInstance:
       propertyPath: maxVelocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8618037617581187678, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: minimumVelocity
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21216,8 +21228,8 @@ MonoBehaviour:
   baseDamage: 10
   velocityDamageMultiplier: 2
   knockbackForceMultiplier: 5
-  minimumVelocity: 1
-  maxVelocity: 10
+  minimumVelocity: 4
+  maxVelocity: 5
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 2086092901}
 --- !u!54 &1910929111
@@ -21505,6 +21517,10 @@ PrefabInstance:
     - target: {fileID: 1821664347962247707, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
       propertyPath: maxVelocity
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821664347962247707, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: minimumVelocity
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
       propertyPath: m_UseDynamicAttach
@@ -22113,8 +22129,8 @@ MonoBehaviour:
   baseDamage: 10
   velocityDamageMultiplier: 2
   knockbackForceMultiplier: 5
-  minimumVelocity: 1
-  maxVelocity: 10
+  minimumVelocity: 4
+  maxVelocity: 5
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 672437959}
 --- !u!54 &2018273212
