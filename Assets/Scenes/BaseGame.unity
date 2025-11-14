@@ -3856,15 +3856,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7273296192265854573, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.382
+      value: 8.329
       objectReference: {fileID: 0}
     - target: {fileID: 7273296192265854573, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.763
+      value: 1.828
       objectReference: {fileID: 0}
     - target: {fileID: 7273296192265854573, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.489
+      value: -2.514
       objectReference: {fileID: 0}
     - target: {fileID: 7273296192265854573, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3912,7 +3912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3924,6 +3924,10 @@ PrefabInstance:
       objectReference: {fileID: 1128643462}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
@@ -3939,12 +3943,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1128643462}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2307343601073823431}
+    - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SpawnHordeForKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: openBarsEvent
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3955,11 +3971,19 @@ PrefabInstance:
       value: HordeManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NERoomsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
