@@ -1,6 +1,10 @@
-using System.Data;
+using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
@@ -8,6 +12,10 @@ public class PlayerHealthSystem : MonoBehaviour
     public int currentHealth;
     private bool lowHealthTriggered = false;
 
+    public RawImage dieImage;
+    public float fadeTime;
+    public float reloadSceneTime;
+    
     public BloodVignette bloodVignette;
 
     public UnityEvent LowHealthEvent, TakeDamageEvent, DeathEvent;
@@ -73,7 +81,20 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         Debug.Log("Player has died.");
         DeathEvent.Invoke();
+        dieImage.DOFade(1, fadeTime);
 
+        GetComponentInChildren<DynamicMoveProvider>().moveSpeed = 0;
+
+        StartCoroutine(ReloadSceneWait());
+    }
+
+    private IEnumerator ReloadSceneWait()
+    {
+        yield return new WaitForSeconds(reloadSceneTime);
+        var scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.buildIndex);
+
+        yield return null;
     }
 
 }

@@ -7,6 +7,7 @@ public class GateLock : MonoBehaviour
     public GameObject leftLock, rightLock;
     public Transform leftKeyPos, rightKeyPos;
     public Vector3 rotation;
+    public Animator leftLineAnim, rightLineAnim;
     
     public float keyFloatDuration;
 
@@ -20,6 +21,7 @@ public class GateLock : MonoBehaviour
             {
                 Unlock(other.gameObject, true);
                 leftOpen = true;
+                leftLineAnim.SetTrigger("Lightup");
             }
 
             other.GetComponent<XRGrabInteractable>().enabled = false;
@@ -30,6 +32,7 @@ public class GateLock : MonoBehaviour
             {
                 Unlock(other.gameObject, false);
                 rightOpen = true;
+                rightLineAnim.SetTrigger("Lightup");
             }
             
             other.GetComponent<XRGrabInteractable>().enabled = false;
