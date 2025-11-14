@@ -16771,6 +16771,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2975349732984493802, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1626308347}
+    - targetCorrespondingSourceObject: {fileID: 2975349732984493802, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1626308348}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
 --- !u!4 &1524746845 stripped
 Transform:
@@ -18245,6 +18248,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioRoomScript
   audioroomReflections: {fileID: 942189176}
+--- !u!65 &1626308348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171908967}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3914133, y: 1.2841932, z: 0.3602616}
+  m_Center: {x: 0.020452667, y: 0.8142841, z: 0.021212427}
 --- !u!1001 &1631153808
 PrefabInstance:
   m_ObjectHideFlags: 0
