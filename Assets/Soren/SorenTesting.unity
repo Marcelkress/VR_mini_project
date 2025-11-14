@@ -356,6 +356,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3894618876845432147, guid: 78efd827cd4cadf4aabb90f20ab1c9fe, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 480c982305146a6459ef69e4a9877e0c, type: 2}
     - target: {fileID: 8482744325712674091, guid: 78efd827cd4cadf4aabb90f20ab1c9fe, type: 3}
       propertyPath: m_Name
       value: SphereKeySocket Blue
@@ -470,6 +474,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3894618876845432147, guid: f323d557739d64c4ab8a01597b22f0ba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a26c4cfc170f4d45a0700aff9ce93fd, type: 2}
     - target: {fileID: 8482744325712674091, guid: f323d557739d64c4ab8a01597b22f0ba, type: 3}
       propertyPath: m_Name
       value: SphereKeySocket Red
