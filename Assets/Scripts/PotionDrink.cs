@@ -46,7 +46,7 @@ public class PotionDrink : MonoBehaviour
         // Destroy the potion after drinking
         Destroy(gameObject, 0.5f);
         
-        Instantiate(EmptyBottlePrefab, transformRef, rotationRef);        
+        EmptyBottlePrefab.SetActive(false);     
 
     }
 }
