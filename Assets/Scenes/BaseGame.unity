@@ -9564,11 +9564,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac373d2409e0e50daaffc80608ef2f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damager
-  baseDamage: 10
-  velocityDamageMultiplier: 2
-  knockbackForceMultiplier: 5
+  baseDamage: 80
+  velocityDamageMultiplier: 1.1
+  knockbackForceMultiplier: 2
   minimumVelocity: 1
-  maxVelocity: 10
+  maxVelocity: 2
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 839857800}
 --- !u!54 &885897306
