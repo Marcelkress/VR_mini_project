@@ -7,8 +7,9 @@ public class VRWeaponWoosh : MonoBehaviour
 {
     [Header("VR Settings")]
     [Tooltip("Which hand is holding this weapon?")]
-    public XRNode hand = XRNode.RightHand;
-
+    public XRNode Righthand = XRNode.RightHand;
+    public XRNode Lefthand = XRNode.LeftHand;
+    
     [Header("FMOD")]
     [Tooltip("FMOD event reference for the woosh sound.")]
     public EventReference wooshEvent;
@@ -24,6 +25,12 @@ public class VRWeaponWoosh : MonoBehaviour
     private float lastWooshTime;
     private bool IsInHand;
 
+    [Header("FMOD")]
+    [Tooltip("FMOD event reference for the Hit Sound.")]
+    public EventReference BloddyHit;
+
+    public GameObject HitSoundPosition;
+    
     private void OnEnable()
     {
         InitDevice();
@@ -31,7 +38,11 @@ public class VRWeaponWoosh : MonoBehaviour
 
     private void InitDevice()
     {
-        device = InputDevices.GetDeviceAtXRNode(hand);
+        device = InputDevices.GetDeviceAtXRNode(Righthand);
+        if (!device.isValid)
+        {
+            device = InputDevices.GetDeviceAtXRNode(Lefthand);
+        }
     }
 
     private void Update()
@@ -70,5 +81,20 @@ public class VRWeaponWoosh : MonoBehaviour
      public void IsWeaponInHand(bool inHand)
     {
         IsInHand = inHand;
+    }
+
+    public void PlayHitSound()
+    {
+        
+            RuntimeManager.PlayOneShotAttached(BloddyHit, HitSoundPosition);
+        
+    }
+    
+    public void OnTriggerEnter(Collider monster)
+    {
+        if (monster.CompareTag("Monster"))
+        {
+            PlayHitSound();
+        }
     }
 }

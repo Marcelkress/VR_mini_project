@@ -18007,7 +18007,7 @@ PrefabInstance:
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1710076207}
+      objectReference: {fileID: 0}
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
@@ -18019,7 +18019,7 @@ PrefabInstance:
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1710076207}
+      objectReference: {fileID: 0}
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
@@ -18031,7 +18031,7 @@ PrefabInstance:
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1710076207}
+      objectReference: {fileID: 0}
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: IsWeaponInHand
@@ -18039,7 +18039,7 @@ PrefabInstance:
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1710076207}
+      objectReference: {fileID: 0}
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -18170,9 +18170,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1710076208}
-    - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1710076207}
     - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1710076215}
@@ -20038,28 +20035,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
   m_PrefabInstance: {fileID: 1557985435}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1710076207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710076200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
-  hand: 5
-  wooshEvent:
-    Guid:
-      Data1: -1516847612
-      Data2: 1320708541
-      Data3: -1317480008
-      Data4: -1857574156
-    Path: event:/Weapons/MorningStar
-  velocityThreshold: 1.5
-  cooldown: 0.25
 --- !u!114 &1710076208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20108,7 +20083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
-  hand: 4
+  Righthand: 5
+  Lefthand: 4
   wooshEvent:
     Guid:
       Data1: -1516847612
@@ -20118,6 +20094,14 @@ MonoBehaviour:
     Path: event:/Weapons/MorningStar
   velocityThreshold: 1.5
   cooldown: 0.25
+  BloddyHit:
+    Guid:
+      Data1: -147595013
+      Data2: 1144890435
+      Data3: 1190368426
+      Data4: -1285040353
+    Path: event:/HardPunch
+  HitSoundPosition: {fileID: 476434279}
 --- !u!1001 &1715879791
 PrefabInstance:
   m_ObjectHideFlags: 0
