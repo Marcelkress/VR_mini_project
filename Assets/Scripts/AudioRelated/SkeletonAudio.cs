@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using FMODUnity;
 
@@ -39,6 +40,14 @@ public class SkeletonAudio : MonoBehaviour
         _breathInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         _breathInstance.release();
         _breathPlaying = false;
+    }
+
+    public void Update()
+    {
+        if (_breathPlaying)
+        {
+            _breathInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        }
     }
 }
 

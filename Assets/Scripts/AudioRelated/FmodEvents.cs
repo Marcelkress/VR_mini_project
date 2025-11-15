@@ -18,6 +18,9 @@ public class FmodEvents : MonoBehaviour
     [field: Header ("Fight music")]
     [field: SerializeField] public EventReference Fightmusic { get; private set; }
     
+    [field: Header ("startMusic")]
+    [field: SerializeField] public EventReference StartMusic { get; private set; }
+    
    // [field: Header ("Monster attack")]
    // [field: SerializeField] public EventReference MonsterAttack { get; private set; }
     
@@ -27,7 +30,8 @@ public class FmodEvents : MonoBehaviour
     //We then create a public static instance of the FmodEvents script so that we can access it from anywhere in the game.
     //We also create a private set so that we can only set the instance in this script.
     public static FmodEvents Instance { get; private set; } 
-   
+    
+    
     private void Awake()
     {
         if (Instance != null)

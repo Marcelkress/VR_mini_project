@@ -87,6 +87,8 @@ public class MonsterTest : MonoBehaviour, IDamagable
             }
         }
         UpdateMovementAnimation();
+        
+       
     }
 
     private void OnTriggerEnter(Collider other)
