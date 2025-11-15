@@ -423,6 +423,8 @@ MonoBehaviour:
   - Music.assets
   - SFX
   - SFX.assets
+  - WeaponSFX
+  - WeaponSFX.assets
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

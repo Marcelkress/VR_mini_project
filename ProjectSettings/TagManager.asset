@@ -15,6 +15,7 @@ TagManager:
   - GateKeyLeft
   - GateKeyRight
   - Room 2
+  - Monster
   layers:
   - Default
   - TransparentFX
