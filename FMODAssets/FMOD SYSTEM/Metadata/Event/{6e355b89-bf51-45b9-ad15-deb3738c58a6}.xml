@@ -31,6 +31,9 @@
 		<relationship name="parameters">
 			<destination>{362ee90c-ab99-4b20-ac20-c87df98e57ea}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{f6a1666c-1905-42d9-b38a-ee6d94b91463}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{5a2c02d1-f868-45f8-bcbc-aa13b81cf524}">
 		<relationship name="masterBus">
@@ -180,7 +183,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -189,7 +191,6 @@
 		<property name="name">
 			<value>Atten. Range</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -198,7 +199,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
