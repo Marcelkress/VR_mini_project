@@ -6311,7 +6311,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 476434280}
-  - component: {fileID: 476434281}
   m_Layer: 6
   m_Name: BloodPunchSound
   m_TagString: Untagged
@@ -6328,43 +6327,12 @@ Transform:
   m_GameObject: {fileID: 476434279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0073}
+  m_LocalPosition: {x: 0, y: -0, z: 0.00923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1710076214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &476434281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476434279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: Monster
-  EventReference:
-    Guid:
-      Data1: -366374344
-      Data2: 1273327391
-      Data3: -423843694
-      Data4: 124043587
-    Path: event:/Gruesome Punch
-  Event: 
-  EventPlayTrigger: 3
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &493431052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18173,6 +18141,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1710076215}
+    - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1710076216}
   m_SourcePrefab: {fileID: 100100000, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
 --- !u!1 &1562752486
 GameObject:
@@ -20083,8 +20054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
-  Righthand: 5
-  Lefthand: 4
+  velocityThreshold: 1.5
+  cooldown: 0.25
   wooshEvent:
     Guid:
       Data1: -1516847612
@@ -20092,8 +20063,6 @@ MonoBehaviour:
       Data3: -1317480008
       Data4: -1857574156
     Path: event:/Weapons/MorningStar
-  velocityThreshold: 1.5
-  cooldown: 0.25
   BloddyHit:
     Guid:
       Data1: -147595013
@@ -20102,6 +20071,18 @@ MonoBehaviour:
       Data4: -1285040353
     Path: event:/HardPunch
   HitSoundPosition: {fileID: 476434279}
+--- !u!114 &1710076216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710076200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cda438b8c9564235a15ddc456918b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponGrabHandler
 --- !u!1001 &1715879791
 PrefabInstance:
   m_ObjectHideFlags: 0

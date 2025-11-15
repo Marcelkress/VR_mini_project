@@ -1,7 +1,7 @@
 using UnityEngine;
-using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable))]
 public class WeaponGrabHandler : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
@@ -15,14 +15,12 @@ public class WeaponGrabHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        if (grab == null) return;
         grab.selectEntered.AddListener(OnGrab);
         grab.selectExited.AddListener(OnRelease);
     }
 
     private void OnDisable()
     {
-        if (grab == null) return;
         grab.selectEntered.RemoveListener(OnGrab);
         grab.selectExited.RemoveListener(OnRelease);
     }
@@ -30,29 +28,6 @@ public class WeaponGrabHandler : MonoBehaviour
     private void OnGrab(SelectEnterEventArgs args)
     {
         if (weaponWoosh == null) return;
-
-        // Get the interactor GameObject (the controller / hand)
-        var interactorGO = args.interactorObject.transform.gameObject;
-
-        XRNode node = XRNode.RightHand;
-
-        // Try to get XRController (Action-based or Device-based)
-        var xrController = interactorGO.GetComponent<XRController>();
-        if (xrController != null)
-        {
-            node = xrController.controllerNode;   // This will be LeftHand or RightHand
-        }
-        else
-        {
-            // Fallback: infer from object name if no XRController
-            string lowerName = interactorGO.name.ToLower();
-            if (lowerName.Contains("left"))
-                node = XRNode.LeftHand;
-            else
-                node = XRNode.RightHand;
-        }
-
-        weaponWoosh.SetHand(node);
         weaponWoosh.IsWeaponInHand(true);
     }
 
