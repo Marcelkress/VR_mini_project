@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{e757420a-0c9c-4723-b063-3562dd953a8d}">
 		<property name="assetPath">
-			<value>SubDroneSolarEner HYP027201.wav</value>
+			<value>Music/SubDroneSolarEner HYP027201.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

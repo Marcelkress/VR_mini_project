@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{7a214458-6289-415f-a4b0-e0ebccac1d56}">
 		<property name="assetPath">
-			<value>MonsterHits 1-Critical Hit I.wav</value>
+			<value>WeaponSFX/MonsterHits 1-Critical Hit I.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
