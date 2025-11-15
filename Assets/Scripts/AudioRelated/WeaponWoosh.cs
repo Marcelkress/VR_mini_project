@@ -1,9 +1,19 @@
 using UnityEngine;
+using UnityEngine.XR;
 using FMODUnity;
 using FMOD.Studio;
 
 public class VRWeaponWoosh : MonoBehaviour
 {
+    [Header("VR Settings")]
+    [Tooltip("Which hand is holding this weapon?")]
+    public XRNode hand = XRNode.RightHand;
+   
+    
+    [Header("FMOD")]
+    [Tooltip("FMOD event reference for the woosh sound.")]
+    public EventReference wooshEvent;
+
     [Header("Swing Detection")]
     [Tooltip("Speed (m/s) required to trigger a woosh.")]
     public float velocityThreshold = 1.5f;
@@ -11,82 +21,71 @@ public class VRWeaponWoosh : MonoBehaviour
     [Tooltip("Minimum time between woosh sounds.")]
     public float cooldown = 0.25f;
 
-    [Header("FMOD - Woosh")]
-    [Tooltip("FMOD event reference for the woosh sound.")]
-    public EventReference wooshEvent;
+    private InputDevice device;
+    private float lastWooshTime;
+    public bool IsInHand;
 
-    [Header("FMOD - Hit")]
+    [Header("FMOD")]
     [Tooltip("FMOD event reference for the Hit Sound.")]
     public EventReference BloddyHit;
 
     public GameObject HitSoundPosition;
-
-    private float lastWooshTime;
-    private bool IsInHand;
-
-    private Vector3 lastPosition;
-    private bool hasLastPosition;
-
+    
     private void OnEnable()
     {
-        hasLastPosition = false;
+        InitDevice();
+    }
+
+    private void InitDevice()
+    {
+        device = InputDevices.GetDeviceAtXRNode(hand);
+     
     }
 
     private void Update()
     {
-        // Need at least one frame to initialize position
-        if (!hasLastPosition)
+        // Make sure we have a valid device
+        if (!device.isValid)
         {
-            lastPosition = transform.position;
-            hasLastPosition = true;
+            InitDevice();
             return;
         }
 
-        // Weapon must be in hand and not on cooldown
-        if (!IsInHand || Time.time - lastWooshTime < cooldown)
-        {
-            lastPosition = transform.position;
+        // Cooldown between wooshes
+        if (Time.time - lastWooshTime < cooldown)
             return;
-        }
 
-        // Approximate velocity from movement of the weapon in world space
-        Vector3 displacement = transform.position - lastPosition;
-        float speed = displacement.magnitude / Time.deltaTime;
-
-        if (speed > velocityThreshold)
+        // Get controller velocity
+        if (device.TryGetFeatureValue(CommonUsages.deviceVelocity, out Vector3 velocity))
         {
-            PlayWoosh();
-            lastWooshTime = Time.time;
-        }
+            float speed = velocity.magnitude;
 
-        lastPosition = transform.position;
+            // If we're swinging fast enough, play the woosh
+            if (speed > velocityThreshold && IsInHand)  
+            {
+                PlayWoosh();
+                lastWooshTime = Time.time;
+            }
+        }
     }
 
     private void PlayWoosh()
     {
+        // Plays a 3D one-shot at this weapon's position
         RuntimeManager.PlayOneShotAttached(wooshEvent, gameObject);
     }
-
-    /// <summary>
-    /// Call this when the weapon is picked up / dropped.
-    /// </summary>
+    
     public void IsWeaponInHand(bool inHand)
     {
         IsInHand = inHand;
-
-        // Reset last position when picked up to avoid instant woosh
-        if (inHand)
-        {
-            hasLastPosition = false;
-        }
     }
 
     public void PlayHitSound()
     {
         RuntimeManager.PlayOneShotAttached(BloddyHit, HitSoundPosition);
     }
-
-    private void OnTriggerEnter(Collider monster)
+    
+    public void OnTriggerEnter(Collider monster)
     {
         if (monster.CompareTag("Monster"))
         {

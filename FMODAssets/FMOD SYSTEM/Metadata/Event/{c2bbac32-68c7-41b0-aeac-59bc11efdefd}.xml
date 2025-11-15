@@ -104,6 +104,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{9b268962-b449-4ffe-a3e3-d0e620e92b7a}" />
 	<object class="MultiSound" id="{820da717-264f-4251-ad56-ad58985b0072}">
+		<property name="volume">
+			<value>-14.5</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{9a6b27a2-d2da-4752-8912-2889a6b1c2b3}</destination>
 			<destination>{81024f44-a6b3-4107-a696-f08107702693}</destination>
@@ -165,7 +168,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -174,7 +176,6 @@
 		<property name="name">
 			<value>Atten. Range</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -183,7 +184,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

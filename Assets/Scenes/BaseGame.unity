@@ -17999,7 +17999,7 @@ PrefabInstance:
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1710076215}
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: IsWeaponInHand
@@ -18007,7 +18007,7 @@ PrefabInstance:
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1710076215}
     - target: {fileID: 826039154604709140, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -18137,13 +18137,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1710076223}
+    - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1710076222}
+    - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1710076208}
     - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1710076215}
-    - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1710076216}
   m_SourcePrefab: {fileID: 100100000, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
 --- !u!1 &1562752486
 GameObject:
@@ -20054,8 +20057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
-  velocityThreshold: 1.5
-  cooldown: 0.25
+  hand: 5
   wooshEvent:
     Guid:
       Data1: -1516847612
@@ -20063,6 +20065,9 @@ MonoBehaviour:
       Data3: -1317480008
       Data4: -1857574156
     Path: event:/Weapons/MorningStar
+  velocityThreshold: 1.52
+  cooldown: 0.25
+  IsInHand: 0
   BloddyHit:
     Guid:
       Data1: -147595013
@@ -20071,18 +20076,49 @@ MonoBehaviour:
       Data4: -1285040353
     Path: event:/HardPunch
   HitSoundPosition: {fileID: 476434279}
---- !u!114 &1710076216
+--- !u!114 &1710076222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710076200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cda438b8c9564235a15ddc456918b8e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponGrabHandler
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponHandBinder
+--- !u!114 &1710076223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710076200}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a5f8d5062bb2a41b6adff8e1e9562e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh2
+  Righthand: 5
+  Lefthand: 4
+  wooshEvent:
+    Guid:
+      Data1: -1516847612
+      Data2: 1320708541
+      Data3: -1317480008
+      Data4: -1857574156
+    Path: event:/Weapons/MorningStar
+  velocityThreshold: 1.5
+  cooldown: 0.25
+  BloddyHit:
+    Guid:
+      Data1: -147595013
+      Data2: 1144890435
+      Data3: 1190368426
+      Data4: -1285040353
+    Path: event:/HardPunch
+  HitSoundPosition: {fileID: 476434279}
 --- !u!1001 &1715879791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28004,6 +28040,7 @@ GameObject:
   - component: {fileID: 9150491916666839418}
   - component: {fileID: 9150491916666839417}
   - component: {fileID: 9150491916666839419}
+  - component: {fileID: 9150491916666839420}
   m_Layer: 6
   m_Name: Type XA
   m_TagString: Untagged
@@ -28059,10 +28096,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9150491916666839420}
+        m_TargetAssemblyTypeName: VRWeaponWoosh, Assembly-CSharp
+        m_MethodName: IsWeaponInHand
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9150491916666839420}
+        m_TargetAssemblyTypeName: VRWeaponWoosh, Assembly-CSharp
+        m_MethodName: IsWeaponInHand
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -28187,6 +28248,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019649502, y: 0.04999999, z: 0.04344965}
   m_Center: {x: 0.0011709325, y: 0.01, z: 0.000010877849}
+--- !u!114 &9150491916666839420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150491916666839416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
+  hand: 5
+  wooshEvent:
+    Guid:
+      Data1: -1027888078
+      Data2: 1102080199
+      Data3: -1134973778
+      Data4: -35721455
+    Path: event:/Sword Woosh
+  velocityThreshold: 1.5
+  cooldown: 0.25
+  IsInHand: 0
+  BloddyHit:
+    Guid:
+      Data1: -147595013
+      Data2: 1144890435
+      Data3: 1190368426
+      Data4: -1285040353
+    Path: event:/HardPunch
+  HitSoundPosition: {fileID: 0}
 --- !u!1 &9187936129451437962
 GameObject:
   m_ObjectHideFlags: 0
