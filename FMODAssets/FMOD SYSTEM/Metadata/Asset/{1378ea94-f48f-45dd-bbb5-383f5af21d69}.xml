@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{1378ea94-f48f-45dd-bbb5-383f5af21d69}">
+		<property name="assetPath">
+			<value>Environment SFX/Doors/HInge/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dedbe953-dec6-4167-b80c-5c1df9fa75e8}</destination>
+		</relationship>
+	</object>
+</objects>
