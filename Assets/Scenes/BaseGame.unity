@@ -5197,6 +5197,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0fe420211c7454e88be63f135966aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1 &414841996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414841997}
+  m_Layer: 6
+  m_Name: HitSoundPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &414841997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414841996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.411, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4184981068629969801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417659797
 GameObject:
   m_ObjectHideFlags: 0
@@ -10851,6 +10882,14 @@ MonoBehaviour:
   maxVelocity: 8
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 839857800}
+  BloddyHit:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  HitsoundPosition: {fileID: 0}
 --- !u!54 &885897306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18072,6 +18111,10 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2464498469856890074, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: baseDamage
       value: 50
@@ -18081,8 +18124,32 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: BloddyHit.Path
+      value: event:/Gruesome Punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: minimumVelocity
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: HitsoundPosition
+      value: 
+      objectReference: {fileID: 476434279}
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: BloddyHit.Guid.Data1
+      value: -366374344
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: BloddyHit.Guid.Data2
+      value: 1273327391
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: BloddyHit.Guid.Data3
+      value: -423843694
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425263923392544385, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: BloddyHit.Guid.Data4
+      value: 124043587
       objectReference: {fileID: 0}
     - target: {fileID: 7897292803940986244, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19010,6 +19077,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624099984}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1624356868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624356869}
+  m_Layer: 6
+  m_Name: HitSoundPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1624356869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624356868}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.395, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 746979830918158274}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1626308341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9095131086348497521, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
@@ -20068,14 +20166,6 @@ MonoBehaviour:
   velocityThreshold: 1.52
   cooldown: 0.25
   IsInHand: 0
-  BloddyHit:
-    Guid:
-      Data1: -147595013
-      Data2: 1144890435
-      Data3: 1190368426
-      Data4: -1285040353
-    Path: event:/HardPunch
-  HitSoundPosition: {fileID: 476434279}
 --- !u!114 &1710076222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22104,6 +22194,14 @@ MonoBehaviour:
   maxVelocity: 5
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 2086092901}
+  BloddyHit:
+    Guid:
+      Data1: 1816099823
+      Data2: 1222445702
+      Data3: 1310926256
+      Data4: 963488468
+    Path: event:/SwordBloodHit
+  HitsoundPosition: {fileID: 414841996}
 --- !u!54 &1910929111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23005,6 +23103,14 @@ MonoBehaviour:
   maxVelocity: 5
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 672437959}
+  BloddyHit:
+    Guid:
+      Data1: 1816099823
+      Data2: 1222445702
+      Data3: 1310926256
+      Data4: 963488468
+    Path: event:/SwordBloodHit
+  HitsoundPosition: {fileID: 1624356868}
 --- !u!54 &2018273212
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24114,6 +24220,7 @@ GameObject:
   - component: {fileID: 8562345182432427894}
   - component: {fileID: 8562345182432427893}
   - component: {fileID: 8562345182432427895}
+  - component: {fileID: 8562345182432427896}
   m_Layer: 6
   m_Name: Type XIIA
   m_TagString: Untagged
@@ -24644,6 +24751,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2018273210}
+  - {fileID: 1624356869}
   m_Father: {fileID: 1130160400940755753}
   m_LocalEulerAnglesHint: {x: -95.083, y: -69.712006, z: 118.128}
 --- !u!33 &811838198836231341
@@ -25814,6 +25922,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1910929109}
+  - {fileID: 414841997}
   m_Father: {fileID: 1130160400940755753}
   m_LocalEulerAnglesHint: {x: -105.705, y: -42.541992, z: 273.222}
 --- !u!1 &4198431654765671848
@@ -27764,10 +27873,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8562345182432427896}
+        m_TargetAssemblyTypeName: VRWeaponWoosh, Assembly-CSharp
+        m_MethodName: IsWeaponInHand
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8562345182432427896}
+        m_TargetAssemblyTypeName: VRWeaponWoosh, Assembly-CSharp
+        m_MethodName: IsWeaponInHand
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -27892,6 +28025,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019545563, y: 0.07, z: 0.04478866}
   m_Center: {x: 0.000514013, y: 0.01, z: -0.00002519102}
+--- !u!114 &8562345182432427896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153641148335024179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
+  hand: 5
+  wooshEvent:
+    Guid:
+      Data1: -1027888078
+      Data2: 1102080199
+      Data3: -1134973778
+      Data4: -35721455
+    Path: event:/Sword Woosh
+  velocityThreshold: 1.5
+  cooldown: 0.25
+  IsInHand: 0
 --- !u!114 &8993373184733170913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28271,14 +28427,6 @@ MonoBehaviour:
   velocityThreshold: 1.5
   cooldown: 0.25
   IsInHand: 0
-  BloddyHit:
-    Guid:
-      Data1: -147595013
-      Data2: 1144890435
-      Data3: 1190368426
-      Data4: -1285040353
-    Path: event:/HardPunch
-  HitSoundPosition: {fileID: 0}
 --- !u!1 &9187936129451437962
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 [RequireComponent(typeof(Collider)), RequireComponent(typeof(Rigidbody))]
 public class Damager : MonoBehaviour
@@ -22,8 +24,14 @@ public class Damager : MonoBehaviour
     [Tooltip("An empty GameObject on the controller/hand to accurately track swing speed.")]
     public Transform weaponVelocityTracker;
 
+    [Header("FMOD")]
+    [Tooltip("FMOD event reference for the Hit Sound.")]
+    public EventReference BloddyHit;
+
+    
     private Vector3 lastTrackerPosition;
     private float currentSwingSpeed;
+    public GameObject HitsoundPosition;
 
     private void Awake()
     {
@@ -84,6 +92,16 @@ public class Damager : MonoBehaviour
         }
 
         return true;
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Monster")
+        {
+            RuntimeManager.PlayOneShotAttached(BloddyHit, HitsoundPosition);     
+        }
+        
+      
     }
 
 }

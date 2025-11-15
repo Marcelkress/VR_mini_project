@@ -109,9 +109,9 @@ public class VRWeaponWoosh2 : MonoBehaviour
         RuntimeManager.PlayOneShotAttached(BloddyHit, HitSoundPosition);
     }
 
-    public void OnTriggerEnter(Collider monster)
+    public void OnTriggerEnter(Collider other)
     {
-        if (monster.CompareTag("Monster"))
+        if (other.CompareTag("Monster"))
         {
             PlayHitSound();
         }

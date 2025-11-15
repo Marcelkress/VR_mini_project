@@ -24,13 +24,13 @@ public class VRWeaponWoosh : MonoBehaviour
     private InputDevice device;
     private float lastWooshTime;
     public bool IsInHand;
-
+/*
     [Header("FMOD")]
     [Tooltip("FMOD event reference for the Hit Sound.")]
     public EventReference BloddyHit;
 
     public GameObject HitSoundPosition;
-    
+  */  
     private void OnEnable()
     {
         InitDevice();
@@ -79,7 +79,7 @@ public class VRWeaponWoosh : MonoBehaviour
     {
         IsInHand = inHand;
     }
-
+/*
     public void PlayHitSound()
     {
         RuntimeManager.PlayOneShotAttached(BloddyHit, HitSoundPosition);
@@ -92,4 +92,6 @@ public class VRWeaponWoosh : MonoBehaviour
             PlayHitSound();
         }
     }
+    
+    */
 }
