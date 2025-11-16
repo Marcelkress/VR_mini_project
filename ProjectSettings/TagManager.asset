@@ -18,6 +18,7 @@ TagManager:
   - Monster
   - WeaponTrig
   - Door
+  - Floor
   layers:
   - Default
   - TransparentFX

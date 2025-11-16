@@ -458,11 +458,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -1270,11 +1270,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -1402,11 +1402,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -1444,7 +1444,7 @@ GameObject:
   - component: {fileID: 183083408}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4049,15 +4049,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 431961440403155690, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.68
+      value: 29.664
       objectReference: {fileID: 0}
     - target: {fileID: 431961440403155690, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: 1.219
       objectReference: {fileID: 0}
     - target: {fileID: 431961440403155690, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.907
+      value: 18.39
       objectReference: {fileID: 0}
     - target: {fileID: 431961440403155690, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4095,6 +4095,10 @@ PrefabInstance:
       propertyPath: healthSystem
       value: 
       objectReference: {fileID: 1626308342}
+    - target: {fileID: 2651991804182914371, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      propertyPath: potionDrinkSound
+      value: 
+      objectReference: {fileID: 1506064029}
     - target: {fileID: 3803214540322872447, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -4106,7 +4110,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1506064028}
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1506064029}
   m_SourcePrefab: {fileID: 100100000, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
 --- !u!1 &327726914 stripped
 GameObject:
@@ -5936,7 +5946,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8482744325712674091, guid: f323d557739d64c4ab8a01597b22f0ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 426732389}
   m_SourcePrefab: {fileID: 100100000, guid: f323d557739d64c4ab8a01597b22f0ba, type: 3}
 --- !u!1 &426732386 stripped
 GameObject:
@@ -5953,6 +5966,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1594835585968067043, guid: f323d557739d64c4ab8a01597b22f0ba, type: 3}
   m_PrefabInstance: {fileID: 426732385}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &426732389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426732386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1281685462
+      Data2: 1278362770
+      Data3: -2121910113
+      Data4: 240739675
+    Path: event:/Dispell
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &432792461
 GameObject:
   m_ObjectHideFlags: 0
@@ -7065,11 +7109,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -7415,10 +7459,10 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -845743259
-      Data2: 1194113974
-      Data3: 910461091
-      Data4: -999564771
+      Data1: -1315490379
+      Data2: 1218468321
+      Data3: 860132738
+      Data4: -2128222213
     Path: event:/FightMusic
   Event: 
   EventPlayTrigger: 0
@@ -8819,6 +8863,132 @@ MonoBehaviour:
   m_FadeFactor: 1
   version: 1
   m_DecalLayerMask: 1
+--- !u!1 &628043954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 628043955}
+  - component: {fileID: 628043959}
+  - component: {fileID: 628043958}
+  - component: {fileID: 628043957}
+  - component: {fileID: 628043956}
+  m_Layer: 0
+  m_Name: Dragon Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &628043955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628043954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.952, y: 0.569, z: 7.089}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1287357313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628043956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628043954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda250809d347c549b57eea930e87da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragonScream
+  dragonScreamEmitter: {fileID: 1083537946}
+  hasbeenCalled: 0
+--- !u!65 &628043957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628043954}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &628043958
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628043954}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &628043959
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628043954}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &641370993
 GameObject:
   m_ObjectHideFlags: 0
@@ -10029,7 +10199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &758780186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12542,11 +12712,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -13595,6 +13765,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064655174}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1083537945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083537947}
+  - component: {fileID: 1083537946}
+  m_Layer: 0
+  m_Name: DragonScream
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1083537946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083537945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1204789320
+      Data2: 1304327494
+      Data3: -310638163
+      Data4: 1629093825
+    Path: event:/Dragon Scream S
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1083537947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083537945}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.04, y: 1.58, z: 12.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1287357313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084831723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3853902308168530595, guid: f67881ad00d5744c48aa6db6c39ac1f1, type: 3}
@@ -14318,6 +14551,8 @@ MonoBehaviour:
   rotation: {x: 0, y: 0, z: 0}
   leftLineAnim: {fileID: 0}
   rightLineAnim: {fileID: 0}
+  LeftKeyunlockSound: {fileID: 426732389}
+  RightKeyunlockSound: {fileID: 1536595716}
   keyFloatDuration: 1
 --- !u!4 &1168915229 stripped
 Transform:
@@ -16600,6 +16835,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 349063519247927049, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
       insertIndex: -1
       addedObject: {fileID: 687052528}
+    - targetCorrespondingSourceObject: {fileID: 349063519247927049, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083537947}
+    - targetCorrespondingSourceObject: {fileID: 349063519247927049, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 628043955}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2332442620828134579, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
       insertIndex: -1
@@ -17762,7 +18003,7 @@ Transform:
   m_GameObject: {fileID: 1482646929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0.01414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18022,7 +18263,7 @@ Transform:
   m_GameObject: {fileID: 1492610290}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.00729, y: -0, z: 0.01547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18170,6 +18411,65 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500631611}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1506064020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+  m_PrefabInstance: {fileID: 310810892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1506064028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506064020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5d318b7d3c3ce4e986ecc5df502513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionSoundScript
+  radius: 0.05
+  floorTag: Floor
+  potionSoundFloor: {fileID: 0}
+  glassSound:
+    Guid:
+      Data1: -640200378
+      Data2: 1208986451
+      Data3: 515116685
+      Data4: -309729368
+    Path: event:/BottleFloor
+  hitSoundPosition: {fileID: 0}
+--- !u!114 &1506064029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506064020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1937731719
+      Data2: 1290114417
+      Data3: 2070880393
+      Data4: 1207408781
+    Path: event:/Drinking Potion
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1508970939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
@@ -18614,6 +18914,34 @@ PrefabInstance:
     - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       propertyPath: maxHealth
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 535521557}
+    - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804322830691106379, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5054007635923500539, guid: 3a4f394a7c54a416eac8e808865675d7, type: 3}
       propertyPath: m_EnableTurnAround
@@ -19083,7 +19411,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8482744325712674091, guid: edb2b77fc192b796097637c0e09cd829, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1536595716}
   m_SourcePrefab: {fileID: 100100000, guid: edb2b77fc192b796097637c0e09cd829, type: 3}
 --- !u!4 &1536595711 stripped
 Transform:
@@ -19100,6 +19431,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8482744325712674091, guid: edb2b77fc192b796097637c0e09cd829, type: 3}
   m_PrefabInstance: {fileID: 1536595710}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1536595716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536595713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1281685462
+      Data2: 1278362770
+      Data3: -2121910113
+      Data4: 240739675
+    Path: event:/Dispell
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1537709576
 GameObject:
   m_ObjectHideFlags: 0
@@ -19278,6 +19640,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4b17872742f174498be6e91b4fc616b8, type: 2}
+    - target: {fileID: 2769565501747255404, guid: f67881ad00d5744c48aa6db6c39ac1f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3853902308168530595, guid: f67881ad00d5744c48aa6db6c39ac1f1, type: 3}
       propertyPath: m_Name
       value: Fake rooms
@@ -21351,11 +21717,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -23264,11 +23630,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -24173,11 +24539,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 74ad8dad903f042cd8482aac51d4e351, type: 2}
     - target: {fileID: 1098936874303266199, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302410423890103758, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7808396755971654821, guid: abc00000000000406958389673355633, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -29525,7 +29891,7 @@ GameObject:
   - component: {fileID: 7887753549703353582}
   m_Layer: 0
   m_Name: Hallway prefab
-  m_TagString: Untagged
+  m_TagString: Hallway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

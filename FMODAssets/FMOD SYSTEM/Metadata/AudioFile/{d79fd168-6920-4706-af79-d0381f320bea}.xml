@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d79fd168-6920-4706-af79-d0381f320bea}">
+		<property name="assetPath">
+			<value>Potion/potion-swig-83168.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.167999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dedbe953-dec6-4167-b80c-5c1df9fa75e8}</destination>
+		</relationship>
+	</object>
+</objects>

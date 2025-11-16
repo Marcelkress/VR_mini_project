@@ -108,9 +108,6 @@
 		<property name="startOffset">
 			<value>9</value>
 		</property>
-		<property name="volume">
-			<value>-2</value>
-		</property>
 		<relationship name="audioFile">
 			<destination>{a2860a28-cda7-4e76-8d2e-f35104f48f72}</destination>
 		</relationship>

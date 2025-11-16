@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{296813f7-d8c1-45c3-b0e0-127b4542735f}">
+		<property name="assetPath">
+			<value>Music/Metal drums Final.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>61.875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dedbe953-dec6-4167-b80c-5c1df9fa75e8}</destination>
+		</relationship>
+	</object>
+</objects>

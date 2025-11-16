@@ -1,4 +1,5 @@
 using System.Numerics;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,6 +24,8 @@ public class PotionDrink : MonoBehaviour
 
     public UnityEvent OnPotionDrunk;
     
+    public StudioEventEmitter potionDrinkSound;
+    
 
 
     void Update()
@@ -34,6 +37,7 @@ public class PotionDrink : MonoBehaviour
         if (transform.position.y >= playerHead.position.y + drinkHeight)
         {
             DrinkPotion();
+            potionDrinkSound.Play();
         }
     }
 
