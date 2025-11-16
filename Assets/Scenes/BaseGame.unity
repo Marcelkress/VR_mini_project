@@ -975,6 +975,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130445486}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &131963069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131963070}
+  - component: {fileID: 131963071}
+  m_Layer: 3
+  m_Name: 'Door Room 2 Hit '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131963070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131963069}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0.01466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2993924682341070942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131963071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131963069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -800824867
+      Data2: 1079524032
+      Data3: -1612039257
+      Data4: -678047116
+    Path: event:/DoorHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &137427631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1231,6 +1294,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 154772571}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &157450251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 164722691803100390, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+  m_PrefabInstance: {fileID: 1886979641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &157450255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4829163524861514603, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+  m_PrefabInstance: {fileID: 1886979641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &157450256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157450251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
+  hand: 5
+  wooshEvent:
+    Guid:
+      Data1: -1516847612
+      Data2: 1320708541
+      Data3: -1317480008
+      Data4: -1857574156
+    Path: event:/Weapons/MorningStar
+  velocityThreshold: 1.5
+  cooldown: 0.25
+  IsInHand: 0
 --- !u!4 &169319566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030981357, guid: abc00000000014825347788973716921, type: 3}
@@ -1728,11 +1824,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -2030026898
-      Data2: 1139703806
-      Data3: 782622391
-      Data4: 362067271
-    Path: event:/Menumusic
+      Data1: 1253176736
+      Data2: 1249461219
+      Data3: 717378465
+      Data4: 1262362700
+    Path: event:/Deep Space
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -3015,6 +3111,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262949625}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &264620916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264620918}
+  - component: {fileID: 264620917}
+  m_Layer: 3
+  m_Name: Door Room 1 sound creak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &264620917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264620916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 539790907
+      Data2: 1260969236
+      Data3: -1999970881
+      Data4: -1457375841
+    Path: event:/DoorCreak
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &264620918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264620916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7067532, y: -0.022361545, z: -0.70710677, w: 0.00000004493726}
+  m_LocalPosition: {x: -0.020743277, y: 0.0025288085, z: -0.000905813}
+  m_LocalScale: {x: 0.010358058, y: 0.007910359, z: 0.01017783}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7007798490572082655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &268672499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4534449285516404, guid: 0941535f5a7c0d846a45a6370dc4036b, type: 3}
@@ -3975,6 +4134,69 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15345933, y: 3.0673258, z: 1.6203251}
   m_Center: {x: -0.045708608, y: 1.5026485, z: -0.77961564}
+--- !u!1 &338479519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338479520}
+  - component: {fileID: 338479521}
+  m_Layer: 3
+  m_Name: Door Room 5 Hit sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338479520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338479519}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 569499915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &338479521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338479519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -800824867
+      Data2: 1079524032
+      Data3: -1612039257
+      Data4: -678047116
+    Path: event:/DoorHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &345224563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4302,7 +4524,7 @@ PrefabInstance:
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 206474517}
+      objectReference: {fileID: 1345978953}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -4325,7 +4547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Stop
+      value: FadeOutAndSwitch
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4341,7 +4563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: FMODUnity.StudioEventEmitter, FMODUnity
+      value: MusicFade, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9120345315477566842, guid: 6101f1ad2910c4907a56af16a5bde544, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4781,6 +5003,116 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!1 &385299610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385299611}
+  - component: {fileID: 385299612}
+  m_Layer: 6
+  m_Name: WeaponTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &385299611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385299610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 157450255}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &385299612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385299610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278c56d51561c5e43b583ae21fb317d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponTip
+  radius: 0.05
+  monsterTag: Monster
+  monsterHitEmitter: {fileID: 0}
+  BloodyHit:
+    Guid:
+      Data1: -147595013
+      Data2: 1144890435
+      Data3: 1190368426
+      Data4: -1285040353
+    Path: event:/HardPunch
+  hitSoundPosition: {fileID: 1751530516}
+--- !u!1 &385342218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385342219}
+  - component: {fileID: 385342220}
+  m_Layer: 0
+  m_Name: WeaponTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &385342219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385342218}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.64214927, y: -0.32094508, z: -0.25837636, w: 0.6464366}
+  m_LocalPosition: {x: -0.12322445, y: -0.36171225, z: 0.53836644}
+  m_LocalScale: {x: 0.28926587, y: 0.9847719, z: 0.30351993}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 746979830918158274}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &385342220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385342218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278c56d51561c5e43b583ae21fb317d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponTip
+  radius: 0.05
+  monsterTag: Monster
+  monsterHitEmitter: {fileID: 0}
+  BloodyHit:
+    Guid:
+      Data1: 1816099823
+      Data2: 1222445702
+      Data3: 1310926256
+      Data4: 963488468
+    Path: event:/SwordBloodHit
+  hitSoundPosition: {fileID: 1624356868}
 --- !u!1001 &386834009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5197,6 +5529,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0fe420211c7454e88be63f135966aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1 &414498461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414498462}
+  - component: {fileID: 414498463}
+  m_Layer: 3
+  m_Name: Door 4 Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &414498462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414498461}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000010291112, y: -0.0000000018626447, z: -0.7211364, w: -0.6927931}
+  m_LocalPosition: {x: 0.061851375, y: -0.060761172, z: 0}
+  m_LocalScale: {x: 0.9960425, y: 1.0039736, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6663693057893136982}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &414498463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414498461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -800824867
+      Data2: 1079524032
+      Data3: -1612039257
+      Data4: -678047116
+    Path: event:/DoorHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &414841996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5359,6 +5754,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417659797}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &417929637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417929638}
+  - component: {fileID: 417929639}
+  m_Layer: 3
+  m_Name: Door 3 Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &417929638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417929637}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7189395533945460687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &417929639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417929637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -800824867
+      Data2: 1079524032
+      Data3: -1612039257
+      Data4: -678047116
+    Path: event:/DoorHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &426732385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6197,6 +6655,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 460367762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &461348101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461348102}
+  m_Layer: 6
+  m_Name: HitPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461348102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461348101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.41668153, y: 0.133928, z: 0.63725936, w: -0.6343031}
+  m_LocalPosition: {x: 0.00949, y: -0.00024, z: -0.00035}
+  m_LocalScale: {x: 0.010000002, y: 0.01, z: 0.010000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2121575221}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475729611
 GameObject:
   m_ObjectHideFlags: 0
@@ -6828,6 +7317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535521555}
   - component: {fileID: 535521556}
+  - component: {fileID: 535521557}
   m_Layer: 0
   m_Name: FightMusic
   m_TagString: Untagged
@@ -6862,6 +7352,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae1bd10a745bf444b6b4cc7a625b4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartMusic
+--- !u!114 &535521557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535521554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -845743259
+      Data2: 1194113974
+      Data3: 910461091
+      Data4: -999564771
+    Path: event:/FightMusic
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &538603555
 GameObject:
   m_ObjectHideFlags: 0
@@ -7493,13 +8014,26 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8474585658821497621, guid: 7eaec1abeed6045dca42a79a99a126a6, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474585658821497621, guid: 7eaec1abeed6045dca42a79a99a126a6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5574431633060005744, guid: 7eaec1abeed6045dca42a79a99a126a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1590201747}
+    - targetCorrespondingSourceObject: {fileID: 5574431633060005744, guid: 7eaec1abeed6045dca42a79a99a126a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 338479520}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8474585658821497621, guid: 7eaec1abeed6045dca42a79a99a126a6, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 1114557265}
   m_SourcePrefab: {fileID: 100100000, guid: 7eaec1abeed6045dca42a79a99a126a6, type: 3}
 --- !u!4 &569499915 stripped
 Transform:
@@ -10419,6 +10953,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850500208}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &859468144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859468146}
+  - component: {fileID: 859468145}
+  m_Layer: 3
+  m_Name: Room 0 Door Hinge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &859468145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859468144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 539790907
+      Data2: 1260969236
+      Data3: -1999970881
+      Data4: -1457375841
+    Path: event:/DoorCreak
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &859468146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859468144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00812, y: -0, z: 0.01392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5955346621572704511}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &879102049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10882,14 +11479,6 @@ MonoBehaviour:
   maxVelocity: 8
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 839857800}
-  BloddyHit:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  HitsoundPosition: {fileID: 0}
 --- !u!54 &885897306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10917,6 +11506,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &891496406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891496407}
+  - component: {fileID: 891496408}
+  m_Layer: 0
+  m_Name: DoorHitSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &891496407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891496406}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.053691864, y: 1.52711, z: 0.13596916}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6402479857075065986}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891496408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891496406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7f00a2cdfe4ea44b134ddbfe1dac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorHitSound
+  hitEmitter: {fileID: 1482646931}
+  openEmitter: {fileID: 1492610292}
 --- !u!1001 &899850746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11757,6 +12392,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 955354628}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &961998759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961998760}
+  - component: {fileID: 961998761}
+  m_Layer: 3
+  m_Name: Door room 2 Creak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &961998760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961998759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.007, y: -0, z: 0.0153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2993924682341070942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961998761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961998759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 539790907
+      Data2: 1260969236
+      Data3: -1999970881
+      Data4: -1457375841
+    Path: event:/DoorCreak
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &964976855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4463149083286388, guid: 2e57ba42788234646b2d6b76f15dac76, type: 3}
@@ -12087,6 +12785,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 981816626}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &999244227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999244228}
+  - component: {fileID: 999244229}
+  m_Layer: 3
+  m_Name: Room 0 Door Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &999244228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999244227}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01402}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5955346621572704511}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999244229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999244227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: WeaponTrig
+  EventReference:
+    Guid:
+      Data1: -800824867
+      Data2: 1079524032
+      Data3: -1612039257
+      Data4: -678047116
+    Path: event:/DoorHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1002831701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4368101801063984, guid: e701c442dd73c844b9f5a0c6ed6e59e1, type: 3}
@@ -12866,6 +13627,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09, y: 0.37, z: -0.17}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1114557259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8474585658821497621, guid: 7eaec1abeed6045dca42a79a99a126a6, type: 3}
+  m_PrefabInstance: {fileID: 569499914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1114557265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114557259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7f00a2cdfe4ea44b134ddbfe1dac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorHitSound
+  hitEmitter: {fileID: 338479521}
+  openEmitter: {fileID: 1590201748}
 --- !u!1 &1128643460
 GameObject:
   m_ObjectHideFlags: 0
@@ -13558,6 +14338,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000017391409611913972250, type: 3}
+--- !u!1 &1180006548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1180006549}
+  - component: {fileID: 1180006550}
+  m_Layer: 3
+  m_Name: Door 4 Creak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1180006549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180006548}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000010291112, y: -0.0000000018626447, z: -0.7211364, w: -0.6927931}
+  m_LocalPosition: {x: 0.061851375, y: -0.060761172, z: 0}
+  m_LocalScale: {x: 0.9960425, y: 1.0039736, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6663693057893136982}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180006550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180006548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 539790907
+      Data2: 1260969236
+      Data3: -1999970881
+      Data4: -1457375841
+    Path: event:/DoorCreak
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1185801631
 GameObject:
   m_ObjectHideFlags: 0
@@ -14071,6 +14914,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272466641}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1281506252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1281506253}
+  - component: {fileID: 1281506254}
+  m_Layer: 3
+  m_Name: Door 3 Creak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1281506253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281506252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7189395533945460687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1281506254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281506252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 539790907
+      Data2: 1260969236
+      Data3: -1999970881
+      Data4: -1457375841
+    Path: event:/DoorCreak
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1282886545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14972,6 +15878,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321499985}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1340070817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1340070818}
+  - component: {fileID: 1340070819}
+  m_Layer: 6
+  m_Name: WeaponTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1340070818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340070817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0.00765}
+  m_LocalScale: {x: 0.66625, y: 0.66625, z: 0.66625}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1710076214}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1340070819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340070817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278c56d51561c5e43b583ae21fb317d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponTip
+  radius: 0.05
+  monsterTag: Monster
+  monsterHitEmitter: {fileID: 0}
+  BloodyHit:
+    Guid:
+      Data1: -366374344
+      Data2: 1273327391
+      Data3: -423843694
+      Data4: 124043587
+    Path: event:/Gruesome Punch
+  hitSoundPosition: {fileID: 476434279}
+--- !u!1 &1345978951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345978952}
+  - component: {fileID: 1345978953}
+  m_Layer: 0
+  m_Name: MusicFader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345978952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345978951}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1287357313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1345978953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345978951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eced5265b73ddb4c8020726d7ecd6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicFade
+  currentTrack: {fileID: 206474517}
+  nextTrack: {fileID: 535521557}
+  Banshee: {fileID: 1649385821}
+  fadeOutTime: 2
+  delayTime: 2
+  hasbeenCalled: 0
 --- !u!1 &1358924098
 GameObject:
   m_ObjectHideFlags: 0
@@ -15403,6 +16414,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 349063519247927049, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
       insertIndex: -1
       addedObject: {fileID: 535521555}
+    - targetCorrespondingSourceObject: {fileID: 349063519247927049, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1345978952}
+    - targetCorrespondingSourceObject: {fileID: 349063519247927049, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1649385820}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2332442620828134579, guid: 2caeb4209c16344daa8a090e0ca47394, type: 3}
       insertIndex: -1
@@ -16539,6 +17556,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0941535f5a7c0d846a45a6370dc4036b, type: 3}
+--- !u!1 &1482646929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482646930}
+  - component: {fileID: 1482646931}
+  m_Layer: 3
+  m_Name: 'DoorToMain hit '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1482646930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482646929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5621511909415909715}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482646931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482646929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -800824867
+      Data2: 1079524032
+      Data3: -1612039257
+      Data4: -678047116
+    Path: event:/DoorHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1490765003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16736,6 +17816,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e701c442dd73c844b9f5a0c6ed6e59e1, type: 3}
+--- !u!1 &1492610290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492610291}
+  - component: {fileID: 1492610292}
+  m_Layer: 3
+  m_Name: Door to main Creak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1492610291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492610290}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5621511909415909715}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1492610292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492610290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 539790907
+      Data2: 1260969236
+      Data3: -1999970881
+      Data4: -1457375841
+    Path: event:/DoorCreak
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1500631611
 GameObject:
   m_ObjectHideFlags: 0
@@ -17777,6 +18920,61 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8482744325712674091, guid: edb2b77fc192b796097637c0e09cd829, type: 3}
   m_PrefabInstance: {fileID: 1536595710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1537709576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537709577}
+  - component: {fileID: 1537709578}
+  m_Layer: 6
+  m_Name: WeaponTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1537709577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537709576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.41668153, y: 0.133928, z: 0.63725936, w: -0.6343031}
+  m_LocalPosition: {x: -0.004437593, y: -0.0045459126, z: 0.0008294231}
+  m_LocalScale: {x: 0.010000002, y: 0.01, z: 0.010000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2121575221}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1537709578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537709576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278c56d51561c5e43b583ae21fb317d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponTip
+  radius: 0.05
+  monsterTag: Monster
+  monsterHitEmitter: {fileID: 0}
+  BloodyHit:
+    Guid:
+      Data1: -366374344
+      Data2: 1273327391
+      Data3: -423843694
+      Data4: 124043587
+    Path: event:/Gruesome Punch
+  hitSoundPosition: {fileID: 461348101}
 --- !u!1 &1544993612
 GameObject:
   m_ObjectHideFlags: 0
@@ -18195,12 +19393,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mace2
       objectReference: {fileID: 0}
+    - target: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      propertyPath: m_TagString
+      value: WeaponTrig
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7897292803940986244, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 476434280}
+    - targetCorrespondingSourceObject: {fileID: 7897292803940986244, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1340070818}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8976201713463106639, guid: bc0bae7c97c46d7e89307a226827e5f4, type: 3}
       insertIndex: -1
@@ -18621,6 +19826,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 442205056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1590201746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590201747}
+  - component: {fileID: 1590201748}
+  m_Layer: 3
+  m_Name: Door Room 5 sound creak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1590201747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590201746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0083, y: 0, z: 0.01534}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 569499915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1590201748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590201746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 539790907
+      Data2: 1260969236
+      Data3: -1999970881
+      Data4: -1457375841
+    Path: event:/DoorCreak
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1621605343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19102,7 +20370,7 @@ Transform:
   m_GameObject: {fileID: 1624356868}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.395, z: -0}
+  m_LocalPosition: {x: 0, y: -0.395, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19248,6 +20516,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 1631153808}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1649385819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649385820}
+  - component: {fileID: 1649385821}
+  m_Layer: 0
+  m_Name: BansheeScream
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649385820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649385819}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.154, y: 0.702, z: -12.962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1287357313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649385821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649385819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 742890687
+      Data2: 1212868309
+      Data3: 608726207
+      Data4: -122644081
+    Path: event:/Banshee
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 50
 --- !u!1 &1649586190
 GameObject:
   m_ObjectHideFlags: 0
@@ -20512,6 +21843,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739094533}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1751530516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751530517}
+  m_Layer: 6
+  m_Name: HitPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1751530517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751530516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.112, z: 0.252}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 157450255}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1753493027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21754,6 +23116,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
   m_PrefabInstance: {fileID: 1832177518}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1843031541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843031542}
+  - component: {fileID: 1843031543}
+  m_Layer: 3
+  m_Name: Door Room 1 Hit sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843031542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843031541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7067532, y: -0.022361545, z: -0.70710677, w: 0.00000004493726}
+  m_LocalPosition: {x: -0.020754639, y: 0.0025314759, z: -0.0008296883}
+  m_LocalScale: {x: 0.010358058, y: 0.007910359, z: 0.01017783}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7007798490572082655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1843031543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843031541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -800824867
+      Data2: 1079524032
+      Data3: -1612039257
+      Data4: -678047116
+    Path: event:/DoorHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1848628763
 GameObject:
   m_ObjectHideFlags: 0
@@ -22083,6 +23508,66 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe
       objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 157450256}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 157450256}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsWeaponInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsWeaponInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VRWeaponWoosh, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VRWeaponWoosh, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166132403753695117, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4829163524861514603, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.73155
@@ -22137,9 +23622,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4829163524861514603, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 385299611}
+    - targetCorrespondingSourceObject: {fileID: 4829163524861514603, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751530517}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 164722691803100390, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 157450256}
   m_SourcePrefab: {fileID: 100100000, guid: eb4b8e5a106ce34759fdcc5b1565d879, type: 3}
+--- !u!1 &1896289524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1896289525}
+  - component: {fileID: 1896289526}
+  m_Layer: 6
+  m_Name: WeponTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1896289525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896289524}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4184981068629969801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896289526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896289524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278c56d51561c5e43b583ae21fb317d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponTip
+  radius: 0.05
+  monsterTag: Monster
+  monsterHitEmitter: {fileID: 0}
+  BloodyHit:
+    Guid:
+      Data1: 1816099823
+      Data2: 1222445702
+      Data3: 1310926256
+      Data4: 963488468
+    Path: event:/SwordBloodHit
+  hitSoundPosition: {fileID: 414841996}
 --- !u!1 &1910929108
 GameObject:
   m_ObjectHideFlags: 0
@@ -22194,14 +23743,6 @@ MonoBehaviour:
   maxVelocity: 5
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 2086092901}
-  BloddyHit:
-    Guid:
-      Data1: 1816099823
-      Data2: 1222445702
-      Data3: 1310926256
-      Data4: 963488468
-    Path: event:/SwordBloodHit
-  HitsoundPosition: {fileID: 414841996}
 --- !u!54 &1910929111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22496,6 +24037,66 @@ PrefabInstance:
       propertyPath: m_UseDynamicAttach
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2121575222}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2121575222}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsWeaponInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsWeaponInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VRWeaponWoosh, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VRWeaponWoosh, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933183098524407436, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6636224727673711872, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.063
@@ -22540,10 +24141,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: mace
       objectReference: {fileID: 0}
+    - target: {fileID: 7120640485540491021, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      propertyPath: m_TagString
+      value: WeaponTrig
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6636224727673711872, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1537709577}
+    - targetCorrespondingSourceObject: {fileID: 6636224727673711872, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 461348102}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7120640485540491021, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 2121575222}
   m_SourcePrefab: {fileID: 100100000, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
 --- !u!4 &1965121038 stripped
 Transform:
@@ -23103,14 +24717,6 @@ MonoBehaviour:
   maxVelocity: 5
   canKnockBack: 1
   weaponVelocityTracker: {fileID: 672437959}
-  BloddyHit:
-    Guid:
-      Data1: 1816099823
-      Data2: 1222445702
-      Data3: 1310926256
-      Data4: 963488468
-    Path: event:/SwordBloodHit
-  HitsoundPosition: {fileID: 1624356868}
 --- !u!54 &2018273212
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23749,6 +25355,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+--- !u!1 &2121575215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7120640485540491021, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+  m_PrefabInstance: {fileID: 1958116218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2121575221 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6636224727673711872, guid: fabde053d2d6cfef1b4b862953194dce, type: 3}
+  m_PrefabInstance: {fileID: 1958116218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2121575222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121575215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f2e26620e044d46a35399743c7d7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRWeaponWoosh
+  hand: 5
+  wooshEvent:
+    Guid:
+      Data1: -1516847612
+      Data2: 1320708541
+      Data3: -1317480008
+      Data4: -1857574156
+    Path: event:/Weapons/MorningStar
+  velocityThreshold: 1.5
+  cooldown: 0.25
+  IsInHand: 0
 --- !u!1 &2128918760
 GameObject:
   m_ObjectHideFlags: 0
@@ -24752,6 +26391,7 @@ Transform:
   m_Children:
   - {fileID: 2018273210}
   - {fileID: 1624356869}
+  - {fileID: 385342219}
   m_Father: {fileID: 1130160400940755753}
   m_LocalEulerAnglesHint: {x: -95.083, y: -69.712006, z: 118.128}
 --- !u!33 &811838198836231341
@@ -24852,6 +26492,7 @@ GameObject:
   - component: {fileID: 8993373184733170913}
   - component: {fileID: 8993373184733170916}
   - component: {fileID: 8993373184733170915}
+  - component: {fileID: 8993373184733170917}
   - component: {fileID: 8993373184733170914}
   m_Layer: 0
   m_Name: Room no arches 1
@@ -25563,7 +27204,9 @@ Transform:
   m_LocalPosition: {x: -0.13000514, y: 0.01999998, z: -2.0600073}
   m_LocalScale: {x: -99.60357, y: 99.99997, z: 96.157005}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 131963070}
+  - {fileID: 961998760}
   m_Father: {fileID: 2983136834976589487}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -1.812}
 --- !u!4 &3039020772203201486
@@ -25923,6 +27566,7 @@ Transform:
   m_Children:
   - {fileID: 1910929109}
   - {fileID: 414841997}
+  - {fileID: 1896289525}
   m_Father: {fileID: 1130160400940755753}
   m_LocalEulerAnglesHint: {x: -105.705, y: -42.541992, z: 273.222}
 --- !u!1 &4198431654765671848
@@ -25937,11 +27581,12 @@ GameObject:
   - component: {fileID: 8261532360595655132}
   - component: {fileID: 6443278106807594187}
   - component: {fileID: 2053974038745857112}
+  - component: {fileID: 9056579265988306478}
   - component: {fileID: 9056579265988306477}
   - component: {fileID: 6479517941302512665}
   m_Layer: 3
   m_Name: WoodenDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25990,9 +27635,10 @@ GameObject:
   - component: {fileID: 7469224451969477881}
   - component: {fileID: 470138295984715404}
   - component: {fileID: 2504834466502155448}
+  - component: {fileID: 7469224451969477882}
   m_Layer: 3
   m_Name: WoodenDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26144,7 +27790,9 @@ Transform:
   m_LocalPosition: {x: -0.053577423, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1482646930}
+  - {fileID: 1492610291}
   m_Father: {fileID: 6402479857075065986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5714625439229119660
@@ -26176,6 +27824,7 @@ GameObject:
   - component: {fileID: 7599703031609851472}
   - component: {fileID: 601742917801141285}
   - component: {fileID: 3178802575836778001}
+  - component: {fileID: 7599703031609851473}
   m_Layer: 3
   m_Name: WoodenDoor
   m_TagString: Untagged
@@ -26213,7 +27862,9 @@ Transform:
   m_LocalPosition: {x: -0.142, y: 0.116, z: -1.912}
   m_LocalScale: {x: 78.47466, y: 78.78697, z: 75.75922}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 999244228}
+  - {fileID: 859468146}
   m_Father: {fileID: 1646584113672751926}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -1.812}
 --- !u!1 &6021872552932920888
@@ -26464,6 +28115,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1172026539854028205}
+  - {fileID: 891496407}
   - {fileID: 5621511909415909715}
   - {fileID: 966967464671680361}
   m_Father: {fileID: 1130160400940755753}
@@ -26754,7 +28406,9 @@ Transform:
   m_LocalPosition: {x: 0.188, y: 0.02, z: -2.021}
   m_LocalScale: {x: -99.60358, y: 99.99998, z: 96.15701}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 414498462}
+  - {fileID: 1180006549}
   m_Father: {fileID: 3162465482915822783}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.515}
 --- !u!4 &7007798490572082655
@@ -26769,7 +28423,9 @@ Transform:
   m_LocalPosition: {x: -0.13000679, y: 0.01999998, z: -2.060008}
   m_LocalScale: {x: -99.603584, y: 99.999985, z: 96.157005}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 264620918}
+  - {fileID: 1843031542}
   m_Father: {fileID: 7147046178998602046}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -1.812}
 --- !u!1 &7126696058903161282
@@ -27148,7 +28804,9 @@ Transform:
   m_LocalPosition: {x: -0.12999916, y: 0.01999998, z: -2.0599995}
   m_LocalScale: {x: -99.603584, y: 99.999985, z: 96.157005}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 417929638}
+  - {fileID: 1281506253}
   m_Father: {fileID: 1731143897181657503}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -1.812}
 --- !u!1 &7193046932888276289
@@ -27436,6 +29094,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7469224451969477882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713854602855802121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7f00a2cdfe4ea44b134ddbfe1dac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorHitSound
+  hitEmitter: {fileID: 859468145}
+  openEmitter: {fileID: 999244229}
 --- !u!114 &7491066290972840368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27486,6 +29158,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7599703031609851473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743616186404468640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7f00a2cdfe4ea44b134ddbfe1dac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorHitSound
+  hitEmitter: {fileID: 414498463}
+  openEmitter: {fileID: 1180006550}
 --- !u!33 &7655580083405482320
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27779,6 +29465,7 @@ GameObject:
   - component: {fileID: 4102647793265223245}
   - component: {fileID: 1378748873526117210}
   - component: {fileID: 6253385547545170889}
+  - component: {fileID: 8073406981404088890}
   - component: {fileID: 4027974385243081148}
   - component: {fileID: 1414847970531386248}
   m_Layer: 3
@@ -27788,6 +29475,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8073406981404088890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073406981404088889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7f00a2cdfe4ea44b134ddbfe1dac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorHitSound
+  hitEmitter: {fileID: 417929639}
+  openEmitter: {fileID: 1281506254}
 --- !u!1 &8255078753029832745
 GameObject:
   m_ObjectHideFlags: 0
@@ -28143,6 +29844,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170180119502799267}
   m_Mesh: {fileID: 561191789}
+--- !u!114 &8993373184733170917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170180119502799267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7f00a2cdfe4ea44b134ddbfe1dac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorHitSound
+  hitEmitter: {fileID: 1843031543}
+  openEmitter: {fileID: 264620917}
 --- !u!59 &9056579265988306477
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -28182,6 +29897,20 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &9056579265988306478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198431654765671848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7f00a2cdfe4ea44b134ddbfe1dac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorHitSound
+  hitEmitter: {fileID: 1843031543}
+  openEmitter: {fileID: 264620917}
 --- !u!1 &9150491916666839416
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,12 +17,14 @@ public class PlayerHealthSystem : MonoBehaviour
     public float reloadSceneTime;
     
     public BloodVignette bloodVignette;
+    private HordeManager hordemanager;
 
     public UnityEvent LowHealthEvent, TakeDamageEvent, DeathEvent;
 
     void Start()
     {
         currentHealth = maxHealth;
+        hordemanager = FindObjectOfType<HordeManager>();
     }
 
     void Update()
@@ -77,11 +79,23 @@ public class PlayerHealthSystem : MonoBehaviour
         return (float)currentHealth / maxHealth;
     }
 
+    
+    private void stopmonstersounds()
+    {
+        if (hordemanager != null)
+        {
+            hordemanager.StopAllMonsterSounds();
+        }
+    }
+    
     private void Die()
+    
+    
     {
         Debug.Log("Player has died.");
         DeathEvent.Invoke();
         dieImage.DOFade(1, fadeTime);
+        
 
         GetComponentInChildren<DynamicMoveProvider>().moveSpeed = 0;
 
@@ -93,6 +107,7 @@ public class PlayerHealthSystem : MonoBehaviour
         yield return new WaitForSeconds(reloadSceneTime);
         var scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex);
+        stopmonstersounds();
 
         yield return null;
     }

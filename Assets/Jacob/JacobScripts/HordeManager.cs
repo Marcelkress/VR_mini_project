@@ -9,6 +9,7 @@ public class HordeManager : MonoBehaviour
     public Transform player; // Assign your player here
     public int hordeSpawnSize = 20; // Max number of monsters in a horde
     public float spawnInterval = 1;
+    SkeletonAudio skeletonAudio;
     
     [Header("Spawn Points (Optional)")]
     public Transform[] spawnPoints; // If you want specific spawn locations
@@ -125,5 +126,23 @@ public class HordeManager : MonoBehaviour
         StartCoroutine(SpawnHorde(0, 1, spawnPoints[0].transform.position, spawnRadius: 5f, spawnDistance: 10f));
         yield return new WaitForSeconds(3f);
         StartCoroutine(SpawnHorde(1, 1, spawnPoints[2].transform.position, spawnRadius: 5f, spawnDistance: 10f));
+    }
+    
+    public void StopAllMonsterSounds()
+    {
+        // Make sure list is cleaned first
+        CleanupDeadMonsters();
+
+        foreach (var monster in spawnedMonsters)
+        {
+            if (monster == null) continue;
+
+            // Look for the FMOD helper on the same object
+            SkeletonAudio audio = monster.GetComponent<SkeletonAudio>();
+            if (audio != null)
+            {
+                skeletonAudio.StopmonsterAudio();
+            }
+        }
     }
 }

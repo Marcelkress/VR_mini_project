@@ -49,5 +49,11 @@ public class SkeletonAudio : MonoBehaviour
             _breathInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         }
     }
+    
+    public void StopmonsterAudio()
+    {
+        StopSkeletonBreath();
+        _breathInstance.release();
+    }
 }
 

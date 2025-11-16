@@ -17,6 +17,7 @@ TagManager:
   - Room 2
   - Monster
   - WeaponTrig
+  - Door
   layers:
   - Default
   - TransparentFX

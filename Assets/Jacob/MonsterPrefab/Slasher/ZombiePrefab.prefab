@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 6482792527939117730}
   - component: {fileID: 8551104774829430669}
   - component: {fileID: 6448215821421185022}
+  - component: {fileID: 6472258237097802288}
   m_Layer: 0
   m_Name: ZombiePrefab
   m_TagString: Monster
@@ -205,11 +206,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1736304458
-      Data2: 1333904297
-      Data3: 1656598974
-      Data4: -1463457324
-    Path: event:/Monsters/MonsterAttack
+      Data1: -703301877
+      Data2: 1118041216
+      Data3: 2118124936
+      Data4: -1514685361
+    Path: event:/Monsters/Skeleton/SkeletonWalk
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -219,8 +220,20 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 1
+  OverrideMinDistance: 1.8000001
   OverrideMaxDistance: 20
+--- !u!114 &6472258237097802288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138323682549609981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd369502615a4ac3a7e08b9d01598b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkeletonAudio
 --- !u!1 &1299419249214308865
 GameObject:
   m_ObjectHideFlags: 0
