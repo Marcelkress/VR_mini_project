@@ -12642,6 +12642,65 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.41766077, y: 2.986063, z: 2.1426618}
   m_Center: {x: -0.29116988, y: 0.9930318, z: -0.5713301}
+--- !u!1 &954814184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+  m_PrefabInstance: {fileID: 2103507656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &954814192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954814184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1937731719
+      Data2: 1290114417
+      Data3: 2070880393
+      Data4: 1207408781
+    Path: event:/Drinking Potion
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &954814193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954814184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5d318b7d3c3ce4e986ecc5df502513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionSoundScript
+  radius: 0.05
+  floorTag: Floor
+  potionSoundFloor: {fileID: 0}
+  glassSound:
+    Guid:
+      Data1: -640200378
+      Data2: 1208986451
+      Data3: 515116685
+      Data4: -309729368
+    Path: event:/BottleFloor
+  hitSoundPosition: {fileID: 0}
 --- !u!1001 &955354628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16902,6 +16961,10 @@ PrefabInstance:
       propertyPath: healthSystem
       value: 
       objectReference: {fileID: 1626308342}
+    - target: {fileID: 2651991804182914371, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      propertyPath: potionDrinkSound
+      value: 
+      objectReference: {fileID: 2095002938}
     - target: {fileID: 3803214540322872447, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -16913,7 +16976,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095002939}
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095002938}
   m_SourcePrefab: {fileID: 100100000, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
 --- !u!1 &1392659358
 GameObject:
@@ -25643,6 +25712,65 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &2078668681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+  m_PrefabInstance: {fileID: 5357982854649304452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078668689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078668681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5d318b7d3c3ce4e986ecc5df502513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionSoundScript
+  radius: 0.05
+  floorTag: Floor
+  potionSoundFloor: {fileID: 0}
+  glassSound:
+    Guid:
+      Data1: -640200378
+      Data2: 1208986451
+      Data3: 515116685
+      Data4: -309729368
+    Path: event:/BottleFloor
+  hitSoundPosition: {fileID: 0}
+--- !u!114 &2078668690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078668681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1937731719
+      Data2: 1290114417
+      Data3: 2070880393
+      Data4: 1207408781
+    Path: event:/Drinking Potion
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2086092900
 GameObject:
   m_ObjectHideFlags: 0
@@ -25674,6 +25802,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1910929109}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2095002930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+  m_PrefabInstance: {fileID: 1391797823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095002938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095002930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1937731719
+      Data2: 1290114417
+      Data3: 2070880393
+      Data4: 1207408781
+    Path: event:/Drinking Potion
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2095002939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095002930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5d318b7d3c3ce4e986ecc5df502513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionSoundScript
+  radius: 0.05
+  floorTag: Floor
+  potionSoundFloor: {fileID: 0}
+  glassSound:
+    Guid:
+      Data1: -640200378
+      Data2: 1208986451
+      Data3: 515116685
+      Data4: -309729368
+    Path: event:/BottleFloor
+  hitSoundPosition: {fileID: 0}
 --- !u!4 &2095741984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030994337, guid: abc00000000000406958389673355633, type: 3}
@@ -25888,6 +26075,10 @@ PrefabInstance:
       propertyPath: healthSystem
       value: 
       objectReference: {fileID: 1626308342}
+    - target: {fileID: 2651991804182914371, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      propertyPath: potionDrinkSound
+      value: 
+      objectReference: {fileID: 954814192}
     - target: {fileID: 3803214540322872447, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -25899,7 +26090,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 954814193}
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 954814192}
   m_SourcePrefab: {fileID: 100100000, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
 --- !u!1 &2121575215 stripped
 GameObject:
@@ -28311,6 +28508,10 @@ PrefabInstance:
       propertyPath: healthSystem
       value: 
       objectReference: {fileID: 1626308342}
+    - target: {fileID: 2651991804182914371, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      propertyPath: potionDrinkSound
+      value: 
+      objectReference: {fileID: 2078668690}
     - target: {fileID: 3803214540322872447, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -28322,7 +28523,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078668690}
+    - targetCorrespondingSourceObject: {fileID: 6797508106080002678, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078668689}
   m_SourcePrefab: {fileID: 100100000, guid: bcbedab3c802528e5be0e4770bad4674, type: 3}
 --- !u!4 &5621511909415909715
 Transform:
