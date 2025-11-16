@@ -118,6 +118,9 @@
 	<object class="MixerBusFader" id="{27a4c4ae-2279-40b1-bb84-a8cf4a89bf7e}" />
 	<object class="MixerBusFader" id="{37786a81-b26b-42e0-9ef5-1d4670f2899f}" />
 	<object class="PluginEffect" id="{67163d73-ac21-42a1-8ad4-cc4836b26990}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<relationship name="plugin">
 			<destination>{b63b25e9-4734-48a5-b9d8-f0ebe68c8ce5}</destination>
 		</relationship>
@@ -216,7 +219,7 @@
 			<value>Acoustics</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{20f57cba-40dd-48c9-b2ba-7b91e92366bd}">
@@ -235,7 +238,7 @@
 			<value>Refl. Send</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-60</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-60.000000)(1.000000,-40.000000)(2.000000,-20.000000)(3.000000,-12.000000)(4.000000,-6.000000)(5.000000,-2.000000)(6.000000,0.000000)(7.000000,2.000000)(8.000000,6.000000)(9.000000,12.000000)(10.000000,20.000000)}</value>
@@ -282,7 +285,7 @@
 			<value>Dtv. Intensity</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -301,7 +304,7 @@
 			<value>Reverb Reach</value>
 		</property>
 		<property name="value">
-			<value>0.5</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -312,7 +315,7 @@
 			<value>Occl. Intensity</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>

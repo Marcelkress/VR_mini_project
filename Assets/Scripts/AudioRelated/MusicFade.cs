@@ -8,7 +8,7 @@ public class MusicFade : MonoBehaviour
     [Header("FMOD Emitters")]
     public StudioEventEmitter currentTrack;
     public StudioEventEmitter nextTrack;
-    public StudioEventEmitter Banshee;
+    public StudioEventEmitter banshee;
 
     [Header("Timing")]
     public float fadeOutTime = 2f;   // time to fade out current track
@@ -48,16 +48,16 @@ public class MusicFade : MonoBehaviour
             float newVolume = Mathf.Lerp(startingVolume, 0f, t);
 
             currentInstance.setVolume(newVolume);
+           // banshee.Play();
             yield return null;
         }
 
         currentInstance.setVolume(0f);
         currentInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
+     
         // ---- 2. Wait for delayTime seconds ----
         yield return new WaitForSeconds(delayTime);
         
-        Banshee.Play();
 
         // ---- 3. Start new FMOD track ----
         if (nextTrack != null)
