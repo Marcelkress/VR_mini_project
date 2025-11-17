@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class GateLock : MonoBehaviour
 {
-    public GameObject leftLock, rightLock;
+    public GameObject leftLock, rightLock, rightGate, leftGate;
     public Transform leftKeyPos, rightKeyPos;
     public Vector3 rotation;
     public Animator leftLineAnim, rightLineAnim;
@@ -16,6 +16,14 @@ public class GateLock : MonoBehaviour
 
     private bool leftOpen, rightOpen;
     
+    private void Start()
+    {
+        rightGate.GetComponent<HingeJoint>().useMotor = false;
+        leftGate.GetComponent<HingeJoint>().useMotor = false;
+
+        rightGate.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        leftGate.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("GateKeyLeft"))
@@ -68,7 +76,25 @@ public class GateLock : MonoBehaviour
 
         if (leftOpen && rightOpen)
         {
-            // WIN!!
+
+            leftGate.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            rightGate.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+            // Enable motors and set target velocity to open the gates
+            JointMotor leftMotor = leftGate.GetComponent<HingeJoint>().motor;
+            leftMotor.targetVelocity = 90f; 
+            leftMotor.force = 10f; 
+            leftGate.GetComponent<HingeJoint>().motor = leftMotor;
+            leftGate.GetComponent<HingeJoint>().useMotor = true;
+
+            JointMotor rightMotor = rightGate.GetComponent<HingeJoint>().motor;
+            rightMotor.targetVelocity = 90f;
+            rightMotor.force = 10f;
+            rightGate.GetComponent<HingeJoint>().motor = rightMotor;
+            rightGate.GetComponent<HingeJoint>().useMotor = true;
+
+
+
         }
     }
 

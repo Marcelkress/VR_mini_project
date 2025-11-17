@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FakePortal : MonoBehaviour
 {
@@ -13,9 +14,29 @@ public class FakePortal : MonoBehaviour
 
     public GameObject bonFire, Key;
 
+    public bool shouldSpawnMonsters = true;
+    public bool reloadSceneAfterUse = false;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (reloadSceneAfterUse)
+        {
+            if (other.CompareTag("Player"))
+            {
+                other.transform.SetParent(fakeRooms.transform);
+
+                localposition = other.transform.localPosition;
+                HordeManager.CleanupDeadMonsters(); // Call to clear dead so you cant see them laying in the new room
+                other.transform.SetParent(realRooms.transform);
+
+                other.transform.localPosition = localposition;
+        
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+
+            return;
+        }
+        else if (other.CompareTag("Player"))
         {
             Debug.Log("Wal");
 
