@@ -27787,8 +27787,8 @@ MonoBehaviour:
   monsterSpawnPoint: {fileID: 1306171808}
   bonFire: {fileID: 919132148814617003}
   Key: {fileID: 647952076}
-  shouldSpawnMonsters: 1
-  reloadSceneAfterUse: 0
+  shouldSpawnMonsters: 0
+  reloadSceneAfterUse: 1
 --- !u!65 &1730966686
 BoxCollider:
   m_ObjectHideFlags: 0
