@@ -11,6 +11,8 @@ public class DoorPuzzle : MonoBehaviour
     public float keyFlyDuratio = 1f;
     
     public Vector3 unlockPushTorque;
+    public HordeManager hordeManager;
+    public Transform spawnPoint;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,8 +39,9 @@ public class DoorPuzzle : MonoBehaviour
     {
         if (other.CompareTag("DoorKey"))
         {
-            //other.GetComponent<XRGrabInteractable>().selectExited.
+            // other.GetComponent<XRGrabInteractable>().selectExited.
             Unlock(other.gameObject);
+            hordeManager.SpawnHorde(1, 1, spawnPoint.position, 1, 1);
         }
     }
 }
